@@ -28,8 +28,11 @@ C:\git
 
 ## 0. Quick start on a new machine (from the zip)
 
-1. Extract the zip so that this folder becomes `C:\git\interop-assessment` (any parent folder works;
-   the scripts derive the root from their own location).
+1. Get the package into `C:\git\interop-assessment` (any parent folder works; the scripts derive the root
+   from their own location), either by extracting the zip or by cloning:
+   ```powershell
+   git clone https://github.com/zuhaibshafi/healthcare-interop.git C:\git\interop-assessment
+   ```
 2. Open PowerShell (no admin needed) and run the bootstrap. It downloads the portable toolchain
    (JDK 21, Maven, PostgreSQL 16, Redis 8, Ruby 3.3 + MSYS2, HL7 validator), clones the four
    repositories at the exact commits used here, applies the local patches, builds HAPI, eCRNow and
