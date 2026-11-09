@@ -1,0 +1,12 @@
+{
+  "bundleType": "TransactionResponse",
+  "entryCount": 1,
+  "entries": [
+    {
+      "index": 0,
+      "status": "204 No Content",
+      "location": "Encounter/71a06a2d-979a-44de-9b8b-d53ae1e81203/_history/2",
+      "etag": "2"
+    }
+  ]
+}

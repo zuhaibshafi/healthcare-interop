@@ -1,0 +1,133 @@
+{
+ "resourceType": "Bundle",
+ "id": "9d512c27-a0bb-4cc2-be38-0ff1283d58fe",
+ "meta": {
+  "lastUpdated": "2026-11-08T23:47:28.059+05:30"
+ },
+ "type": "history",
+ "total": 3,
+ "link": [
+  {
+   "relation": "self",
+   "url": "http://localhost:8080/fhir/Patient/23070867-3801-4cbb-b1cc-016790c4c065/_history"
+  }
+ ],
+ "entry": [
+  {
+   "fullUrl": "http://localhost:8080/fhir/Patient/23070867-3801-4cbb-b1cc-016790c4c065",
+   "resource": {
+    "resourceType": "Patient",
+    "id": "23070867-3801-4cbb-b1cc-016790c4c065",
+    "meta": {
+     "versionId": "3",
+     "lastUpdated": "2026-11-08T23:47:27.931+05:30",
+     "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+     ]
+    },
+    "identifier": [
+     {
+      "system": "urn:oid:1.2.36.146.595.217.0.1",
+      "value": "MRN-TEMP-001"
+     }
+    ],
+    "name": [
+     {
+      "family": "Integration",
+      "given": [
+       "Test",
+       "Updated"
+      ]
+     }
+    ],
+    "gender": "other",
+    "birthDate": "1990-01-01"
+   },
+   "request": {
+    "method": "PUT",
+    "url": "Patient/23070867-3801-4cbb-b1cc-016790c4c065/_history/3"
+   },
+   "response": {
+    "status": "200 OK",
+    "etag": "W/\"3\""
+   }
+  },
+  {
+   "fullUrl": "http://localhost:8080/fhir/Patient/23070867-3801-4cbb-b1cc-016790c4c065",
+   "resource": {
+    "resourceType": "Patient",
+    "id": "23070867-3801-4cbb-b1cc-016790c4c065",
+    "meta": {
+     "versionId": "2",
+     "lastUpdated": "2026-11-08T23:47:27.872+05:30",
+     "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+     ]
+    },
+    "identifier": [
+     {
+      "system": "urn:oid:1.2.36.146.595.217.0.1",
+      "value": "MRN-TEMP-001"
+     }
+    ],
+    "name": [
+     {
+      "family": "Integration",
+      "given": [
+       "Test",
+       "Updated"
+      ]
+     }
+    ],
+    "gender": "male",
+    "birthDate": "1990-01-01"
+   },
+   "request": {
+    "method": "PUT",
+    "url": "Patient/23070867-3801-4cbb-b1cc-016790c4c065/_history/2"
+   },
+   "response": {
+    "status": "200 OK",
+    "etag": "W/\"2\""
+   }
+  },
+  {
+   "fullUrl": "http://localhost:8080/fhir/Patient/23070867-3801-4cbb-b1cc-016790c4c065",
+   "resource": {
+    "resourceType": "Patient",
+    "id": "23070867-3801-4cbb-b1cc-016790c4c065",
+    "meta": {
+     "versionId": "1",
+     "lastUpdated": "2026-11-08T23:47:27.850+05:30",
+     "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+     ]
+    },
+    "identifier": [
+     {
+      "system": "urn:oid:1.2.36.146.595.217.0.1",
+      "value": "MRN-TEMP-001"
+     }
+    ],
+    "name": [
+     {
+      "family": "Integration",
+      "given": [
+       "Test"
+      ]
+     }
+    ],
+    "gender": "male",
+    "birthDate": "1990-01-01"
+   },
+   "request": {
+    "method": "POST",
+    "url": "Patient/23070867-3801-4cbb-b1cc-016790c4c065/_history/1"
+   },
+   "response": {
+    "status": "201 Created",
+    "etag": "W/\"1\""
+   }
+  }
+ ]
+}

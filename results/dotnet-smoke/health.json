@@ -1,0 +1,27 @@
+{
+  "status": "healthy",
+  "checkedAt": "2026-11-08T18:44:02.4841538+00:00",
+  "dependencies": [
+    {
+      "name": "hapi-fhir",
+      "url": "http://localhost:8080/fhir/metadata?_summary=true",
+      "healthy": true,
+      "statusCode": 200,
+      "elapsedMs": 25
+    },
+    {
+      "name": "fhir-validator",
+      "url": "http://localhost:8082/",
+      "healthy": true,
+      "statusCode": 200,
+      "elapsedMs": 4
+    },
+    {
+      "name": "ecrnow",
+      "url": "http://localhost:8081/api/healthcareSettings/",
+      "healthy": true,
+      "statusCode": 200,
+      "elapsedMs": 10
+    }
+  ]
+}

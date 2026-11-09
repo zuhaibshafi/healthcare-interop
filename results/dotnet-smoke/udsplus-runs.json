@@ -1,0 +1,38 @@
+[
+  {
+    "runId": "20261108-181848-901c697e0f7b4e518d17296d",
+    "createdAt": "2026-11-08T18:18:48.9881925Z",
+    "files": [
+      "http://localhost:5080/udsplus/files/20261108-181848-901c697e0f7b4e518d17296d/AllergyIntolerance.ndjson",
+      "http://localhost:5080/udsplus/files/20261108-181848-901c697e0f7b4e518d17296d/Condition.ndjson",
+      "http://localhost:5080/udsplus/files/20261108-181848-901c697e0f7b4e518d17296d/Encounter.ndjson",
+      "http://localhost:5080/udsplus/files/20261108-181848-901c697e0f7b4e518d17296d/Immunization.ndjson",
+      "http://localhost:5080/udsplus/files/20261108-181848-901c697e0f7b4e518d17296d/manifest.json",
+      "http://localhost:5080/udsplus/files/20261108-181848-901c697e0f7b4e518d17296d/MedicationRequest.ndjson",
+      "http://localhost:5080/udsplus/files/20261108-181848-901c697e0f7b4e518d17296d/Observation.ndjson",
+      "http://localhost:5080/udsplus/files/20261108-181848-901c697e0f7b4e518d17296d/Patient.ndjson",
+      "http://localhost:5080/udsplus/files/20261108-181848-901c697e0f7b4e518d17296d/Procedure.ndjson"
+    ]
+  },
+  {
+    "runId": "20261108-181815-54079a096ca3482d8fa53e17",
+    "createdAt": "2026-11-08T18:18:15.8166842Z",
+    "files": [
+      "http://localhost:5080/udsplus/files/20261108-181815-54079a096ca3482d8fa53e17/AllergyIntolerance.ndjson",
+      "http://localhost:5080/udsplus/files/20261108-181815-54079a096ca3482d8fa53e17/Condition.ndjson",
+      "http://localhost:5080/udsplus/files/20261108-181815-54079a096ca3482d8fa53e17/Encounter.ndjson",
+      "http://localhost:5080/udsplus/files/20261108-181815-54079a096ca3482d8fa53e17/Immunization.ndjson",
+      "http://localhost:5080/udsplus/files/20261108-181815-54079a096ca3482d8fa53e17/manifest.json",
+      "http://localhost:5080/udsplus/files/20261108-181815-54079a096ca3482d8fa53e17/MedicationRequest.ndjson",
+      "http://localhost:5080/udsplus/files/20261108-181815-54079a096ca3482d8fa53e17/Observation.ndjson",
+      "http://localhost:5080/udsplus/files/20261108-181815-54079a096ca3482d8fa53e17/Patient.ndjson",
+      "http://localhost:5080/udsplus/files/20261108-181815-54079a096ca3482d8fa53e17/Procedure.ndjson",
+      "http://localhost:5080/udsplus/files/20261108-181815-54079a096ca3482d8fa53e17/run-summary.json"
+    ]
+  },
+  {
+    "runId": "20261108-181555-106b04b1a4854e6e9fba39b1",
+    "createdAt": "2026-11-08T18:15:55.636107Z",
+    "files": []
+  }
+]

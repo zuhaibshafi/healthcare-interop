@@ -1,0 +1,23 @@
+{
+ "resourceType": "OperationOutcome",
+ "text": {
+  "status": "generated",
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h1>Operation Outcome</h1><table border=\"0\"><tr><td style=\"font-weight: bold;\">INFORMATION</td><td>[]</td><td>Successfully deleted 1 resource(s). Took 11ms.</td></tr></table></div>"
+ },
+ "issue": [
+  {
+   "severity": "information",
+   "code": "informational",
+   "details": {
+    "coding": [
+     {
+      "system": "https://hapifhir.io/fhir/CodeSystem/hapi-fhir-storage-response-code",
+      "code": "SUCCESSFUL_DELETE",
+      "display": "Delete succeeded."
+     }
+    ]
+   },
+   "diagnostics": "Successfully deleted 1 resource(s). Took 11ms."
+  }
+ ]
+}

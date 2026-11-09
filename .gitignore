@@ -1,0 +1,6 @@
+logs/
+**/bin/
+**/obj/
+*.part
+*.err.log
+results/dotnet-output/udsplus/*/source/

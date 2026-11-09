@@ -1,0 +1,57 @@
+29:report-submission.endpoint=http://localhost:5080/pha/r4/fhir
+stopped ecrnow 24840
+DELETE 1
+DELETE 0
+ecrnow up (200) after ~24s
+--- register PHA
+{"id":152,"clientId":"ecrnow-local","clientSecret":"ecrnow-secret","username":null,"password":null,"fhirServerBaseURL":"http://localhost:5080/pha/r4/fhir/$process-message","fhirVersion":"R4","tokenUrl
+--- launch
+{"resourceType":"OperationOutcome","meta":{"lastUpdated":"2026-11-08T18:43:52.168+00:00"},"issue":[{"severity":"informat
+BsaScheduledJob|2026-11-08 18:46:52.097
+--- waiting for eICR + submission
+bsa files: 3 after ~200s
+Bundle_c011a4e9-4658-4fee-9372-d9994b428248.json
+TriggerQueryBundle_demo-patient-1_demo-encounter-1.json
+create-report_demo-patient-1_demo-encounter-1.json
+create-report_demo-patient-1_demo-encounter-1.xml
+18:47:06.759Z ERROR 34796 --- [db-scheduler-pool-3-thread-1] c.d.bsa.utils.R3ToR2DataConverterUtils   :  Did not find the service provider in KarProcessingData null
+18:47:06.759Z ERROR 34796 --- [db-scheduler-pool-3-thread-1] c.d.bsa.utils.R3ToR2DataConverterUtils   :  Did not find the location in KarProcessingData null
+18:47:07.109Z  WARN 34796 --- [db-scheduler-pool-3-thread-1] ca.uhn.fhir.parser.LenientErrorHandler   : [element="Bundle(res).entry.resource.Bundle(res).entry.resource.Composition(res).section.entry.extension"] Resource is missing required element: value
+18:47:07.510Z  WARN 34796 --- [db-scheduler-pool-3-thread-1] ca.uhn.fhir.parser.LenientErrorHandler   : [element="Bundle(res).entry.resource.Bundle(res).entry.resource.Composition(res).section.entry.extension"] Resource is missing required element: value
+18:47:07.760Z  INFO 34796 --- [db-scheduler-pool-3-thread-1] com.drajer.bsa.kar.action.ActionUtils    :  Issue of error detected 
+18:47:07.760Z ERROR 34796 --- [db-scheduler-pool-3-thread-1] c.drajer.bsa.kar.action.ValidateReport   :  Total # of issues found in the Operation Outcome 1
+18:47:07.761Z  INFO 34796 --- [db-scheduler-pool-3-thread-1] com.drajer.bsa.kar.action.SubmitReport   :  Executing the submission of the Report to : http://localhost:5080/pha/r4/fhir
+18:47:07.761Z  INFO 34796 --- [db-scheduler-pool-3-thread-1] com.drajer.bsa.kar.action.SubmitReport   :  Submitting FHIR Output 
+18:47:07.761Z  INFO 34796 --- [db-scheduler-pool-3-thread-1] com.drajer.bsa.kar.action.SubmitReport   :  1 resource(s) to submit
+18:47:07.761Z  INFO 34796 --- [db-scheduler-pool-3-thread-1] com.drajer.bsa.kar.action.SubmitReport   : Sending to submissionEndpoint http://localhost:5080/pha/r4/fhir
+18:47:07.762Z  INFO 34796 --- [db-scheduler-pool-3-thread-1] com.drajer.bsa.kar.action.SubmitReport   : SubmitResources called: sending data to http://localhost:5080/pha/r4/fhir
+18:47:07.767Z  INFO 34796 --- [db-scheduler-pool-3-thread-1] com.drajer.bsa.kar.action.SubmitReport   : PHA is NULL
+18:47:07.771Z  INFO 34796 --- [db-scheduler-pool-3-thread-1] com.drajer.bsa.kar.action.SubmitReport   : Attempting to retrieve TOKEN from PHA http://localhost:5080/oauth/token or http://localhost:5080/oauth/token
+18:47:07.772Z  INFO 34796 --- [db-scheduler-pool-3-thread-1] com.drajer.bsa.kar.action.SubmitReport   : 1 Resources to submit 
+18:47:07.784Z  INFO 34796 --- [db-scheduler-pool-3-thread-1] com.drajer.bsa.kar.action.SubmitReport   :  Trying to invoke $process-message to: http://localhost:5080/pha/r4/fhir
+18:47:07.859Z  WARN 34796 --- [db-scheduler-pool-3-thread-1] ca.uhn.fhir.parser.LenientErrorHandler   : [element="Bundle(res).entry.resource.Bundle(res).entry.resource.Composition(res).section.entry.extension"] Resource is missing required element: value
+18:47:08.368Z  INFO 34796 --- [db-scheduler-pool-3-thread-1] com.drajer.bsa.model.KarProcessingData   : Access Token is Valid
+18:47:09.344Z ERROR 34796 --- [db-scheduler-pool-3-thread-1] c.d.bsa.kar.condition.FhirPathProcessor  :  Null Value returned from FHIR Path Expression Evaluator : So condition not met
+18:47:09.345Z  INFO 34796 --- [db-scheduler-pool-3-thread-1] com.drajer.bsa.model.KarProcessingData   : Access Token is Valid
+18:47:10.161Z ERROR 34796 --- [db-scheduler-pool-3-thread-1] c.d.bsa.kar.condition.FhirPathProcessor  :  Null Value returned from FHIR Path Expression Evaluator : So condition not met
+18:47:10.162Z  INFO 34796 --- [db-scheduler-pool-3-thread-1] com.drajer.bsa.model.KarProcessingData   : Access Token is Valid
+18:47:11.347Z ERROR 34796 --- [db-scheduler-pool-3-thread-1] c.d.bsa.kar.condition.FhirPathProcessor  :  Null Value returned from FHIR Path Expression Evaluator : So condition not met
+18:47:11.371Z  WARN 34796 --- [db-scheduler-pool-3-thread-1] ca.uhn.fhir.parser.LenientErrorHandler   : [element="Bundle(res).entry.resource.Bundle(res).entry.resource.Composition(res).section.entry.extension"] Resource is missing required element: value
+18:47:11.380Z  WARN 34796 --- [db-scheduler-pool-3-thread-1] ca.uhn.fhir.parser.LenientErrorHandler   : [element="Bundle(res).entry.resource.Bundle(res).entry.resource.Composition(res).section.entry.extension"] Resource is missing required element: value
+18:47:11.400Z  WARN 34796 --- [db-scheduler-pool-3-thread-1] ca.uhn.fhir.parser.LenientErrorHandler   : [element="Bundle(res).entry.resource.Bundle(res).entry.resource.Composition(res).section.entry.extension"] Resource is missing required element: value
+--- PHA received
+[
+  {
+    "fileName": "20261108-184708-315-c011a4e9-4658-4fee-9372-d9994b428248.json",
+    "sizeBytes": 10823,
+    "receivedAt": "2026-11-08T18:47:08.319813+00:00",
+    "url": "http://localhost:5080/pha/received/20261108-184708-315-c011a4e9-4658-4fee-9372-d9994b428248.json"
+  },
+  {
+    "fileName": "20261108-181519-557-eicr-smoke-1.json",
+    "sizeBytes": 678,
+    "receivedAt": "2026-11-08T18:15:19.5585971+00:00",
+    "url": "http://localhost:5080/pha/received/20261108-181519-557-eicr-smoke-1.json"
+  }
+]
+[exited with code 0]

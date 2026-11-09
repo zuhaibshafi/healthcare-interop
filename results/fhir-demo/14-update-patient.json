@@ -1,0 +1,28 @@
+{
+ "resourceType": "Patient",
+ "id": "23070867-3801-4cbb-b1cc-016790c4c065",
+ "meta": {
+  "versionId": "2",
+  "lastUpdated": "2026-11-08T23:47:27.872+05:30",
+  "profile": [
+   "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+  ]
+ },
+ "identifier": [
+  {
+   "system": "urn:oid:1.2.36.146.595.217.0.1",
+   "value": "MRN-TEMP-001"
+  }
+ ],
+ "name": [
+  {
+   "family": "Integration",
+   "given": [
+    "Test",
+    "Updated"
+   ]
+  }
+ ],
+ "gender": "male",
+ "birthDate": "1990-01-01"
+}

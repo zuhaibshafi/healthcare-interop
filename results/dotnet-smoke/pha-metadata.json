@@ -1,0 +1,33 @@
+{
+  "resourceType": "CapabilityStatement",
+  "id": "pha-receiver",
+  "status": "active",
+  "date": "2026-11-08",
+  "publisher": "FhirIntegration.Api PHA receiver mock",
+  "kind": "instance",
+  "software": {
+    "name": "FhirIntegration.Api",
+    "version": "1.0"
+  },
+  "implementation": {
+    "description": "Mock Public Health Agency eICR receiver",
+    "url": "http://localhost:5080/pha/r4/fhir"
+  },
+  "fhirVersion": "4.0.1",
+  "format": [
+    "json",
+    "application/fhir+json"
+  ],
+  "rest": [
+    {
+      "mode": "server",
+      "documentation": "Accepts eICR message Bundles via $process-message and returns a Reportability Response acknowledgement.",
+      "operation": [
+        {
+          "name": "process-message",
+          "definition": "http://hl7.org/fhir/OperationDefinition/MessageHeader-process-message"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+diff --git a/pom.xml b/pom.xml
+index 1b0ee69..0ea9c85 100644
+--- a/pom.xml
++++ b/pom.xml
+@@ -329,7 +329,7 @@
+         <dependency>
+             <groupId>org.projectlombok</groupId>
+             <artifactId>lombok</artifactId>
+-            <version>1.18.22</version>
++            <version>1.18.36</version>
+             <optional>true</optional>
+         </dependency>
+ 

@@ -1,0 +1,6 @@
+{
+  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjUwODAiLCJzdWIiOiJlY3Jub3ctbG9jYWwiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjUwODAiLCJjbGllbnRfaWQiOiJlY3Jub3ctbG9jYWwiLCJzY29wZSI6InN5c3RlbS8qLnJlYWQgc3lzdGVtLyoud3JpdGUiLCJpYXQiOjE3OTQxNjE3MTgsImV4cCI6MTc5NDE2NTMxOCwianRpIjoiMDVmMTljMTY0ZTZhNDkxMTliYTc3NjUzMDNhZWUxZWYifQ.oR_kRGIOpF6QzLnNn4zaEnBcVEOAkbz-r-ZCDDcCb6A",
+  "token_type": "Bearer",
+  "expires_in": 3600,
+  "scope": "system/*.read system/*.write"
+}

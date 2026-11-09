@@ -1,0 +1,6 @@
+{
+  "resourceType": "Patient",
+  "id": "0556b6a3-2ddd-4439-bbaa-7c30b4102383",
+  "versionId": "1",
+  "location": "http://localhost:8080/fhir/Patient/0556b6a3-2ddd-4439-bbaa-7c30b4102383/_history/1"
+}

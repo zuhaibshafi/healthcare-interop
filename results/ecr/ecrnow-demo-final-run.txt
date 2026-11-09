@@ -1,0 +1,51 @@
+
+=== 1. Connectivity
+HAPI FHIR OK: HAPI FHIR Server 8.12.0 fhirVersion=4.0.1
+eCRNow OK: 1 healthcare setting(s) registered
+
+=== 2. Register HAPI as an eCRNow Healthcare Setting
+Already registered as hsId=2
+
+=== 3. Knowledge Artifact Repositories loaded by eCRNow (kar.directory)
+repo=local-repo-ersd url=http://localhost/ersd -> karId=bundle-ersd-specification-bundle version=2 name=PlanDefinition_eRSD_Instance
+
+=== 4. Activate the eRSD KAR for this Healthcare Setting
+addKARStatus -> HTTP 200: [{"id": 2, "hsId": 2, "karId": "bundle-ersd-specification-bundle", "karVersion": "2", "versionUniqueKarId": "bundle-ersd-specification-bundle|2", "isActive": true, "lastActivationDate": "2026-11-08T19:40:39.238+00:00", "lastInActivationDate": "2026-11-08T19:40:39.231+00:00", "subscriptionsEnabled": 
+active KARs for hsId=2: [('bundle-ersd-specification-bundle', '2', True, 'FHIR')]
+
+=== 4b. Register the Public Health Agency receiver (the .NET mock) so submit-report can look it up
+PHA already registered: http://localhost:5080/pha/r4/fhir/$process-message
+NOTE: report-submission.endpoint in application-local.properties must be the PHA *base* URL (http://localhost:5080/pha/r4/fhir); eCRNow's FHIR client appends /$process-message itself.
+
+=== 5. Launch patient processing (EHR -> eCRNow 'launchPatient')
+1 existing notification context(s) for this encounter -> deleting so the launch is not rejected (eCRNow enforces a unique context per server/patient/encounter/trigger)
+launchPatient -> HTTP 200: {'resourceType': 'OperationOutcome', 'meta': {'lastUpdated': '2026-11-08T19:40:39.387+00:00'}, 'issue': [{'severity': 'information', 'code': 'informational', 'details': {'text': 'Patient Instance launched for processing successfully'}}]}
+
+=== 6. Wait for the eRSD workflow (encounter-start -> 3 min timer -> check-trigger-codes -> create-report -> validate -> submit)
+  ... workflow running (see C:/git/ecrnow-runtime/bsa-output for TriggerQueryBundle / create-report files)
+  ... workflow running (see C:/git/ecrnow-runtime/bsa-output for TriggerQueryBundle / create-report files)
+  ... workflow running (see C:/git/ecrnow-runtime/bsa-output for TriggerQueryBundle / create-report files)
+  ... workflow running (see C:/git/ecrnow-runtime/bsa-output for TriggerQueryBundle / create-report files)
+  ... workflow running (see C:/git/ecrnow-runtime/bsa-output for TriggerQueryBundle / create-report files)
+  ... workflow running (see C:/git/ecrnow-runtime/bsa-output for TriggerQueryBundle / create-report files)
+  ... workflow running (see C:/git/ecrnow-runtime/bsa-output for TriggerQueryBundle / create-report files)
+  ... workflow running (see C:/git/ecrnow-runtime/bsa-output for TriggerQueryBundle / create-report files)
+  ... workflow running (see C:/git/ecrnow-runtime/bsa-output for TriggerQueryBundle / create-report files)
+  ... workflow running (see C:/git/ecrnow-runtime/bsa-output for TriggerQueryBundle / create-report files)
+  ... workflow running (see C:/git/ecrnow-runtime/bsa-output for TriggerQueryBundle / create-report files)
+  ... workflow running (see C:/git/ecrnow-runtime/bsa-output for TriggerQueryBundle / create-report files)
+  ... workflow running (see C:/git/ecrnow-runtime/bsa-output for TriggerQueryBundle / create-report files)
+  ... workflow running (see C:/git/ecrnow-runtime/bsa-output for TriggerQueryBundle / create-report files)
+  ... workflow running (see C:/git/ecrnow-runtime/bsa-output for TriggerQueryBundle / create-report files)
+  ... workflow running (see C:/git/ecrnow-runtime/bsa-output for TriggerQueryBundle / create-report files)
+  ... workflow running (see C:/git/ecrnow-runtime/bsa-output for TriggerQueryBundle / create-report files)
+  ... workflow running (see C:/git/ecrnow-runtime/bsa-output for TriggerQueryBundle / create-report files)
+  ... workflow running (see C:/git/ecrnow-runtime/bsa-output for TriggerQueryBundle / create-report files)
+eCRNow notification context(s): [('encounter-start', 'IN_PROGRESS')]
+eICR received by the PHA mock: 20261108-194344-738-676d2948-fbfe-49e2-951a-8399b82a752a.json (10743 bytes) -> http://localhost:5080/pha/received/20261108-194344-738-676d2948-fbfe-49e2-951a-8399b82a752a.json
+  message type: message | event: eicr-case-report-message
+  eICR document contents: {'Composition': 1, 'Patient': 1, 'Condition': 1, 'Organization': 1, 'MedicationRequest': 1}
+
+=== Done
+Swagger UI for eCRNow:  http://localhost:8081/swagger-ui/index.html
+Debug output (eICR bundles, trigger evaluation): C:/git/ecrnow-runtime/bsa-output/

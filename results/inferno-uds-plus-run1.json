@@ -1,0 +1,632 @@
+{
+ "inferno": "http://localhost:4568",
+ "suite": "uds_plus",
+ "group": "uds_plus-uds_plus_test_group",
+ "session": "4RrbsH3RmAn",
+ "run": "259ca372-a246-41c5-acf0-b5d155ef9b86",
+ "inputs": [
+  {
+   "name": "import_manifest",
+   "value": "http://localhost:5080/udsplus/files/20261108-181848-901c697e0f7b4e518d17296d/manifest.json"
+  }
+ ],
+ "results": [
+  {
+   "id": "c1ffc53a-96b7-4b4e-9be2-c136fbad3acb",
+   "created_at": "2026-11-09T00:25:52.541+05:30",
+   "inputs": [
+    {
+     "name": "import_manifest",
+     "value": "http://localhost:5080/udsplus/files/20261108-181848-901c697e0f7b4e518d17296d/manifest.json",
+     "type": "text"
+    }
+   ],
+   "optional": false,
+   "outputs": [],
+   "requests": [
+    {
+     "id": "1113f948-4f29-4eca-b207-96cabc7a74d1",
+     "direction": "outgoing",
+     "index": 1,
+     "result_id": "c1ffc53a-96b7-4b4e-9be2-c136fbad3acb",
+     "status": 200,
+     "timestamp": "2026-11-09T00:25:52.554+05:30",
+     "url": "http://localhost:5080/udsplus/files/20261108-181848-901c697e0f7b4e518d17296d/manifest.json",
+     "verb": "get"
+    }
+   ],
+   "result": "pass",
+   "test_id": "uds_plus-uds_plus_test_group-uds_plus_read_manifest_test",
+   "test_run_id": "259ca372-a246-41c5-acf0-b5d155ef9b86",
+   "test_session_id": "4RrbsH3RmAn",
+   "updated_at": "2026-11-09T00:25:52.541+05:30"
+  },
+  {
+   "id": "1beafeb1-ec38-4b55-9f6a-2f3f9cddf9b4",
+   "created_at": "2026-11-09T00:28:25.698+05:30",
+   "inputs": [],
+   "messages": [
+    {
+     "message": "Parameters/20261108-181848-901c697e0f7b4e518d17296d: Parameters.parameter[5].part[1].value.ofType(url): No definition could be found for URL value 'http://localhost:5080/udsplus/files/20261108-181848-901c697e0f7b4e518d17296d/AllergyIntolerance.ndjson'",
+     "type": "warning"
+    },
+    {
+     "message": "Parameters/20261108-181848-901c697e0f7b4e518d17296d: Parameters.parameter[6].part[1].value.ofType(url): No definition could be found for URL value 'http://localhost:5080/udsplus/files/20261108-181848-901c697e0f7b4e518d17296d/Condition.ndjson'",
+     "type": "warning"
+    },
+    {
+     "message": "Parameters/20261108-181848-901c697e0f7b4e518d17296d: Parameters.parameter[7].part[1].value.ofType(url): No definition could be found for URL value 'http://localhost:5080/udsplus/files/20261108-181848-901c697e0f7b4e518d17296d/Encounter.ndjson'",
+     "type": "warning"
+    },
+    {
+     "message": "Parameters/20261108-181848-901c697e0f7b4e518d17296d: Parameters.parameter[8].part[1].value.ofType(url): No definition could be found for URL value 'http://localhost:5080/udsplus/files/20261108-181848-901c697e0f7b4e518d17296d/Immunization.ndjson'",
+     "type": "warning"
+    },
+    {
+     "message": "Parameters/20261108-181848-901c697e0f7b4e518d17296d: Parameters.parameter[9].part[1].value.ofType(url): No definition could be found for URL value 'http://localhost:5080/udsplus/files/20261108-181848-901c697e0f7b4e518d17296d/MedicationRequest.ndjson'",
+     "type": "warning"
+    },
+    {
+     "message": "Parameters/20261108-181848-901c697e0f7b4e518d17296d: Parameters.parameter[10].part[1].value.ofType(url): No definition could be found for URL value 'http://localhost:5080/udsplus/files/20261108-181848-901c697e0f7b4e518d17296d/Observation.ndjson'",
+     "type": "warning"
+    },
+    {
+     "message": "Parameters/20261108-181848-901c697e0f7b4e518d17296d: Parameters.parameter[11].part[1].value.ofType(url): No definition could be found for URL value 'http://localhost:5080/udsplus/files/20261108-181848-901c697e0f7b4e518d17296d/Patient.ndjson'",
+     "type": "warning"
+    },
+    {
+     "message": "Parameters/20261108-181848-901c697e0f7b4e518d17296d: Parameters.parameter[12].part[1].value.ofType(url): No definition could be found for URL value 'http://localhost:5080/udsplus/files/20261108-181848-901c697e0f7b4e518d17296d/Procedure.ndjson'",
+     "type": "warning"
+    }
+   ],
+   "optional": false,
+   "outputs": [],
+   "requests": [],
+   "result": "pass",
+   "test_id": "uds_plus-uds_plus_test_group-uds_plus_validate_manifest_test",
+   "test_run_id": "259ca372-a246-41c5-acf0-b5d155ef9b86",
+   "test_session_id": "4RrbsH3RmAn",
+   "updated_at": "2026-11-09T00:28:25.698+05:30"
+  },
+  {
+   "id": "8b39b905-ba74-4002-8f69-370e61529b7a",
+   "created_at": "2026-11-09T00:28:26.039+05:30",
+   "inputs": [],
+   "optional": false,
+   "outputs": [],
+   "requests": [
+    {
+     "id": "952823af-0e8b-4856-bbb7-32701b317bbb",
+     "direction": "outgoing",
+     "index": 2,
+     "result_id": "8b39b905-ba74-4002-8f69-370e61529b7a",
+     "status": 200,
+     "timestamp": "2026-11-09T00:28:26.062+05:30",
+     "url": "http://localhost:5080/udsplus/files/20261108-181848-901c697e0f7b4e518d17296d/AllergyIntolerance.ndjson",
+     "verb": "get"
+    },
+    {
+     "id": "a8a5a0e6-1607-4fc7-82eb-3b608c2dbf71",
+     "direction": "outgoing",
+     "index": 3,
+     "result_id": "8b39b905-ba74-4002-8f69-370e61529b7a",
+     "status": 200,
+     "timestamp": "2026-11-09T00:28:26.138+05:30",
+     "url": "http://localhost:5080/udsplus/files/20261108-181848-901c697e0f7b4e518d17296d/Condition.ndjson",
+     "verb": "get"
+    },
+    {
+     "id": "e9d8b3be-cd72-40a3-bef6-fb43ff6193f2",
+     "direction": "outgoing",
+     "index": 4,
+     "result_id": "8b39b905-ba74-4002-8f69-370e61529b7a",
+     "status": 200,
+     "timestamp": "2026-11-09T00:28:26.214+05:30",
+     "url": "http://localhost:5080/udsplus/files/20261108-181848-901c697e0f7b4e518d17296d/Encounter.ndjson",
+     "verb": "get"
+    },
+    {
+     "id": "92eb6c09-1486-4be3-8fc1-01c69619d3d2",
+     "direction": "outgoing",
+     "index": 5,
+     "result_id": "8b39b905-ba74-4002-8f69-370e61529b7a",
+     "status": 200,
+     "timestamp": "2026-11-09T00:28:26.298+05:30",
+     "url": "http://localhost:5080/udsplus/files/20261108-181848-901c697e0f7b4e518d17296d/Immunization.ndjson",
+     "verb": "get"
+    },
+    {
+     "id": "fea8258c-4ee2-4ca7-83d3-8f7469e374f2",
+     "direction": "outgoing",
+     "index": 6,
+     "result_id": "8b39b905-ba74-4002-8f69-370e61529b7a",
+     "status": 200,
+     "timestamp": "2026-11-09T00:28:26.369+05:30",
+     "url": "http://localhost:5080/udsplus/files/20261108-181848-901c697e0f7b4e518d17296d/MedicationRequest.ndjson",
+     "verb": "get"
+    },
+    {
+     "id": "7bfc59c1-9530-4593-9ae4-dd82885d557e",
+     "direction": "outgoing",
+     "index": 7,
+     "result_id": "8b39b905-ba74-4002-8f69-370e61529b7a",
+     "status": 200,
+     "timestamp": "2026-11-09T00:28:26.443+05:30",
+     "url": "http://localhost:5080/udsplus/files/20261108-181848-901c697e0f7b4e518d17296d/Observation.ndjson",
+     "verb": "get"
+    },
+    {
+     "id": "aaa3a1ba-0e96-4259-acea-c217fee169e5",
+     "direction": "outgoing",
+     "index": 8,
+     "result_id": "8b39b905-ba74-4002-8f69-370e61529b7a",
+     "status": 200,
+     "timestamp": "2026-11-09T00:28:26.521+05:30",
+     "url": "http://localhost:5080/udsplus/files/20261108-181848-901c697e0f7b4e518d17296d/Patient.ndjson",
+     "verb": "get"
+    },
+    {
+     "id": "3f2c9718-5bd5-4c82-a185-31e325bae58e",
+     "direction": "outgoing",
+     "index": 9,
+     "result_id": "8b39b905-ba74-4002-8f69-370e61529b7a",
+     "status": 200,
+     "timestamp": "2026-11-09T00:28:26.591+05:30",
+     "url": "http://localhost:5080/udsplus/files/20261108-181848-901c697e0f7b4e518d17296d/Procedure.ndjson",
+     "verb": "get"
+    }
+   ],
+   "result": "pass",
+   "test_id": "uds_plus-uds_plus_test_group-uds_plus_read_data_test",
+   "test_run_id": "259ca372-a246-41c5-acf0-b5d155ef9b86",
+   "test_session_id": "4RrbsH3RmAn",
+   "updated_at": "2026-11-09T00:28:26.039+05:30"
+  },
+  {
+   "id": "571af247-45b3-4dc7-a51e-0a6aa80a9fb2",
+   "created_at": "2026-11-09T00:28:26.676+05:30",
+   "inputs": [],
+   "optional": false,
+   "outputs": [],
+   "requests": [],
+   "result": "omit",
+   "result_message": "No data of this type was identified.",
+   "test_id": "uds_plus-uds_plus_test_group-uds_plus_validate_coverage_test",
+   "test_run_id": "259ca372-a246-41c5-acf0-b5d155ef9b86",
+   "test_session_id": "4RrbsH3RmAn",
+   "updated_at": "2026-11-09T00:28:26.676+05:30"
+  },
+  {
+   "id": "a9eecfcf-e663-49ab-a3aa-6ae3e415e73c",
+   "created_at": "2026-11-09T00:28:29.550+05:30",
+   "inputs": [],
+   "messages": [
+    {
+     "message": "Condition/demo-condition-covid: Condition.recordedDate: Constraint failed: uds-plus-diag-8: 'All dateTime data elements should be truncated to a year only for de-identified resources.'",
+     "type": "error"
+    },
+    {
+     "message": "Condition/demo-condition-covid: Condition: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    }
+   ],
+   "optional": false,
+   "outputs": [],
+   "requests": [],
+   "result": "fail",
+   "result_message": "Resource does not conform to the profile: http://fhir.org/guides/hrsa/uds-plus/StructureDefinition/uds-plus-diagnosis|2.0.0",
+   "test_id": "uds_plus-uds_plus_test_group-uds_plus_validate_diagnosis_test",
+   "test_run_id": "259ca372-a246-41c5-acf0-b5d155ef9b86",
+   "test_session_id": "4RrbsH3RmAn",
+   "updated_at": "2026-11-09T00:28:29.550+05:30"
+  },
+  {
+   "id": "d08c7ad9-ef85-4cb0-b747-e4a673a8f07b",
+   "created_at": "2026-11-09T00:28:33.756+05:30",
+   "inputs": [],
+   "messages": [
+    {
+     "message": "Encounter/demo-encounter-1: Encounter.type[0].coding[0].display: Wrong Display Name 'Office outpatient visit 15 minutes' for http://www.ama-assn.org/go/cpt#99213. Valid display is one of 8 choices: 'Office or other outpatient visit for the evaluation and management of an established patient, which requires a medically appropriate history and/or examination and low level of medical decision making. When using time for code selection, 20-29 minutes of total time is spent on the date of the encounter.' (en), 'OFFICE OR OTHER OUTPATIENT VISIT FOR THE EVALUATION AND MANAGEMENT OF AN ESTABLISHED PATIENT, WHICH REQUIRES A MEDICALLY APPROPRIATE HISTORY AND/OR EXAMINATION AND LOW LEVEL OF MEDICAL DECISION MAKING. WHEN USING TIME FOR CODE SELECTION, 20-29 MINUTES OF TOTAL TIME IS SPENT ON THE DATE OF THE ENCOUNTER.' (en), 'OFFICE/OUTPATIENT ESTABLISHED LOW MDM 20-29 MIN' (en), 'OFFICE O/P EST LOW 20-29 MIN' (en), 'Established patient office or other outpatient visit, 20-29 minutes' (en), 'Outpatient visit for evaluation and management of established patient, including medically appropriate examination and low level of medical decision making, total time 20-29 minutes' (en), 'Outpatient visit for evaluation and management of established patient, including medically appropriate history and low level of medical decision making, total time 20-29 minutes' (en) or 'Outpatient visit for evaluation and management of established patient, including medically appropriate history, examination and low level of medical decision making, total time 20-29 minutes' (en) (for the language(s) 'en')",
+     "type": "warning"
+    },
+    {
+     "message": "Encounter/demo-encounter-1: Encounter.period: Constraint failed: uds-plus-enc-3: 'All Period.start data elements should be truncated to a year only for de-identified resources.'",
+     "type": "error"
+    },
+    {
+     "message": "Encounter/demo-encounter-1: Encounter.period: Constraint failed: uds-plus-enc-4: 'All Period.emd data elements should be truncated to a year only for de-identified resources.'",
+     "type": "error"
+    },
+    {
+     "message": "Encounter/demo-encounter-1: Encounter.hospitalization.dischargeDisposition: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/discharge-disposition|0.1.0 from active ValueSet http://hl7.org/fhir/us/core/ValueSet/us-core-discharge-disposition|6.1.0",
+     "type": "info"
+    },
+    {
+     "message": "Encounter/demo-encounter-1: Encounter.hospitalization.dischargeDisposition: None of the codings provided are in the value set 'US Core Discharge Disposition' (http://hl7.org/fhir/us/core/ValueSet/us-core-discharge-disposition|6.1.0), and a coding is recommended to come from this value set (codes = http://terminology.hl7.org/CodeSystem/discharge-disposition#home)",
+     "type": "info"
+    },
+    {
+     "message": "Encounter/demo-encounter-1: Encounter: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    }
+   ],
+   "optional": false,
+   "outputs": [],
+   "requests": [],
+   "result": "fail",
+   "result_message": "Resource does not conform to the profile: http://fhir.org/guides/hrsa/uds-plus/StructureDefinition/uds-plus-encounter|2.0.0",
+   "test_id": "uds_plus-uds_plus_test_group-uds_plus_validate_encounter_test",
+   "test_run_id": "259ca372-a246-41c5-acf0-b5d155ef9b86",
+   "test_session_id": "4RrbsH3RmAn",
+   "updated_at": "2026-11-09T00:28:33.756+05:30"
+  },
+  {
+   "id": "df21ba38-2b41-4aff-8760-f40973d4f135",
+   "created_at": "2026-11-09T00:28:39.770+05:30",
+   "inputs": [],
+   "messages": [
+    {
+     "message": "Patient/c78d920ac0b3028038845c8e52ee852f7c589f59089da78b6bb4be64e1531a35: Patient.extension[2]: This element does not match any known slice defined in the profile http://fhir.org/guides/hrsa/uds-plus/StructureDefinition/de-identified-uds-plus-patient|2.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)",
+     "type": "info"
+    },
+    {
+     "message": "Patient/c78d920ac0b3028038845c8e52ee852f7c589f59089da78b6bb4be64e1531a35: Patient.extension[0]: Slice 'Extension.extension:detailed': a matching slice is required, but not found (from http://fhir.org/guides/hrsa/uds-plus/StructureDefinition/uds-plus-race-extension|2.0.0). Note that other slices are allowed in addition to this required slice",
+     "type": "error"
+    },
+    {
+     "message": "Patient/c78d920ac0b3028038845c8e52ee852f7c589f59089da78b6bb4be64e1531a35: Patient.extension[1]: Slice 'Extension.extension:detailed': a matching slice is required, but not found (from http://fhir.org/guides/hrsa/uds-plus/StructureDefinition/uds-plus-ethnicity-extension|2.0.0). Note that other slices are allowed in addition to this required slice",
+     "type": "error"
+    },
+    {
+     "message": "Patient/c78d920ac0b3028038845c8e52ee852f7c589f59089da78b6bb4be64e1531a35: Patient: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    }
+   ],
+   "optional": false,
+   "outputs": [],
+   "requests": [],
+   "result": "fail",
+   "result_message": "Resource does not conform to the profile: http://fhir.org/guides/hrsa/uds-plus/StructureDefinition/de-identified-uds-plus-patient|2.0.0",
+   "test_id": "uds_plus-uds_plus_test_group-uds_plus_validate_patient_test",
+   "test_run_id": "259ca372-a246-41c5-acf0-b5d155ef9b86",
+   "test_session_id": "4RrbsH3RmAn",
+   "updated_at": "2026-11-09T00:28:39.770+05:30"
+  },
+  {
+   "id": "08e59f6e-c499-4365-8fa1-26ef6ce001c6",
+   "created_at": "2026-11-09T00:28:41.752+05:30",
+   "inputs": [],
+   "messages": [
+    {
+     "message": "Procedure/demo-proc-swab: Procedure.code.coding[0].display: Wrong Display Name 'SARS-CoV-2 amplified probe technique' for http://www.ama-assn.org/go/cpt#87635. Valid display is one of 7 choices: 'Infectious agent detection by nucleic acid (DNA or RNA); severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) (coronavirus disease [COVID-19]), amplified probe technique' (en), 'INFECTIOUS AGENT DETECTION BY NUCLEIC ACID (DNA OR RNA); SEVERE ACUTE RESPIRATORY SYNDROME CORONAVIRUS 2 (SARS-COV-2) (CORONAVIRUS DISEASE [COVID-19]), AMPLIFIED PROBE TECHNIQUE' (en), 'IADNA SARS-COV-2 COVID-19 AMPLIFIED PROBE TQ' (en), 'SARS-COV-2 COVID-19 AMP PRB' (en), 'Amplifed DNA or RNA probe detection of severe acute respiratory syndrome coronavirus 2 (Covid-19) antigen' (en), 'Detection of severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) nucleic acid by amplified DNA probe technique' (en) or 'Detection of severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) nucleic acid by amplified RNA probe technique' (en) (for the language(s) 'en')",
+     "type": "warning"
+    },
+    {
+     "message": "Procedure/demo-proc-swab: Procedure: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    }
+   ],
+   "optional": false,
+   "outputs": [],
+   "requests": [],
+   "result": "pass",
+   "test_id": "uds_plus-uds_plus_test_group-uds_plus_validate_procedure_test",
+   "test_run_id": "259ca372-a246-41c5-acf0-b5d155ef9b86",
+   "test_session_id": "4RrbsH3RmAn",
+   "updated_at": "2026-11-09T00:28:41.752+05:30"
+  },
+  {
+   "id": "7df019d3-92ad-41c3-8534-b048790a0372",
+   "created_at": "2026-11-09T00:28:41.821+05:30",
+   "inputs": [],
+   "optional": false,
+   "outputs": [],
+   "requests": [],
+   "result": "omit",
+   "result_message": "No data of this type was identified.",
+   "test_id": "uds_plus-uds_plus_test_group-uds_plus_validate_related_person_test",
+   "test_run_id": "259ca372-a246-41c5-acf0-b5d155ef9b86",
+   "test_session_id": "4RrbsH3RmAn",
+   "updated_at": "2026-11-09T00:28:41.821+05:30"
+  },
+  {
+   "id": "0b05730f-b41a-42bb-8ff5-0991a5999002",
+   "created_at": "2026-11-09T00:28:42.926+05:30",
+   "inputs": [],
+   "messages": [
+    {
+     "message": "Immunization/demo-imm-flu: Immunization.vaccineCode.coding[0].display: Wrong Display Name 'influenza, injectable, quadrivalent, contains preservative' for http://hl7.org/fhir/sid/cvx#158. Valid display is 'Influenza, split virus, quadrivalent, preservative' (for the language(s) 'en')",
+     "type": "warning"
+    },
+    {
+     "message": "Immunization/demo-imm-flu: Immunization: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    }
+   ],
+   "optional": false,
+   "outputs": [],
+   "requests": [],
+   "result": "pass",
+   "test_id": "uds_plus-uds_plus_test_group-uds_plus_validate_immunization_test",
+   "test_run_id": "259ca372-a246-41c5-acf0-b5d155ef9b86",
+   "test_session_id": "4RrbsH3RmAn",
+   "updated_at": "2026-11-09T00:28:42.926+05:30"
+  },
+  {
+   "id": "011c94ca-c7c8-498a-908f-2317f7635260",
+   "created_at": "2026-11-09T00:28:42.959+05:30",
+   "inputs": [],
+   "optional": false,
+   "outputs": [],
+   "requests": [],
+   "result": "omit",
+   "result_message": "No data of this type was identified.",
+   "test_id": "uds_plus-uds_plus_test_group-uds_plus_validate_location_test",
+   "test_run_id": "259ca372-a246-41c5-acf0-b5d155ef9b86",
+   "test_session_id": "4RrbsH3RmAn",
+   "updated_at": "2026-11-09T00:28:42.959+05:30"
+  },
+  {
+   "id": "edcce12c-7a7e-4cb0-8dc9-d0a1f974476e",
+   "created_at": "2026-11-09T00:28:44.881+05:30",
+   "inputs": [],
+   "messages": [
+    {
+     "message": "AllergyIntolerance/demo-allergy-pcn: AllergyIntolerance: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    }
+   ],
+   "optional": false,
+   "outputs": [],
+   "requests": [],
+   "result": "pass",
+   "test_id": "uds_plus-uds_plus_test_group-uds_plus_validate_allergy_intolerance_test",
+   "test_run_id": "259ca372-a246-41c5-acf0-b5d155ef9b86",
+   "test_session_id": "4RrbsH3RmAn",
+   "updated_at": "2026-11-09T00:28:44.881+05:30"
+  },
+  {
+   "id": "1ad189a2-e557-4647-8d5e-d51a76172e96",
+   "created_at": "2026-11-09T00:28:44.922+05:30",
+   "inputs": [],
+   "optional": false,
+   "outputs": [],
+   "requests": [],
+   "result": "omit",
+   "result_message": "No data of this type was identified.",
+   "test_id": "uds_plus-uds_plus_test_group-uds_plus_validate_adverse_event_test",
+   "test_run_id": "259ca372-a246-41c5-acf0-b5d155ef9b86",
+   "test_session_id": "4RrbsH3RmAn",
+   "updated_at": "2026-11-09T00:28:44.922+05:30"
+  },
+  {
+   "id": "476ded7b-e7ec-490e-b241-a83ad60fe40b",
+   "created_at": "2026-11-09T00:28:44.942+05:30",
+   "inputs": [],
+   "optional": false,
+   "outputs": [],
+   "requests": [],
+   "result": "omit",
+   "result_message": "No data of this type was identified.",
+   "test_id": "uds_plus-uds_plus_test_group-uds_plus_validate_income_test",
+   "test_run_id": "259ca372-a246-41c5-acf0-b5d155ef9b86",
+   "test_session_id": "4RrbsH3RmAn",
+   "updated_at": "2026-11-09T00:28:44.942+05:30"
+  },
+  {
+   "id": "344d304f-3e8e-40bf-a3dd-b1875522f2e5",
+   "created_at": "2026-11-09T00:28:46.145+05:30",
+   "inputs": [],
+   "messages": [
+    {
+     "message": "Observation/demo-obs-covid-pcr: Observation: Observation.issued: max allowed = 0, but found 1 (from http://fhir.org/guides/hrsa/uds-plus/StructureDefinition/uds-plus-lab-observation|2.0.0)",
+     "type": "error"
+    },
+    {
+     "message": "Observation/demo-obs-covid-pcr: Observation.category[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/observation-category|0.1.0 from active ValueSet http://hl7.org/fhir/us/core/ValueSet/us-core-clinical-result-observation-category|6.1.0",
+     "type": "info"
+    },
+    {
+     "message": "Observation/demo-obs-covid-pcr: Observation.code.coding[0].display: Wrong Display Name 'SARS-CoV-2 (COVID-19) RNA [Presence] in Respiratory specimen by NAA with probe detection' for http://loinc.org#94500-6. Valid display is one of 3 choices: 'SARS-CoV-2 (COVID-19) RNA [Presence] in Respiratory system specimen by NAA with probe detection' (en-US), 'SARS-CoV-2 (COVID-19) RNA [Presence] in Respiratory system specimen by NAA with probe detection' (en-US) or 'SARS-CoV-2 RNA Resp Ql NAA+probe' (en-US) (for the language(s) 'en')",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo-obs-covid-pcr: Observation: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo-obs-covid-pcr: Observation: Best Practice Recommendation: In general, all observations should have a performer",
+     "type": "warning"
+    }
+   ],
+   "optional": false,
+   "outputs": [],
+   "requests": [],
+   "result": "fail",
+   "result_message": "Resource does not conform to the profile: http://fhir.org/guides/hrsa/uds-plus/StructureDefinition/uds-plus-lab-observation|2.0.0",
+   "test_id": "uds_plus-uds_plus_test_group-uds_plus_validate_lab_test",
+   "test_run_id": "259ca372-a246-41c5-acf0-b5d155ef9b86",
+   "test_session_id": "4RrbsH3RmAn",
+   "updated_at": "2026-11-09T00:28:46.145+05:30"
+  },
+  {
+   "id": "dfd1c0eb-46c7-46f1-8c95-3285e8fe9459",
+   "created_at": "2026-11-09T00:28:46.207+05:30",
+   "inputs": [],
+   "optional": false,
+   "outputs": [],
+   "requests": [],
+   "result": "omit",
+   "result_message": "No data of this type was identified.",
+   "test_id": "uds_plus-uds_plus_test_group-uds_plus_validate_clinical_result_test",
+   "test_run_id": "259ca372-a246-41c5-acf0-b5d155ef9b86",
+   "test_session_id": "4RrbsH3RmAn",
+   "updated_at": "2026-11-09T00:28:46.207+05:30"
+  },
+  {
+   "id": "1adda78f-38fb-465f-9038-c12495f0cf35",
+   "created_at": "2026-11-09T00:28:50.603+05:30",
+   "inputs": [],
+   "messages": [
+    {
+     "message": "Observation/demo-obs-bp: Observation: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo-obs-bp: Observation: Validate Observation against the Blood pressure systolic and diastolic profile (http://hl7.org/fhir/StructureDefinition/bp) which is required by the FHIR specification because the LOINC code 85354-9 was found",
+     "type": "info"
+    },
+    {
+     "message": "Observation/demo-obs-bp: Observation: Best Practice Recommendation: In general, all observations should have a performer",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo-obs-temp: Observation: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo-obs-temp: Observation: Validate Observation against the Body temperature profile (http://hl7.org/fhir/StructureDefinition/bodytemp) which is required by the FHIR specification because the LOINC code 8310-5 was found",
+     "type": "info"
+    },
+    {
+     "message": "Observation/demo-obs-temp: Observation: Best Practice Recommendation: In general, all observations should have a performer",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo-obs-smoking: Observation: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo-obs-smoking: Observation: Best Practice Recommendation: In general, all observations should have a performer",
+     "type": "warning"
+    }
+   ],
+   "optional": false,
+   "outputs": [],
+   "requests": [],
+   "result": "pass",
+   "test_id": "uds_plus-uds_plus_test_group-uds_plus_validate_observation_test",
+   "test_run_id": "259ca372-a246-41c5-acf0-b5d155ef9b86",
+   "test_session_id": "4RrbsH3RmAn",
+   "updated_at": "2026-11-09T00:28:50.603+05:30"
+  },
+  {
+   "id": "e84d68b9-f982-45d7-8cd2-2d1f8709a63c",
+   "created_at": "2026-11-09T00:28:51.184+05:30",
+   "inputs": [],
+   "messages": [
+    {
+     "message": "MedicationRequest/demo-medrx-paxlovid: MedicationRequest.medication.ofType(CodeableConcept).coding[0].display: Wrong Display Name 'nirmatrelvir 150 MG Oral Tablet / ritonavir 100 MG Oral Tablet pack' for http://www.nlm.nih.gov/research/umls/rxnorm#2587899. Valid display is one of 3 choices: '{20 (nirmatrelvir 150 MG Oral Tablet) / 10 (ritonavir 100 MG Oral Tablet) } Pack [Paxlovid 5-Day]' (en-US), 'PAXLOVID 300 MG ; 100 MG Dose Pack' (en-US) or 'Paxlovid 300 MG / 100 MG Dose Pack' (en-US) (for the language(s) 'en')",
+     "type": "warning"
+    },
+    {
+     "message": "MedicationRequest/demo-medrx-paxlovid: MedicationRequest.authoredOn: Constraint failed: uds-plus-medreq-1: 'All dateTime data elements should be truncated to a year only for de-identified resources.'",
+     "type": "error"
+    },
+    {
+     "message": "MedicationRequest/demo-medrx-paxlovid: MedicationRequest: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    }
+   ],
+   "optional": false,
+   "outputs": [],
+   "requests": [],
+   "result": "fail",
+   "result_message": "Resource does not conform to the profile: http://fhir.org/guides/hrsa/uds-plus/StructureDefinition/uds-plus-medicationrequest|2.0.0",
+   "test_id": "uds_plus-uds_plus_test_group-uds_plus_validate_medication_request_test",
+   "test_run_id": "259ca372-a246-41c5-acf0-b5d155ef9b86",
+   "test_session_id": "4RrbsH3RmAn",
+   "updated_at": "2026-11-09T00:28:51.184+05:30"
+  },
+  {
+   "id": "107a6821-1333-40aa-baea-51dc187b7324",
+   "created_at": "2026-11-09T00:28:51.235+05:30",
+   "inputs": [],
+   "optional": false,
+   "outputs": [],
+   "requests": [],
+   "result": "omit",
+   "result_message": "No data of this type was identified.",
+   "test_id": "uds_plus-uds_plus_test_group-uds_plus_validate_medication_statement_test",
+   "test_run_id": "259ca372-a246-41c5-acf0-b5d155ef9b86",
+   "test_session_id": "4RrbsH3RmAn",
+   "updated_at": "2026-11-09T00:28:51.235+05:30"
+  },
+  {
+   "id": "5e1f5df2-4f54-4e0d-a09c-ab3ab5a38043",
+   "created_at": "2026-11-09T00:28:51.257+05:30",
+   "inputs": [],
+   "optional": false,
+   "outputs": [],
+   "requests": [],
+   "result": "omit",
+   "result_message": "No data of this type was identified.",
+   "test_id": "uds_plus-uds_plus_test_group-uds_plus_validate_service_request_test",
+   "test_run_id": "259ca372-a246-41c5-acf0-b5d155ef9b86",
+   "test_session_id": "4RrbsH3RmAn",
+   "updated_at": "2026-11-09T00:28:51.257+05:30"
+  },
+  {
+   "id": "e07bcb0f-3735-4a95-8583-0dbdc07fbc2c",
+   "created_at": "2026-11-09T00:28:51.293+05:30",
+   "inputs": [],
+   "optional": false,
+   "outputs": [],
+   "requests": [],
+   "result": "omit",
+   "result_message": "No data of this type was identified.",
+   "test_id": "uds_plus-uds_plus_test_group-uds_plus_validate_data_urls_test",
+   "test_run_id": "259ca372-a246-41c5-acf0-b5d155ef9b86",
+   "test_session_id": "4RrbsH3RmAn",
+   "updated_at": "2026-11-09T00:28:51.293+05:30"
+  },
+  {
+   "id": "1aa26323-e125-4029-b475-dbcd38c2cf69",
+   "created_at": "2026-11-09T00:28:51.308+05:30",
+   "inputs": [],
+   "optional": false,
+   "outputs": [],
+   "requests": [],
+   "result": "omit",
+   "result_message": "No data of this type was identified.",
+   "test_id": "uds_plus-uds_plus_test_group-uds_plus_validate_patient_reporting_parameters_test",
+   "test_run_id": "259ca372-a246-41c5-acf0-b5d155ef9b86",
+   "test_session_id": "4RrbsH3RmAn",
+   "updated_at": "2026-11-09T00:28:51.308+05:30"
+  },
+  {
+   "id": "9eea58f6-c732-42e0-b9f1-dc1e96deb206",
+   "created_at": "2026-11-09T00:28:51.337+05:30",
+   "inputs": [],
+   "optional": false,
+   "outputs": [],
+   "requests": [],
+   "result": "pass",
+   "test_id": "uds_plus-uds_plus_test_group-uds_plus_invalid_type_test",
+   "test_run_id": "259ca372-a246-41c5-acf0-b5d155ef9b86",
+   "test_session_id": "4RrbsH3RmAn",
+   "updated_at": "2026-11-09T00:28:51.337+05:30"
+  },
+  {
+   "id": "89a32b7e-8cb3-44f4-97ad-642ed1549083",
+   "created_at": "2026-11-09T00:28:51.352+05:30",
+   "inputs": [
+    {
+     "name": "import_manifest",
+     "label": "Import Manifest",
+     "description": "\n                User can input the Import manifest as: \n                a URL link to the location of the manifest (ex: http://www.example.com/import_manifest.json) OR \n                a JSON string that composes the manifest (ex: {manifest_contents}) \n            ",
+     "value": "http://localhost:5080/udsplus/files/20261108-181848-901c697e0f7b4e518d17296d/manifest.json",
+     "type": "text"
+    }
+   ],
+   "optional": false,
+   "outputs": [],
+   "requests": [],
+   "result": "fail",
+   "test_group_id": "uds_plus-uds_plus_test_group",
+   "test_run_id": "259ca372-a246-41c5-acf0-b5d155ef9b86",
+   "test_session_id": "4RrbsH3RmAn",
+   "updated_at": "2026-11-09T00:28:51.352+05:30"
+  }
+ ]
+}

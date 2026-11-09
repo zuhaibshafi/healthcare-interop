@@ -1,0 +1,39 @@
+# HAPI FHIR JPA starter local overrides (loaded via --spring.config.additional-location)
+spring:
+  datasource:
+    # persistent H2 database so data survives restarts (default is in-memory)
+    url: jdbc:h2:file:{{ROOT}}/hapi-runtime/h2/hapi;DB_CLOSE_ON_EXIT=FALSE
+    username: sa
+    password: null
+    driver-class-name: org.h2.Driver
+hapi:
+  fhir:
+    fhir_version: R4
+    server_address: http://localhost:8080/fhir
+    openapi_enabled: true
+    # Bulk Data $export is what the UDS+ Data Source actor must support
+    bulk_export_enabled: true
+    bulk_import_enabled: true
+    # R4 Subscriptions let eCRNow react to encounter events
+    subscription:
+      resthook_enabled: true
+    # Allow client-assigned ids (PUT Patient/demo-patient-1) which the sample data uses
+    client_id_strategy: ANY
+    allow_external_references: true
+    allow_multiple_delete: true
+    reuse_cached_search_results_millis: 0
+    narrative_enabled: true
+    # Install the US Core 6.1.0 package (StructureDefinitions, ValueSets, SearchParameters such as
+    # CareTeam.role / Encounter.discharge-disposition) so HAPI advertises and supports US Core.
+    implementationguides:
+      uscore610:
+        name: hl7.fhir.us.core
+        version: 6.1.0
+        reloadExisting: false
+        installMode: STORE_AND_INSTALL
+    tester:
+      home:
+        name: Local Tester
+        server_address: http://localhost:8080/fhir
+        refuse_to_fetch_third_party_urls: false
+        fhir_version: R4

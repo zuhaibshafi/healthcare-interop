@@ -1,0 +1,468 @@
+{
+  "runId": "20261108-190425-8a3360f2bd97497d976e2fd6",
+  "groupId": "uds-plus-reporting-group",
+  "startedAt": "2026-11-08T19:04:25.9845898+00:00",
+  "completedAt": "2026-11-08T19:07:15.8289635+00:00",
+  "exportedCounts": {
+    "Condition": 7,
+    "MedicationRequest": 4,
+    "AllergyIntolerance": 3,
+    "Immunization": 4,
+    "Observation": 29,
+    "Patient": 2,
+    "Procedure": 3,
+    "Encounter": 3
+  },
+  "deidentifiedCounts": {
+    "Patient": 2,
+    "AllergyIntolerance": 3,
+    "Condition": 7,
+    "Encounter": 3,
+    "Immunization": 4,
+    "MedicationRequest": 4,
+    "Observation": 29,
+    "Procedure": 3
+  },
+  "files": [
+    "http://localhost:5080/udsplus/files/20261108-190425-8a3360f2bd97497d976e2fd6/AllergyIntolerance.ndjson",
+    "http://localhost:5080/udsplus/files/20261108-190425-8a3360f2bd97497d976e2fd6/Condition.ndjson",
+    "http://localhost:5080/udsplus/files/20261108-190425-8a3360f2bd97497d976e2fd6/Encounter.ndjson",
+    "http://localhost:5080/udsplus/files/20261108-190425-8a3360f2bd97497d976e2fd6/Immunization.ndjson",
+    "http://localhost:5080/udsplus/files/20261108-190425-8a3360f2bd97497d976e2fd6/MedicationRequest.ndjson",
+    "http://localhost:5080/udsplus/files/20261108-190425-8a3360f2bd97497d976e2fd6/Observation.ndjson",
+    "http://localhost:5080/udsplus/files/20261108-190425-8a3360f2bd97497d976e2fd6/Patient.ndjson",
+    "http://localhost:5080/udsplus/files/20261108-190425-8a3360f2bd97497d976e2fd6/Procedure.ndjson"
+  ],
+  "manifestUrl": "http://localhost:5080/udsplus/files/20261108-190425-8a3360f2bd97497d976e2fd6/manifest.json",
+  "validation": {
+    "sessionId": "081f96da-652a-41a1-af3f-cb14664fa859",
+    "errors": 20,
+    "warnings": 100,
+    "information": 30,
+    "files": [
+      {
+        "fileName": "manifest.json",
+        "errors": 0,
+        "warnings": 0,
+        "information": 0
+      },
+      {
+        "fileName": "AllergyIntolerance-demo-allergy-pcn.json",
+        "errors": 0,
+        "warnings": 1,
+        "information": 0
+      },
+      {
+        "fileName": "AllergyIntolerance-demo2-allergy-peanut.json",
+        "errors": 0,
+        "warnings": 3,
+        "information": 0
+      },
+      {
+        "fileName": "AllergyIntolerance-demo2-allergy-sulfa.json",
+        "errors": 0,
+        "warnings": 1,
+        "information": 0
+      },
+      {
+        "fileName": "Condition-demo-condition-covid.json",
+        "errors": 0,
+        "warnings": 1,
+        "information": 0
+      },
+      {
+        "fileName": "Condition-demo-condition-htn.json",
+        "errors": 0,
+        "warnings": 1,
+        "information": 0
+      },
+      {
+        "fileName": "Condition-demo2-condition-uri.json",
+        "errors": 0,
+        "warnings": 1,
+        "information": 0
+      },
+      {
+        "fileName": "Condition-demo2-condition-appendicitis.json",
+        "errors": 0,
+        "warnings": 1,
+        "information": 0
+      },
+      {
+        "fileName": "Condition-demo2-condition-t2dm.json",
+        "errors": 1,
+        "warnings": 2,
+        "information": 0
+      },
+      {
+        "fileName": "Condition-demo2-condition-htn.json",
+        "errors": 0,
+        "warnings": 1,
+        "information": 0
+      },
+      {
+        "fileName": "Condition-demo2-condition-food-insecurity.json",
+        "errors": 2,
+        "warnings": 4,
+        "information": 0
+      },
+      {
+        "fileName": "Encounter-demo-encounter-1.json",
+        "errors": 0,
+        "warnings": 1,
+        "information": 2
+      },
+      {
+        "fileName": "Encounter-demo2-encounter-2025.json",
+        "errors": 0,
+        "warnings": 1,
+        "information": 2
+      },
+      {
+        "fileName": "Encounter-demo2-encounter-2026.json",
+        "errors": 0,
+        "warnings": 2,
+        "information": 2
+      },
+      {
+        "fileName": "Immunization-demo-imm-flu.json",
+        "errors": 0,
+        "warnings": 1,
+        "information": 0
+      },
+      {
+        "fileName": "Immunization-demo2-immunization-flu.json",
+        "errors": 1,
+        "warnings": 1,
+        "information": 0
+      },
+      {
+        "fileName": "Immunization-demo2-immunization-covid.json",
+        "errors": 0,
+        "warnings": 1,
+        "information": 0
+      },
+      {
+        "fileName": "Immunization-demo2-immunization-tdap-not-done.json",
+        "errors": 0,
+        "warnings": 1,
+        "information": 0
+      },
+      {
+        "fileName": "MedicationRequest-demo-medrx-paxlovid.json",
+        "errors": 0,
+        "warnings": 1,
+        "information": 0
+      },
+      {
+        "fileName": "MedicationRequest-demo2-medicationrequest-amlodipine.json",
+        "errors": 0,
+        "warnings": 1,
+        "information": 0
+      },
+      {
+        "fileName": "MedicationRequest-demo2-medicationrequest-metformin.json",
+        "errors": 0,
+        "warnings": 1,
+        "information": 0
+      },
+      {
+        "fileName": "MedicationRequest-demo2-medicationrequest-cephalexin.json",
+        "errors": 0,
+        "warnings": 1,
+        "information": 0
+      },
+      {
+        "fileName": "Observation-demo-obs-bp.json",
+        "errors": 1,
+        "warnings": 2,
+        "information": 1
+      },
+      {
+        "fileName": "Observation-demo-obs-temp.json",
+        "errors": 1,
+        "warnings": 2,
+        "information": 1
+      },
+      {
+        "fileName": "Observation-demo-obs-covid-pcr.json",
+        "errors": 0,
+        "warnings": 2,
+        "information": 1
+      },
+      {
+        "fileName": "Observation-demo-obs-smoking.json",
+        "errors": 0,
+        "warnings": 2,
+        "information": 0
+      },
+      {
+        "fileName": "Observation-demo2-obs-bp.json",
+        "errors": 1,
+        "warnings": 2,
+        "information": 1
+      },
+      {
+        "fileName": "Observation-demo2-obs-bp-2025.json",
+        "errors": 1,
+        "warnings": 2,
+        "information": 1
+      },
+      {
+        "fileName": "Observation-demo2-obs-heart-rate.json",
+        "errors": 1,
+        "warnings": 2,
+        "information": 1
+      },
+      {
+        "fileName": "Observation-demo2-obs-resp-rate.json",
+        "errors": 1,
+        "warnings": 2,
+        "information": 1
+      },
+      {
+        "fileName": "Observation-demo2-obs-temp.json",
+        "errors": 1,
+        "warnings": 2,
+        "information": 1
+      },
+      {
+        "fileName": "Observation-demo2-obs-height.json",
+        "errors": 1,
+        "warnings": 2,
+        "information": 1
+      },
+      {
+        "fileName": "Observation-demo2-obs-weight.json",
+        "errors": 1,
+        "warnings": 2,
+        "information": 1
+      },
+      {
+        "fileName": "Observation-demo2-obs-bmi.json",
+        "errors": 1,
+        "warnings": 2,
+        "information": 1
+      },
+      {
+        "fileName": "Observation-demo2-obs-pulse-ox.json",
+        "errors": 1,
+        "warnings": 5,
+        "information": 1
+      },
+      {
+        "fileName": "Observation-demo2-obs-smoking.json",
+        "errors": 0,
+        "warnings": 2,
+        "information": 0
+      },
+      {
+        "fileName": "Observation-demo2-obs-hba1c.json",
+        "errors": 0,
+        "warnings": 2,
+        "information": 1
+      },
+      {
+        "fileName": "Observation-demo2-obs-glucose.json",
+        "errors": 0,
+        "warnings": 2,
+        "information": 1
+      },
+      {
+        "fileName": "Observation-demo2-obs-ldl.json",
+        "errors": 0,
+        "warnings": 2,
+        "information": 1
+      },
+      {
+        "fileName": "Observation-demo2-obs-hemoglobin.json",
+        "errors": 0,
+        "warnings": 2,
+        "information": 1
+      },
+      {
+        "fileName": "Observation-demo2-obs-wbc.json",
+        "errors": 0,
+        "warnings": 2,
+        "information": 1
+      },
+      {
+        "fileName": "Observation-demo2-obs-urine-culture.json",
+        "errors": 0,
+        "warnings": 2,
+        "information": 1
+      },
+      {
+        "fileName": "Observation-demo2-obs-potassium-dar-ext.json",
+        "errors": 0,
+        "warnings": 2,
+        "information": 1
+      },
+      {
+        "fileName": "Observation-demo2-obs-creatinine-not-performed.json",
+        "errors": 0,
+        "warnings": 2,
+        "information": 1
+      },
+      {
+        "fileName": "Observation-demo2-obs-ekg.json",
+        "errors": 1,
+        "warnings": 2,
+        "information": 0
+      },
+      {
+        "fileName": "Observation-demo2-obs-cxr-imaging.json",
+        "errors": 0,
+        "warnings": 2,
+        "information": 0
+      },
+      {
+        "fileName": "Observation-demo2-obs-pain.json",
+        "errors": 0,
+        "warnings": 3,
+        "information": 0
+      },
+      {
+        "fileName": "Observation-demo2-obs-phq9.json",
+        "errors": 0,
+        "warnings": 4,
+        "information": 0
+      },
+      {
+        "fileName": "Observation-demo2-obs-occupation.json",
+        "errors": 0,
+        "warnings": 4,
+        "information": 0
+      },
+      {
+        "fileName": "Observation-demo2-obs-sexual-orientation.json",
+        "errors": 0,
+        "warnings": 2,
+        "information": 0
+      },
+      {
+        "fileName": "Observation-demo2-obs-food-insecurity.json",
+        "errors": 0,
+        "warnings": 2,
+        "information": 0
+      },
+      {
+        "fileName": "Patient-c78d920ac0b3028038845c8e52ee852f7c589f59089da78b6bb4be64e1531a35.json",
+        "errors": 1,
+        "warnings": 1,
+        "information": 1
+      },
+      {
+        "fileName": "Patient-e1ab8258c721a1b621399522e1e45c182b3b78201f218b9d450044e116224ec9.json",
+        "errors": 3,
+        "warnings": 1,
+        "information": 3
+      },
+      {
+        "fileName": "Procedure-demo-proc-swab.json",
+        "errors": 0,
+        "warnings": 1,
+        "information": 0
+      },
+      {
+        "fileName": "Procedure-demo2-procedure-appendectomy.json",
+        "errors": 0,
+        "warnings": 1,
+        "information": 0
+      },
+      {
+        "fileName": "Procedure-demo2-procedure-ekg.json",
+        "errors": 0,
+        "warnings": 2,
+        "information": 0
+      }
+    ],
+    "reportUrl": "http://localhost:5080/udsplus/files/20261108-190425-8a3360f2bd97497d976e2fd6/validation-report.json"
+  },
+  "importResponse": {
+    "statusCode": 202,
+    "contentType": "application/fhir\u002Bjson; charset=utf-8",
+    "body": {
+      "resourceType": "OperationOutcome",
+      "issue": [
+        {
+          "severity": "information",
+          "code": "informational",
+          "diagnostics": "Submission e28ee6486212 accepted; poll http://localhost:5080/udsplus/$import-status/e28ee6486212"
+        }
+      ]
+    },
+    "url": "http://localhost:5080/udsplus/$import"
+  },
+  "importStatus": {
+    "id": "e28ee6486212",
+    "status": "complete",
+    "submissionId": "20261108-190425-8a3360f2bd97497d976e2fd6",
+    "receivedAt": "2026-11-08T19:07:15.8000595\u002B00:00",
+    "completedAt": "2026-11-08T19:07:15.8255939\u002B00:00",
+    "counts": {
+      "AllergyIntolerance": 3,
+      "Condition": 7,
+      "Encounter": 3,
+      "Immunization": 4,
+      "MedicationRequest": 4,
+      "Observation": 29,
+      "Patient": 2,
+      "Procedure": 3
+    },
+    "outcomes": [
+      {
+        "type": "AllergyIntolerance",
+        "url": "http://localhost:5080/udsplus/files/20261108-190425-8a3360f2bd97497d976e2fd6/AllergyIntolerance.ndjson",
+        "resourceCount": 3,
+        "statusCode": 200
+      },
+      {
+        "type": "Condition",
+        "url": "http://localhost:5080/udsplus/files/20261108-190425-8a3360f2bd97497d976e2fd6/Condition.ndjson",
+        "resourceCount": 7,
+        "statusCode": 200
+      },
+      {
+        "type": "Encounter",
+        "url": "http://localhost:5080/udsplus/files/20261108-190425-8a3360f2bd97497d976e2fd6/Encounter.ndjson",
+        "resourceCount": 3,
+        "statusCode": 200
+      },
+      {
+        "type": "Immunization",
+        "url": "http://localhost:5080/udsplus/files/20261108-190425-8a3360f2bd97497d976e2fd6/Immunization.ndjson",
+        "resourceCount": 4,
+        "statusCode": 200
+      },
+      {
+        "type": "MedicationRequest",
+        "url": "http://localhost:5080/udsplus/files/20261108-190425-8a3360f2bd97497d976e2fd6/MedicationRequest.ndjson",
+        "resourceCount": 4,
+        "statusCode": 200
+      },
+      {
+        "type": "Observation",
+        "url": "http://localhost:5080/udsplus/files/20261108-190425-8a3360f2bd97497d976e2fd6/Observation.ndjson",
+        "resourceCount": 29,
+        "statusCode": 200
+      },
+      {
+        "type": "Patient",
+        "url": "http://localhost:5080/udsplus/files/20261108-190425-8a3360f2bd97497d976e2fd6/Patient.ndjson",
+        "resourceCount": 2,
+        "statusCode": 200
+      },
+      {
+        "type": "Procedure",
+        "url": "http://localhost:5080/udsplus/files/20261108-190425-8a3360f2bd97497d976e2fd6/Procedure.ndjson",
+        "resourceCount": 3,
+        "statusCode": 200
+      }
+    ]
+  },
+  "notes": [
+    "Patient demo-patient-1: race \u0027detailed\u0027 derived from OMB category (2108-9).",
+    "Patient demo-patient-1: ethnicity \u0027detailed\u0027 derived from OMB category (UNK)."
+  ]
+}

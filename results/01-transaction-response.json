@@ -1,0 +1,504 @@
+{
+  "resourceType": "Bundle",
+  "id": "09daf047-7162-469a-9ca8-a5bd36af05eb",
+  "type": "transaction-response",
+  "link": [ {
+    "relation": "self",
+    "url": "http://localhost:8080/fhir"
+  } ],
+  "entry": [ {
+    "response": {
+      "status": "201 Created",
+      "location": "Organization/org-greenway-clinic/_history/1",
+      "etag": "1",
+      "lastModified": "2026-11-08T23:14:55.780+05:30",
+      "outcome": {
+        "resourceType": "OperationOutcome",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h1>Operation Outcome</h1><table border=\"0\"><tr><td style=\"font-weight: bold;\">INFORMATION</td><td>[]</td><td>Successfully created resource &quot;Organization/org-greenway-clinic/_history/1&quot; using update as create (ie. create with client assigned ID). Took 126ms.</td></tr></table></div>"
+        },
+        "issue": [ {
+          "severity": "information",
+          "code": "informational",
+          "details": {
+            "coding": [ {
+              "system": "https://hapifhir.io/fhir/CodeSystem/hapi-fhir-storage-response-code",
+              "code": "SUCCESSFUL_UPDATE_AS_CREATE",
+              "display": "Update as create succeeded."
+            } ]
+          },
+          "diagnostics": "Successfully created resource \"Organization/org-greenway-clinic/_history/1\" using update as create (ie. create with client assigned ID). Took 126ms."
+        } ]
+      }
+    }
+  }, {
+    "response": {
+      "status": "201 Created",
+      "location": "Location/loc-main-clinic/_history/1",
+      "etag": "1",
+      "lastModified": "2026-11-08T23:14:55.780+05:30",
+      "outcome": {
+        "resourceType": "OperationOutcome",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h1>Operation Outcome</h1><table border=\"0\"><tr><td style=\"font-weight: bold;\">INFORMATION</td><td>[]</td><td>Successfully created resource &quot;Location/loc-main-clinic/_history/1&quot; using update as create (ie. create with client assigned ID). Took 15ms.</td></tr></table></div>"
+        },
+        "issue": [ {
+          "severity": "information",
+          "code": "informational",
+          "details": {
+            "coding": [ {
+              "system": "https://hapifhir.io/fhir/CodeSystem/hapi-fhir-storage-response-code",
+              "code": "SUCCESSFUL_UPDATE_AS_CREATE",
+              "display": "Update as create succeeded."
+            } ]
+          },
+          "diagnostics": "Successfully created resource \"Location/loc-main-clinic/_history/1\" using update as create (ie. create with client assigned ID). Took 15ms."
+        } ]
+      }
+    }
+  }, {
+    "response": {
+      "status": "201 Created",
+      "location": "Practitioner/prac-sarah-lee/_history/1",
+      "etag": "1",
+      "lastModified": "2026-11-08T23:14:55.780+05:30",
+      "outcome": {
+        "resourceType": "OperationOutcome",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h1>Operation Outcome</h1><table border=\"0\"><tr><td style=\"font-weight: bold;\">INFORMATION</td><td>[]</td><td>Successfully created resource &quot;Practitioner/prac-sarah-lee/_history/1&quot; using update as create (ie. create with client assigned ID). Took 16ms.</td></tr></table></div>"
+        },
+        "issue": [ {
+          "severity": "information",
+          "code": "informational",
+          "details": {
+            "coding": [ {
+              "system": "https://hapifhir.io/fhir/CodeSystem/hapi-fhir-storage-response-code",
+              "code": "SUCCESSFUL_UPDATE_AS_CREATE",
+              "display": "Update as create succeeded."
+            } ]
+          },
+          "diagnostics": "Successfully created resource \"Practitioner/prac-sarah-lee/_history/1\" using update as create (ie. create with client assigned ID). Took 16ms."
+        } ]
+      }
+    }
+  }, {
+    "response": {
+      "status": "201 Created",
+      "location": "Patient/demo-patient-1/_history/1",
+      "etag": "1",
+      "lastModified": "2026-11-08T23:14:55.780+05:30",
+      "outcome": {
+        "resourceType": "OperationOutcome",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h1>Operation Outcome</h1><table border=\"0\"><tr><td style=\"font-weight: bold;\">INFORMATION</td><td>[]</td><td>Successfully created resource &quot;Patient/demo-patient-1/_history/1&quot; using update as create (ie. create with client assigned ID). Took 26ms.</td></tr></table></div>"
+        },
+        "issue": [ {
+          "severity": "information",
+          "code": "informational",
+          "details": {
+            "coding": [ {
+              "system": "https://hapifhir.io/fhir/CodeSystem/hapi-fhir-storage-response-code",
+              "code": "SUCCESSFUL_UPDATE_AS_CREATE",
+              "display": "Update as create succeeded."
+            } ]
+          },
+          "diagnostics": "Successfully created resource \"Patient/demo-patient-1/_history/1\" using update as create (ie. create with client assigned ID). Took 26ms."
+        } ]
+      }
+    }
+  }, {
+    "response": {
+      "status": "201 Created",
+      "location": "Encounter/demo-encounter-1/_history/1",
+      "etag": "1",
+      "lastModified": "2026-11-08T23:14:55.780+05:30",
+      "outcome": {
+        "resourceType": "OperationOutcome",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h1>Operation Outcome</h1><table border=\"0\"><tr><td style=\"font-weight: bold;\">INFORMATION</td><td>[]</td><td>Successfully created resource &quot;Encounter/demo-encounter-1/_history/1&quot; using update as create (ie. create with client assigned ID). Took 29ms.</td></tr></table></div>"
+        },
+        "issue": [ {
+          "severity": "information",
+          "code": "informational",
+          "details": {
+            "coding": [ {
+              "system": "https://hapifhir.io/fhir/CodeSystem/hapi-fhir-storage-response-code",
+              "code": "SUCCESSFUL_UPDATE_AS_CREATE",
+              "display": "Update as create succeeded."
+            } ]
+          },
+          "diagnostics": "Successfully created resource \"Encounter/demo-encounter-1/_history/1\" using update as create (ie. create with client assigned ID). Took 29ms."
+        } ]
+      }
+    }
+  }, {
+    "response": {
+      "status": "201 Created",
+      "location": "Condition/demo-condition-covid/_history/1",
+      "etag": "1",
+      "lastModified": "2026-11-08T23:14:55.780+05:30",
+      "outcome": {
+        "resourceType": "OperationOutcome",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h1>Operation Outcome</h1><table border=\"0\"><tr><td style=\"font-weight: bold;\">INFORMATION</td><td>[]</td><td>Successfully created resource &quot;Condition/demo-condition-covid/_history/1&quot; using update as create (ie. create with client assigned ID). Took 15ms.</td></tr></table></div>"
+        },
+        "issue": [ {
+          "severity": "information",
+          "code": "informational",
+          "details": {
+            "coding": [ {
+              "system": "https://hapifhir.io/fhir/CodeSystem/hapi-fhir-storage-response-code",
+              "code": "SUCCESSFUL_UPDATE_AS_CREATE",
+              "display": "Update as create succeeded."
+            } ]
+          },
+          "diagnostics": "Successfully created resource \"Condition/demo-condition-covid/_history/1\" using update as create (ie. create with client assigned ID). Took 15ms."
+        } ]
+      }
+    }
+  }, {
+    "response": {
+      "status": "201 Created",
+      "location": "Condition/demo-condition-htn/_history/1",
+      "etag": "1",
+      "lastModified": "2026-11-08T23:14:55.780+05:30",
+      "outcome": {
+        "resourceType": "OperationOutcome",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h1>Operation Outcome</h1><table border=\"0\"><tr><td style=\"font-weight: bold;\">INFORMATION</td><td>[]</td><td>Successfully created resource &quot;Condition/demo-condition-htn/_history/1&quot; using update as create (ie. create with client assigned ID). Took 8ms.</td></tr></table></div>"
+        },
+        "issue": [ {
+          "severity": "information",
+          "code": "informational",
+          "details": {
+            "coding": [ {
+              "system": "https://hapifhir.io/fhir/CodeSystem/hapi-fhir-storage-response-code",
+              "code": "SUCCESSFUL_UPDATE_AS_CREATE",
+              "display": "Update as create succeeded."
+            } ]
+          },
+          "diagnostics": "Successfully created resource \"Condition/demo-condition-htn/_history/1\" using update as create (ie. create with client assigned ID). Took 8ms."
+        } ]
+      }
+    }
+  }, {
+    "response": {
+      "status": "201 Created",
+      "location": "Observation/demo-obs-bp/_history/1",
+      "etag": "1",
+      "lastModified": "2026-11-08T23:14:55.780+05:30",
+      "outcome": {
+        "resourceType": "OperationOutcome",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h1>Operation Outcome</h1><table border=\"0\"><tr><td style=\"font-weight: bold;\">INFORMATION</td><td>[]</td><td>Successfully created resource &quot;Observation/demo-obs-bp/_history/1&quot; using update as create (ie. create with client assigned ID). Took 31ms.</td></tr></table></div>"
+        },
+        "issue": [ {
+          "severity": "information",
+          "code": "informational",
+          "details": {
+            "coding": [ {
+              "system": "https://hapifhir.io/fhir/CodeSystem/hapi-fhir-storage-response-code",
+              "code": "SUCCESSFUL_UPDATE_AS_CREATE",
+              "display": "Update as create succeeded."
+            } ]
+          },
+          "diagnostics": "Successfully created resource \"Observation/demo-obs-bp/_history/1\" using update as create (ie. create with client assigned ID). Took 31ms."
+        } ]
+      }
+    }
+  }, {
+    "response": {
+      "status": "201 Created",
+      "location": "Observation/demo-obs-temp/_history/1",
+      "etag": "1",
+      "lastModified": "2026-11-08T23:14:55.780+05:30",
+      "outcome": {
+        "resourceType": "OperationOutcome",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h1>Operation Outcome</h1><table border=\"0\"><tr><td style=\"font-weight: bold;\">INFORMATION</td><td>[]</td><td>Successfully created resource &quot;Observation/demo-obs-temp/_history/1&quot; using update as create (ie. create with client assigned ID). Took 9ms.</td></tr></table></div>"
+        },
+        "issue": [ {
+          "severity": "information",
+          "code": "informational",
+          "details": {
+            "coding": [ {
+              "system": "https://hapifhir.io/fhir/CodeSystem/hapi-fhir-storage-response-code",
+              "code": "SUCCESSFUL_UPDATE_AS_CREATE",
+              "display": "Update as create succeeded."
+            } ]
+          },
+          "diagnostics": "Successfully created resource \"Observation/demo-obs-temp/_history/1\" using update as create (ie. create with client assigned ID). Took 9ms."
+        } ]
+      }
+    }
+  }, {
+    "response": {
+      "status": "201 Created",
+      "location": "Observation/demo-obs-covid-pcr/_history/1",
+      "etag": "1",
+      "lastModified": "2026-11-08T23:14:55.780+05:30",
+      "outcome": {
+        "resourceType": "OperationOutcome",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h1>Operation Outcome</h1><table border=\"0\"><tr><td style=\"font-weight: bold;\">INFORMATION</td><td>[]</td><td>Successfully created resource &quot;Observation/demo-obs-covid-pcr/_history/1&quot; using update as create (ie. create with client assigned ID). Took 11ms.</td></tr></table></div>"
+        },
+        "issue": [ {
+          "severity": "information",
+          "code": "informational",
+          "details": {
+            "coding": [ {
+              "system": "https://hapifhir.io/fhir/CodeSystem/hapi-fhir-storage-response-code",
+              "code": "SUCCESSFUL_UPDATE_AS_CREATE",
+              "display": "Update as create succeeded."
+            } ]
+          },
+          "diagnostics": "Successfully created resource \"Observation/demo-obs-covid-pcr/_history/1\" using update as create (ie. create with client assigned ID). Took 11ms."
+        } ]
+      }
+    }
+  }, {
+    "response": {
+      "status": "201 Created",
+      "location": "Observation/demo-obs-smoking/_history/1",
+      "etag": "1",
+      "lastModified": "2026-11-08T23:14:55.780+05:30",
+      "outcome": {
+        "resourceType": "OperationOutcome",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h1>Operation Outcome</h1><table border=\"0\"><tr><td style=\"font-weight: bold;\">INFORMATION</td><td>[]</td><td>Successfully created resource &quot;Observation/demo-obs-smoking/_history/1&quot; using update as create (ie. create with client assigned ID). Took 9ms.</td></tr></table></div>"
+        },
+        "issue": [ {
+          "severity": "information",
+          "code": "informational",
+          "details": {
+            "coding": [ {
+              "system": "https://hapifhir.io/fhir/CodeSystem/hapi-fhir-storage-response-code",
+              "code": "SUCCESSFUL_UPDATE_AS_CREATE",
+              "display": "Update as create succeeded."
+            } ]
+          },
+          "diagnostics": "Successfully created resource \"Observation/demo-obs-smoking/_history/1\" using update as create (ie. create with client assigned ID). Took 9ms."
+        } ]
+      }
+    }
+  }, {
+    "response": {
+      "status": "201 Created",
+      "location": "DiagnosticReport/demo-dr-covid/_history/1",
+      "etag": "1",
+      "lastModified": "2026-11-08T23:14:55.780+05:30",
+      "outcome": {
+        "resourceType": "OperationOutcome",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h1>Operation Outcome</h1><table border=\"0\"><tr><td style=\"font-weight: bold;\">INFORMATION</td><td>[]</td><td>Successfully created resource &quot;DiagnosticReport/demo-dr-covid/_history/1&quot; using update as create (ie. create with client assigned ID). Took 6ms.</td></tr></table></div>"
+        },
+        "issue": [ {
+          "severity": "information",
+          "code": "informational",
+          "details": {
+            "coding": [ {
+              "system": "https://hapifhir.io/fhir/CodeSystem/hapi-fhir-storage-response-code",
+              "code": "SUCCESSFUL_UPDATE_AS_CREATE",
+              "display": "Update as create succeeded."
+            } ]
+          },
+          "diagnostics": "Successfully created resource \"DiagnosticReport/demo-dr-covid/_history/1\" using update as create (ie. create with client assigned ID). Took 6ms."
+        } ]
+      }
+    }
+  }, {
+    "response": {
+      "status": "201 Created",
+      "location": "MedicationRequest/demo-medrx-paxlovid/_history/1",
+      "etag": "1",
+      "lastModified": "2026-11-08T23:14:55.780+05:30",
+      "outcome": {
+        "resourceType": "OperationOutcome",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h1>Operation Outcome</h1><table border=\"0\"><tr><td style=\"font-weight: bold;\">INFORMATION</td><td>[]</td><td>Successfully created resource &quot;MedicationRequest/demo-medrx-paxlovid/_history/1&quot; using update as create (ie. create with client assigned ID). Took 7ms.</td></tr></table></div>"
+        },
+        "issue": [ {
+          "severity": "information",
+          "code": "informational",
+          "details": {
+            "coding": [ {
+              "system": "https://hapifhir.io/fhir/CodeSystem/hapi-fhir-storage-response-code",
+              "code": "SUCCESSFUL_UPDATE_AS_CREATE",
+              "display": "Update as create succeeded."
+            } ]
+          },
+          "diagnostics": "Successfully created resource \"MedicationRequest/demo-medrx-paxlovid/_history/1\" using update as create (ie. create with client assigned ID). Took 7ms."
+        } ]
+      }
+    }
+  }, {
+    "response": {
+      "status": "201 Created",
+      "location": "AllergyIntolerance/demo-allergy-pcn/_history/1",
+      "etag": "1",
+      "lastModified": "2026-11-08T23:14:55.780+05:30",
+      "outcome": {
+        "resourceType": "OperationOutcome",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h1>Operation Outcome</h1><table border=\"0\"><tr><td style=\"font-weight: bold;\">INFORMATION</td><td>[]</td><td>Successfully created resource &quot;AllergyIntolerance/demo-allergy-pcn/_history/1&quot; using update as create (ie. create with client assigned ID). Took 4ms.</td></tr></table></div>"
+        },
+        "issue": [ {
+          "severity": "information",
+          "code": "informational",
+          "details": {
+            "coding": [ {
+              "system": "https://hapifhir.io/fhir/CodeSystem/hapi-fhir-storage-response-code",
+              "code": "SUCCESSFUL_UPDATE_AS_CREATE",
+              "display": "Update as create succeeded."
+            } ]
+          },
+          "diagnostics": "Successfully created resource \"AllergyIntolerance/demo-allergy-pcn/_history/1\" using update as create (ie. create with client assigned ID). Took 4ms."
+        } ]
+      }
+    }
+  }, {
+    "response": {
+      "status": "201 Created",
+      "location": "Immunization/demo-imm-flu/_history/1",
+      "etag": "1",
+      "lastModified": "2026-11-08T23:14:55.780+05:30",
+      "outcome": {
+        "resourceType": "OperationOutcome",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h1>Operation Outcome</h1><table border=\"0\"><tr><td style=\"font-weight: bold;\">INFORMATION</td><td>[]</td><td>Successfully created resource &quot;Immunization/demo-imm-flu/_history/1&quot; using update as create (ie. create with client assigned ID). Took 4ms.</td></tr></table></div>"
+        },
+        "issue": [ {
+          "severity": "information",
+          "code": "informational",
+          "details": {
+            "coding": [ {
+              "system": "https://hapifhir.io/fhir/CodeSystem/hapi-fhir-storage-response-code",
+              "code": "SUCCESSFUL_UPDATE_AS_CREATE",
+              "display": "Update as create succeeded."
+            } ]
+          },
+          "diagnostics": "Successfully created resource \"Immunization/demo-imm-flu/_history/1\" using update as create (ie. create with client assigned ID). Took 4ms."
+        } ]
+      }
+    }
+  }, {
+    "response": {
+      "status": "201 Created",
+      "location": "Procedure/demo-proc-swab/_history/1",
+      "etag": "1",
+      "lastModified": "2026-11-08T23:14:55.780+05:30",
+      "outcome": {
+        "resourceType": "OperationOutcome",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h1>Operation Outcome</h1><table border=\"0\"><tr><td style=\"font-weight: bold;\">INFORMATION</td><td>[]</td><td>Successfully created resource &quot;Procedure/demo-proc-swab/_history/1&quot; using update as create (ie. create with client assigned ID). Took 4ms.</td></tr></table></div>"
+        },
+        "issue": [ {
+          "severity": "information",
+          "code": "informational",
+          "details": {
+            "coding": [ {
+              "system": "https://hapifhir.io/fhir/CodeSystem/hapi-fhir-storage-response-code",
+              "code": "SUCCESSFUL_UPDATE_AS_CREATE",
+              "display": "Update as create succeeded."
+            } ]
+          },
+          "diagnostics": "Successfully created resource \"Procedure/demo-proc-swab/_history/1\" using update as create (ie. create with client assigned ID). Took 4ms."
+        } ]
+      }
+    }
+  }, {
+    "response": {
+      "status": "201 Created",
+      "location": "CareTeam/demo-careteam-1/_history/1",
+      "etag": "1",
+      "lastModified": "2026-11-08T23:14:55.780+05:30",
+      "outcome": {
+        "resourceType": "OperationOutcome",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h1>Operation Outcome</h1><table border=\"0\"><tr><td style=\"font-weight: bold;\">INFORMATION</td><td>[]</td><td>Successfully created resource &quot;CareTeam/demo-careteam-1/_history/1&quot; using update as create (ie. create with client assigned ID). Took 6ms.</td></tr></table></div>"
+        },
+        "issue": [ {
+          "severity": "information",
+          "code": "informational",
+          "details": {
+            "coding": [ {
+              "system": "https://hapifhir.io/fhir/CodeSystem/hapi-fhir-storage-response-code",
+              "code": "SUCCESSFUL_UPDATE_AS_CREATE",
+              "display": "Update as create succeeded."
+            } ]
+          },
+          "diagnostics": "Successfully created resource \"CareTeam/demo-careteam-1/_history/1\" using update as create (ie. create with client assigned ID). Took 6ms."
+        } ]
+      }
+    }
+  }, {
+    "response": {
+      "status": "201 Created",
+      "location": "Goal/demo-goal-bp/_history/1",
+      "etag": "1",
+      "lastModified": "2026-11-08T23:14:55.780+05:30",
+      "outcome": {
+        "resourceType": "OperationOutcome",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h1>Operation Outcome</h1><table border=\"0\"><tr><td style=\"font-weight: bold;\">INFORMATION</td><td>[]</td><td>Successfully created resource &quot;Goal/demo-goal-bp/_history/1&quot; using update as create (ie. create with client assigned ID). Took 4ms.</td></tr></table></div>"
+        },
+        "issue": [ {
+          "severity": "information",
+          "code": "informational",
+          "details": {
+            "coding": [ {
+              "system": "https://hapifhir.io/fhir/CodeSystem/hapi-fhir-storage-response-code",
+              "code": "SUCCESSFUL_UPDATE_AS_CREATE",
+              "display": "Update as create succeeded."
+            } ]
+          },
+          "diagnostics": "Successfully created resource \"Goal/demo-goal-bp/_history/1\" using update as create (ie. create with client assigned ID). Took 4ms."
+        } ]
+      }
+    }
+  }, {
+    "response": {
+      "status": "201 Created",
+      "location": "Group/uds-plus-reporting-group/_history/1",
+      "etag": "1",
+      "lastModified": "2026-11-08T23:14:55.780+05:30",
+      "outcome": {
+        "resourceType": "OperationOutcome",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h1>Operation Outcome</h1><table border=\"0\"><tr><td style=\"font-weight: bold;\">INFORMATION</td><td>[]</td><td>Successfully created resource &quot;Group/uds-plus-reporting-group/_history/1&quot; using update as create (ie. create with client assigned ID). Took 4ms.</td></tr></table></div>"
+        },
+        "issue": [ {
+          "severity": "information",
+          "code": "informational",
+          "details": {
+            "coding": [ {
+              "system": "https://hapifhir.io/fhir/CodeSystem/hapi-fhir-storage-response-code",
+              "code": "SUCCESSFUL_UPDATE_AS_CREATE",
+              "display": "Update as create succeeded."
+            } ]
+          },
+          "diagnostics": "Successfully created resource \"Group/uds-plus-reporting-group/_history/1\" using update as create (ie. create with client assigned ID). Took 4ms."
+        } ]
+      }
+    }
+  } ]
+}

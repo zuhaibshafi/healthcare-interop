@@ -1,0 +1,20 @@
+{
+  "statusCode": 422,
+  "contentType": "application/json",
+  "body": {
+    "resourceType": "OperationOutcome",
+    "meta": {
+      "lastUpdated": "2026-11-08T18:44:01.790\u002B00:00"
+    },
+    "issue": [
+      {
+        "severity": "error",
+        "code": "invalid",
+        "details": {
+          "text": "Unable to launch Patient Instance, Unique Constraint Violation, Detailed Error: could not execute statement [ERROR: duplicate key value violates unique constraint \u0022ukmpyajx75b44gkc31vir4439t2\u0022\n  Detail: Key (fhir_server_base_url, patient_id, notification_resource_id, notification_resource_type, trigger_event)=(http://localhost:8080/fhir, demo-patient-1, demo-encounter-1, Encounter, encounter-start) already exists.] [insert into notification_context_v2 (ehr_access_token,token_expiry_date,ehr_access_token_expiry_duration,ehr_launch_context,encounter_class,encounter_end_time,encounter_start_time,fhir_server_base_url,last_updated_ts,notification_data,notification_processing_status,notification_resource_id,notification_resource_type,patient_id,relaunch_notification_data,throttle_context,trigger_event,correlation_id,x_request_id,id) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)]; SQL [insert into notification_context_v2 (ehr_access_token,token_expiry_date,ehr_access_token_expiry_duration,ehr_launch_context,encounter_class,encounter_end_time,encounter_start_time,fhir_server_base_url,last_updated_ts,notification_data,notification_processing_status,notification_resource_id,notification_resource_type,patient_id,relaunch_notification_data,throttle_context,trigger_event,correlation_id,x_request_id,id) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)]; constraint [ukmpyajx75b44gkc31vir4439t2]"
+        }
+      }
+    ]
+  },
+  "url": "http://localhost:8081/api/launchPatient"
+}

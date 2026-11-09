@@ -1,0 +1,67 @@
+{
+  "id": "e28ee6486212",
+  "status": "complete",
+  "submissionId": "20261108-190425-8a3360f2bd97497d976e2fd6",
+  "receivedAt": "2026-11-08T19:07:15.8000595+00:00",
+  "completedAt": "2026-11-08T19:07:15.8255939+00:00",
+  "counts": {
+    "AllergyIntolerance": 3,
+    "Condition": 7,
+    "Encounter": 3,
+    "Immunization": 4,
+    "MedicationRequest": 4,
+    "Observation": 29,
+    "Patient": 2,
+    "Procedure": 3
+  },
+  "outcomes": [
+    {
+      "type": "AllergyIntolerance",
+      "url": "http://localhost:5080/udsplus/files/20261108-190425-8a3360f2bd97497d976e2fd6/AllergyIntolerance.ndjson",
+      "resourceCount": 3,
+      "statusCode": 200
+    },
+    {
+      "type": "Condition",
+      "url": "http://localhost:5080/udsplus/files/20261108-190425-8a3360f2bd97497d976e2fd6/Condition.ndjson",
+      "resourceCount": 7,
+      "statusCode": 200
+    },
+    {
+      "type": "Encounter",
+      "url": "http://localhost:5080/udsplus/files/20261108-190425-8a3360f2bd97497d976e2fd6/Encounter.ndjson",
+      "resourceCount": 3,
+      "statusCode": 200
+    },
+    {
+      "type": "Immunization",
+      "url": "http://localhost:5080/udsplus/files/20261108-190425-8a3360f2bd97497d976e2fd6/Immunization.ndjson",
+      "resourceCount": 4,
+      "statusCode": 200
+    },
+    {
+      "type": "MedicationRequest",
+      "url": "http://localhost:5080/udsplus/files/20261108-190425-8a3360f2bd97497d976e2fd6/MedicationRequest.ndjson",
+      "resourceCount": 4,
+      "statusCode": 200
+    },
+    {
+      "type": "Observation",
+      "url": "http://localhost:5080/udsplus/files/20261108-190425-8a3360f2bd97497d976e2fd6/Observation.ndjson",
+      "resourceCount": 29,
+      "statusCode": 200
+    },
+    {
+      "type": "Patient",
+      "url": "http://localhost:5080/udsplus/files/20261108-190425-8a3360f2bd97497d976e2fd6/Patient.ndjson",
+      "resourceCount": 2,
+      "statusCode": 200
+    },
+    {
+      "type": "Procedure",
+      "url": "http://localhost:5080/udsplus/files/20261108-190425-8a3360f2bd97497d976e2fd6/Procedure.ndjson",
+      "resourceCount": 3,
+      "statusCode": 200
+    }
+  ]
+}

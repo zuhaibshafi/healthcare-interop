@@ -1,0 +1,137 @@
+{
+ "resourceType": "OperationOutcome",
+ "text": {
+  "status": "generated",
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h1>Operation Outcome</h1><table border=\"0\"><tr><td style=\"font-weight: bold;\">WARNING</td><td>[Patient, Line[1] Col[429]]</td><td>Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)</td></tr><tr><td style=\"font-weight: bold;\">ERROR</td><td>[Patient.meta.profile[0], Line[1] Col[429]]</td><td>Profile reference 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient' has not been checked because it could not be found, and the validator is set to not fetch unknown profiles</td></tr><tr><td style=\"font-weight: bold;\">ERROR</td><td>[Line[0] Col[0]]</td><td>Invalid profile. Failed to retrieve profile with url=http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient</td></tr><tr><td style=\"font-weight: bold;\">ERROR</td><td>[Line[0] Col[0]]</td><td>Invalid profile. Failed to retrieve profile with url=http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient</td></tr></table></div>"
+ },
+ "issue": [
+  {
+   "extension": [
+    {
+     "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+     "valueInteger": 1
+    },
+    {
+     "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+     "valueInteger": 429
+    },
+    {
+     "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+     "valueString": "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"
+    }
+   ],
+   "severity": "warning",
+   "code": "processing",
+   "details": {
+    "coding": [
+     {
+      "system": "http://hl7.org/fhir/java-core-messageId",
+      "code": "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"
+     }
+    ]
+   },
+   "diagnostics": "Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+   "location": [
+    "Patient",
+    "Line[1] Col[429]"
+   ],
+   "expression": [
+    "Patient"
+   ]
+  },
+  {
+   "extension": [
+    {
+     "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+     "valueInteger": 1
+    },
+    {
+     "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+     "valueInteger": 429
+    },
+    {
+     "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+     "valueString": "VALIDATION_VAL_PROFILE_UNKNOWN_NOT_POLICY"
+    }
+   ],
+   "severity": "error",
+   "code": "processing",
+   "details": {
+    "coding": [
+     {
+      "system": "http://hl7.org/fhir/java-core-messageId",
+      "code": "VALIDATION_VAL_PROFILE_UNKNOWN_NOT_POLICY"
+     }
+    ]
+   },
+   "diagnostics": "Profile reference 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient' has not been checked because it could not be found, and the validator is set to not fetch unknown profiles",
+   "location": [
+    "Patient.meta.profile[0]",
+    "Line[1] Col[429]"
+   ],
+   "expression": [
+    "Patient.meta.profile[0]"
+   ]
+  },
+  {
+   "extension": [
+    {
+     "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+     "valueInteger": 0
+    },
+    {
+     "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+     "valueInteger": 0
+    },
+    {
+     "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+     "valueString": "Validation_VAL_Profile_Unknown"
+    }
+   ],
+   "severity": "error",
+   "code": "processing",
+   "details": {
+    "coding": [
+     {
+      "system": "http://hl7.org/fhir/java-core-messageId",
+      "code": "Validation_VAL_Profile_Unknown"
+     }
+    ]
+   },
+   "diagnostics": "Invalid profile. Failed to retrieve profile with url=http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
+   "location": [
+    "Line[0] Col[0]"
+   ]
+  },
+  {
+   "extension": [
+    {
+     "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+     "valueInteger": 0
+    },
+    {
+     "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+     "valueInteger": 0
+    },
+    {
+     "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+     "valueString": "Validation_VAL_Profile_Unknown"
+    }
+   ],
+   "severity": "error",
+   "code": "processing",
+   "details": {
+    "coding": [
+     {
+      "system": "http://hl7.org/fhir/java-core-messageId",
+      "code": "Validation_VAL_Profile_Unknown"
+     }
+    ]
+   },
+   "diagnostics": "Invalid profile. Failed to retrieve profile with url=http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
+   "location": [
+    "Line[0] Col[0]"
+   ]
+  }
+ ]
+}

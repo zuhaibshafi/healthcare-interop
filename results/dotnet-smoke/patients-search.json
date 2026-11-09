@@ -1,0 +1,10 @@
+[
+  {
+    "id": "demo-patient-1",
+    "name": "Amy V. Shaw",
+    "gender": "female",
+    "birthDate": "1987-02-20",
+    "mrn": "MRN-000001",
+    "lastUpdated": "2026-11-08T23:14:55.7800000+05:30"
+  }
+]

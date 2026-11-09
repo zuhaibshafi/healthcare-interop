@@ -1,0 +1,14 @@
+{
+ "resourceType": "OperationOutcome",
+ "text": {
+  "status": "generated",
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h1>Operation Outcome</h1><table border=\"0\"><tr><td style=\"font-weight: bold;\">ERROR</td><td>[]</td><td>Resource was deleted at 2026-11-08T23:47:28.237+05:30</td></tr></table></div>"
+ },
+ "issue": [
+  {
+   "severity": "error",
+   "code": "processing",
+   "diagnostics": "Resource was deleted at 2026-11-08T23:47:28.237+05:30"
+  }
+ ]
+}

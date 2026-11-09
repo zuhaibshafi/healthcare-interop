@@ -1,0 +1,63 @@
+Using launch settings from FhirIntegration.Api\Properties\launchSettings.json...
+info: FhirIntegration.Api[0]
+      FHIR integration layer starting. HAPI=http://localhost:8080/fhir Validator=http://localhost:8082 eCRNow=http://localhost:8081 Output=C:/git/interop-assessment/results/dotnet-output
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5080
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\git\interop-assessment\dotnet\FhirIntegration.Api
+info: FhirIntegration.Api.Services.BulkDataExportClient[0]
+      Bulk export kick-off: Group/uds-plus-reporting-group/$export?_type=Patient,Encounter,Condition,Procedure,Observation,Immunization,MedicationRequest,AllergyIntolerance
+dbug: FhirIntegration.Api.Services.BulkDataExportClient[0]
+      Export in progress (Build in progress - Status set to QUEUED at 2026-11-09T01:16:05.892+05:30); polling again in 2s
+dbug: FhirIntegration.Api.Services.BulkDataExportClient[0]
+      Export in progress (Build in progress - Status set to QUEUED at 2026-11-09T01:16:05.892+05:30); polling again in 2s
+dbug: FhirIntegration.Api.Services.BulkDataExportClient[0]
+      Export in progress (Build in progress - Status set to QUEUED at 2026-11-09T01:16:05.892+05:30); polling again in 2s
+dbug: FhirIntegration.Api.Services.BulkDataExportClient[0]
+      Export in progress (Build in progress - Status set to IN_PROGRESS at 2026-11-09T01:16:05.892+05:30); polling again in 2s
+dbug: FhirIntegration.Api.Services.BulkDataExportClient[0]
+      Export in progress (Build in progress - Status set to IN_PROGRESS at 2026-11-09T01:16:05.892+05:30); polling again in 2s
+dbug: FhirIntegration.Api.Services.BulkDataExportClient[0]
+      Export in progress (Build in progress - Status set to IN_PROGRESS at 2026-11-09T01:16:10.855+05:30); polling again in 2s
+dbug: FhirIntegration.Api.Services.BulkDataExportClient[0]
+      Export in progress (Build in progress - Status set to IN_PROGRESS at 2026-11-09T01:16:10.855+05:30); polling again in 2s
+dbug: FhirIntegration.Api.Services.BulkDataExportClient[0]
+      Export in progress (Build in progress - Status set to IN_PROGRESS at 2026-11-09T01:16:10.855+05:30); polling again in 2s
+dbug: FhirIntegration.Api.Services.BulkDataExportClient[0]
+      Export in progress (Build in progress - Status set to IN_PROGRESS at 2026-11-09T01:16:10.855+05:30); polling again in 2s
+dbug: FhirIntegration.Api.Services.BulkDataExportClient[0]
+      Export in progress (Build in progress - Status set to IN_PROGRESS at 2026-11-09T01:16:10.855+05:30); polling again in 2s
+info: FhirIntegration.Api.Services.BulkDataExportClient[0]
+      Downloaded 7 Condition resources from http://localhost:8080/fhir/Binary/lVGDlFdY4QQvnWFDPFKCr13yCRXNKNik
+info: FhirIntegration.Api.Services.BulkDataExportClient[0]
+      Downloaded 4 Immunization resources from http://localhost:8080/fhir/Binary/tUqOtjzuzxnr2BnHFrJTXQP9urfRIxPM
+info: FhirIntegration.Api.Services.BulkDataExportClient[0]
+      Downloaded 4 MedicationRequest resources from http://localhost:8080/fhir/Binary/xQHwEQ9jldBBejEUDxb0FvYXEK4ctocD
+info: FhirIntegration.Api.Services.BulkDataExportClient[0]
+      Downloaded 3 AllergyIntolerance resources from http://localhost:8080/fhir/Binary/jxSJKoQLxBr9FTtvtvcM8uhxBrB7aI4G
+info: FhirIntegration.Api.Services.BulkDataExportClient[0]
+      Downloaded 28 Observation resources from http://localhost:8080/fhir/Binary/mzxjLAxZbEuIln9sy4JpBpZrghSKCCzo
+info: FhirIntegration.Api.Services.BulkDataExportClient[0]
+      Downloaded 1 Observation resources from http://localhost:8080/fhir/Binary/nJn69AcptwK5QoPZ0sHxRF4z95rToi99
+info: FhirIntegration.Api.Services.BulkDataExportClient[0]
+      Downloaded 2 Procedure resources from http://localhost:8080/fhir/Binary/aEcFoG1qOG9C6YVsTZbpQkpBTKg2mKC1
+info: FhirIntegration.Api.Services.BulkDataExportClient[0]
+      Downloaded 1 Procedure resources from http://localhost:8080/fhir/Binary/PEVbgcqqAJejTjFEeymeO6fUHjVWZBWt
+info: FhirIntegration.Api.Services.BulkDataExportClient[0]
+      Downloaded 2 Patient resources from http://localhost:8080/fhir/Binary/Q8F7r8QAHmEPowvpalvw3hoIosotApb6
+info: FhirIntegration.Api.Services.BulkDataExportClient[0]
+      Downloaded 3 Encounter resources from http://localhost:8080/fhir/Binary/ZPqCbxF2cDKm1xVqVgntX0Uqdyi8PwYz
+info: FhirIntegration.Api.Services.UdsPlusSubmitterService[0]
+      Run 20261108-194605-c2e634b92fb9484db9b993bb: exported Condition=7, Immunization=4, MedicationRequest=4, AllergyIntolerance=3, Observation=29, Procedure=3, Patient=2, Encounter=3 in 20.1s
+info: FhirIntegration.Api.Services.ValidatorClient[0]
+      Validating 56 file(s) against fhir.hrsa.uds-plus#2.0.0 (session new)
+info: FhirIntegration.Api.Services.ValidatorClient[0]
+      Validation finished in 79.2s: 4 errors, 96 warnings
+info: FhirIntegration.Api.Services.UdsPlusReceiverService[0]
+      Submission 1c068c6697ab (20261108-194605-c2e634b92fb9484db9b993bb): complete, counts AllergyIntolerance=3, Condition=7, Encounter=3, Immunization=4, MedicationRequest=4, Observation=29, Patient=2, Procedure=3
+info: FhirIntegration.Api.Services.UdsPlusSubmitterService[0]
+      Run 20261108-194605-c2e634b92fb9484db9b993bb complete in 99.6s

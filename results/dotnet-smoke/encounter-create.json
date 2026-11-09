@@ -1,0 +1,6 @@
+{
+  "resourceType": "Encounter",
+  "id": "71a06a2d-979a-44de-9b8b-d53ae1e81203",
+  "versionId": "1",
+  "location": "http://localhost:8080/fhir/Encounter/71a06a2d-979a-44de-9b8b-d53ae1e81203/_history/1"
+}

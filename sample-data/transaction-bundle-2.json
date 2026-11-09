@@ -1,0 +1,5202 @@
+{
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+    {
+      "fullUrl": "Organization/demo2-payer-org",
+      "request": {
+        "method": "PUT",
+        "url": "Organization/demo2-payer-org"
+      },
+      "resource": {
+        "resourceType": "Organization",
+        "id": "demo2-payer-org",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "urn:oid:2.16.840.1.113883.4.7",
+            "value": "PAYER-ACME-001"
+          }
+        ],
+        "active": true,
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "pay",
+                "display": "Payer"
+              }
+            ]
+          }
+        ],
+        "name": "Acme Health Plan",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "800-555-0199"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "100 Insurance Way"
+            ],
+            "city": "Hartford",
+            "state": "CT",
+            "postalCode": "06103",
+            "country": "US"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Practitioner/demo2-practitioner",
+      "request": {
+        "method": "PUT",
+        "url": "Practitioner/demo2-practitioner"
+      },
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "demo2-practitioner",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://hl7.org/fhir/sid/us-npi",
+            "value": "1497758544"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "official",
+            "family": "Rivera",
+            "given": [
+              "Marcus",
+              "A."
+            ],
+            "prefix": [
+              "Dr."
+            ],
+            "suffix": [
+              "MD"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "813-555-0142",
+            "use": "work"
+          },
+          {
+            "system": "email",
+            "value": "marcus.rivera@example.org",
+            "use": "work"
+          }
+        ],
+        "address": [
+          {
+            "use": "work",
+            "line": [
+              "4301 W Boy Scout Blvd",
+              "Suite 200"
+            ],
+            "city": "Tampa",
+            "state": "FL",
+            "postalCode": "33607",
+            "country": "US"
+          }
+        ],
+        "gender": "male"
+      }
+    },
+    {
+      "fullUrl": "PractitionerRole/demo2-practitionerrole",
+      "request": {
+        "method": "PUT",
+        "url": "PractitionerRole/demo2-practitionerrole"
+      },
+      "resource": {
+        "resourceType": "PractitionerRole",
+        "id": "demo2-practitionerrole",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole"
+          ]
+        },
+        "active": true,
+        "period": {
+          "start": "2020-01-01"
+        },
+        "practitioner": {
+          "reference": "Practitioner/demo2-practitioner",
+          "display": "Dr. Marcus A. Rivera"
+        },
+        "organization": {
+          "reference": "Organization/org-greenway-clinic",
+          "display": "Greenway Community Health Center"
+        },
+        "code": [
+          {
+            "coding": [
+              {
+                "system": "http://nucc.org/provider-taxonomy",
+                "code": "207Q00000X"
+              }
+            ]
+          }
+        ],
+        "specialty": [
+          {
+            "coding": [
+              {
+                "system": "http://nucc.org/provider-taxonomy",
+                "code": "207Q00000X"
+              }
+            ]
+          }
+        ],
+        "location": [
+          {
+            "reference": "Location/loc-main-clinic",
+            "display": "Greenway Main Clinic"
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "813-555-0142",
+            "use": "work"
+          },
+          {
+            "system": "email",
+            "value": "marcus.rivera@example.org",
+            "use": "work"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Patient/demo2-patient",
+      "request": {
+        "method": "PUT",
+        "url": "Patient/demo2-patient"
+      },
+      "resource": {
+        "resourceType": "Patient",
+        "id": "demo2-patient",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2054-5",
+                  "display": "Black or African American"
+                }
+              },
+              {
+                "url": "detailed",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2058-6",
+                  "display": "African American"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "Black or African American"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2135-2",
+                  "display": "Hispanic or Latino"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "Hispanic or Latino"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
+            "valueCode": "M"
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex",
+            "valueCode": "248153007"
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-genderIdentity",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "446151000124109"
+                }
+              ],
+              "text": "Male"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "use": "usual",
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "MR",
+                  "display": "Medical Record Number"
+                }
+              ],
+              "text": "MRN"
+            },
+            "system": "urn:oid:1.2.36.146.595.217.0.1",
+            "value": "MRN-000002"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "official",
+            "family": "Mendoza",
+            "given": [
+              "Carlos",
+              "Alberto"
+            ],
+            "period": {
+              "start": "2010-06-01"
+            }
+          },
+          {
+            "use": "usual",
+            "family": "Mendoza",
+            "given": [
+              "Charlie"
+            ]
+          },
+          {
+            "use": "old",
+            "family": "Mendoza-Lopez",
+            "given": [
+              "Carlos"
+            ],
+            "period": {
+              "start": "1975-06-12",
+              "end": "2010-05-31"
+            }
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "813-555-0177",
+            "use": "mobile",
+            "rank": 1
+          },
+          {
+            "system": "email",
+            "value": "carlos.mendoza@example.com",
+            "use": "home",
+            "rank": 2
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1975-06-12",
+        "deceasedBoolean": false,
+        "address": [
+          {
+            "use": "home",
+            "type": "both",
+            "line": [
+              "1220 N Nebraska Ave",
+              "Apt 4B"
+            ],
+            "city": "Tampa",
+            "state": "FL",
+            "postalCode": "33602",
+            "country": "US",
+            "period": {
+              "start": "2018-08-01"
+            }
+          }
+        ],
+        "maritalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+              "code": "M",
+              "display": "Married"
+            }
+          ]
+        },
+        "contact": [
+          {
+            "relationship": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                    "code": "N",
+                    "display": "Next-of-Kin"
+                  }
+                ]
+              }
+            ],
+            "name": {
+              "family": "Alvarez",
+              "given": [
+                "Maria"
+              ]
+            },
+            "telecom": [
+              {
+                "system": "phone",
+                "value": "813-555-0188",
+                "use": "mobile"
+              }
+            ]
+          }
+        ],
+        "communication": [
+          {
+            "language": {
+              "coding": [
+                {
+                  "system": "urn:ietf:bcp:47",
+                  "code": "es",
+                  "display": "Spanish"
+                }
+              ],
+              "text": "Spanish"
+            },
+            "preferred": true
+          },
+          {
+            "language": {
+              "coding": [
+                {
+                  "system": "urn:ietf:bcp:47",
+                  "code": "en-US",
+                  "display": "English (United States)"
+                }
+              ]
+            },
+            "preferred": false
+          }
+        ],
+        "generalPractitioner": [
+          {
+            "reference": "PractitionerRole/demo2-practitionerrole"
+          }
+        ],
+        "managingOrganization": {
+          "reference": "Organization/org-greenway-clinic"
+        }
+      }
+    },
+    {
+      "fullUrl": "RelatedPerson/demo2-relatedperson",
+      "request": {
+        "method": "PUT",
+        "url": "RelatedPerson/demo2-relatedperson"
+      },
+      "resource": {
+        "resourceType": "RelatedPerson",
+        "id": "demo2-relatedperson",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson"
+          ]
+        },
+        "active": true,
+        "patient": {
+          "reference": "Patient/demo2-patient"
+        },
+        "relationship": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                "code": "SPS",
+                "display": "spouse"
+              }
+            ]
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "family": "Alvarez",
+            "given": [
+              "Maria",
+              "Elena"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "813-555-0188",
+            "use": "mobile"
+          },
+          {
+            "system": "email",
+            "value": "maria.alvarez@example.com"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1977-09-03",
+        "address": [
+          {
+            "use": "home",
+            "line": [
+              "1220 N Nebraska Ave",
+              "Apt 4B"
+            ],
+            "city": "Tampa",
+            "state": "FL",
+            "postalCode": "33602",
+            "country": "US"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Coverage/demo2-coverage",
+      "request": {
+        "method": "PUT",
+        "url": "Coverage/demo2-coverage"
+      },
+      "resource": {
+        "resourceType": "Coverage",
+        "id": "demo2-coverage",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-coverage"
+          ]
+        },
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "MB",
+                  "display": "Member Number"
+                }
+              ]
+            },
+            "system": "urn:oid:2.16.840.1.113883.3.7418.1.1",
+            "value": "ACME-88213347"
+          }
+        ],
+        "status": "active",
+        "type": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+              "code": "HIP",
+              "display": "health insurance plan policy"
+            }
+          ]
+        },
+        "subscriber": {
+          "reference": "Patient/demo2-patient"
+        },
+        "subscriberId": "ACME-88213347",
+        "beneficiary": {
+          "reference": "Patient/demo2-patient"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/subscriber-relationship",
+              "code": "self",
+              "display": "Self"
+            }
+          ]
+        },
+        "period": {
+          "start": "2025-01-01",
+          "end": "2026-12-31"
+        },
+        "payor": [
+          {
+            "reference": "Organization/demo2-payer-org",
+            "display": "Acme Health Plan"
+          }
+        ],
+        "class": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/coverage-class",
+                  "code": "group"
+                }
+              ]
+            },
+            "value": "GRP-5521",
+            "name": "Tampa Employers Group"
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/coverage-class",
+                  "code": "plan"
+                }
+              ]
+            },
+            "value": "PLAN-GOLD-PPO",
+            "name": "Acme Gold PPO"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Encounter/demo2-encounter-2025",
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/demo2-encounter-2025"
+      },
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "demo2-encounter-2025",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "urn:oid:1.2.36.146.595.217.0.2",
+            "value": "ENC-000201"
+          }
+        ],
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://www.ama-assn.org/go/cpt",
+                "code": "99214"
+              }
+            ],
+            "text": "Office Visit"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/demo2-patient",
+          "display": "Carlos Alberto Mendoza"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                    "code": "PPRF",
+                    "display": "primary performer"
+                  }
+                ]
+              }
+            ],
+            "period": {
+              "start": "2025-03-18T10:00:00-04:00",
+              "end": "2025-03-18T10:40:00-04:00"
+            },
+            "individual": {
+              "reference": "PractitionerRole/demo2-practitionerrole"
+            }
+          },
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                    "code": "ATND",
+                    "display": "attender"
+                  }
+                ]
+              }
+            ],
+            "individual": {
+              "reference": "Practitioner/demo2-practitioner"
+            }
+          }
+        ],
+        "period": {
+          "start": "2025-03-18T10:00:00-04:00",
+          "end": "2025-03-18T10:40:00-04:00"
+        },
+        "reasonCode": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "54150009"
+              }
+            ],
+            "text": "Cough and congestion"
+          }
+        ],
+        "diagnosis": [
+          {
+            "condition": {
+              "reference": "Condition/demo2-condition-uri"
+            },
+            "use": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                  "code": "billing",
+                  "display": "Billing"
+                }
+              ]
+            },
+            "rank": 1
+          },
+          {
+            "condition": {
+              "reference": "Condition/demo2-condition-t2dm"
+            },
+            "use": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                  "code": "CM",
+                  "display": "Comorbidity diagnosis"
+                }
+              ]
+            },
+            "rank": 2
+          }
+        ],
+        "hospitalization": {
+          "dischargeDisposition": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/discharge-disposition",
+                "code": "home",
+                "display": "Home"
+              }
+            ]
+          }
+        },
+        "location": [
+          {
+            "location": {
+              "reference": "Location/loc-main-clinic"
+            },
+            "status": "completed",
+            "period": {
+              "start": "2025-03-18T10:00:00-04:00",
+              "end": "2025-03-18T10:40:00-04:00"
+            }
+          }
+        ],
+        "serviceProvider": {
+          "reference": "Organization/org-greenway-clinic"
+        }
+      }
+    },
+    {
+      "fullUrl": "Encounter/demo2-encounter-2026",
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/demo2-encounter-2026"
+      },
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "demo2-encounter-2026",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "urn:oid:1.2.36.146.595.217.0.2",
+            "value": "ENC-000202"
+          }
+        ],
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "IMP",
+          "display": "inpatient encounter"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "32485007"
+              }
+            ],
+            "text": "Inpatient admission"
+          }
+        ],
+        "priority": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+              "code": "EM",
+              "display": "emergency"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/demo2-patient",
+          "display": "Carlos Alberto Mendoza"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                    "code": "ATND",
+                    "display": "attender"
+                  }
+                ]
+              }
+            ],
+            "individual": {
+              "reference": "Practitioner/demo2-practitioner"
+            }
+          },
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                    "code": "CON",
+                    "display": "consultant"
+                  }
+                ]
+              }
+            ],
+            "individual": {
+              "reference": "Practitioner/prac-sarah-lee"
+            }
+          }
+        ],
+        "period": {
+          "start": "2026-02-10T18:30:00-05:00",
+          "end": "2026-02-13T11:00:00-05:00"
+        },
+        "length": {
+          "value": 3,
+          "unit": "days",
+          "system": "http://unitsofmeasure.org",
+          "code": "d"
+        },
+        "reasonCode": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "21522001"
+              }
+            ],
+            "text": "Right lower quadrant abdominal pain"
+          }
+        ],
+        "diagnosis": [
+          {
+            "condition": {
+              "reference": "Condition/demo2-condition-appendicitis"
+            },
+            "use": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                  "code": "AD",
+                  "display": "Admission diagnosis"
+                }
+              ]
+            },
+            "rank": 1
+          }
+        ],
+        "hospitalization": {
+          "admitSource": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/admit-source",
+                "code": "emd",
+                "display": "From accident/emergency department"
+              }
+            ]
+          },
+          "dischargeDisposition": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/discharge-disposition",
+                "code": "home",
+                "display": "Home"
+              }
+            ]
+          }
+        },
+        "location": [
+          {
+            "location": {
+              "reference": "Location/loc-main-clinic"
+            },
+            "status": "completed",
+            "period": {
+              "start": "2026-02-10T18:30:00-05:00",
+              "end": "2026-02-13T11:00:00-05:00"
+            }
+          }
+        ],
+        "serviceProvider": {
+          "reference": "Organization/org-greenway-clinic"
+        }
+      }
+    },
+    {
+      "fullUrl": "Condition/demo2-condition-uri",
+      "request": {
+        "method": "PUT",
+        "url": "Condition/demo2-condition-uri"
+      },
+      "resource": {
+        "resourceType": "Condition",
+        "id": "demo2-condition-uri",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-encounter-diagnosis"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",
+            "valueDateTime": "2025-03-18T10:20:00-04:00"
+          }
+        ],
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "resolved",
+              "display": "Resolved"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "54150009"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "J06.9"
+            }
+          ],
+          "text": "Acute upper respiratory infection"
+        },
+        "subject": {
+          "reference": "Patient/demo2-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/demo2-encounter-2025"
+        },
+        "onsetDateTime": "2025-03-15",
+        "abatementDateTime": "2025-03-25",
+        "recordedDate": "2025-03-18T10:20:00-04:00",
+        "recorder": {
+          "reference": "Practitioner/demo2-practitioner"
+        },
+        "asserter": {
+          "reference": "Practitioner/demo2-practitioner"
+        }
+      }
+    },
+    {
+      "fullUrl": "Condition/demo2-condition-appendicitis",
+      "request": {
+        "method": "PUT",
+        "url": "Condition/demo2-condition-appendicitis"
+      },
+      "resource": {
+        "resourceType": "Condition",
+        "id": "demo2-condition-appendicitis",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-encounter-diagnosis"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",
+            "valueDateTime": "2026-02-10T20:15:00-05:00"
+          }
+        ],
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "resolved",
+              "display": "Resolved"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ]
+          }
+        ],
+        "severity": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "24484000"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "74400008"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "K35.80"
+            }
+          ],
+          "text": "Acute appendicitis"
+        },
+        "subject": {
+          "reference": "Patient/demo2-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/demo2-encounter-2026"
+        },
+        "onsetDateTime": "2026-02-09T22:00:00-05:00",
+        "abatementDateTime": "2026-02-13",
+        "recordedDate": "2026-02-10T20:15:00-05:00",
+        "recorder": {
+          "reference": "Practitioner/demo2-practitioner"
+        }
+      }
+    },
+    {
+      "fullUrl": "Condition/demo2-condition-t2dm",
+      "request": {
+        "method": "PUT",
+        "url": "Condition/demo2-condition-t2dm"
+      },
+      "resource": {
+        "resourceType": "Condition",
+        "id": "demo2-condition-t2dm",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",
+            "valueDateTime": "2019-11-04"
+          }
+        ],
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/core/CodeSystem/condition-category",
+                "code": "health-concern",
+                "display": "Health Concern"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "44054006"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "E11.9"
+            }
+          ],
+          "text": "Type 2 diabetes mellitus"
+        },
+        "subject": {
+          "reference": "Patient/demo2-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/demo2-encounter-2025"
+        },
+        "onsetDateTime": "2019-10-20",
+        "recordedDate": "2019-11-04",
+        "recorder": {
+          "reference": "Practitioner/demo2-practitioner"
+        }
+      }
+    },
+    {
+      "fullUrl": "Condition/demo2-condition-htn",
+      "request": {
+        "method": "PUT",
+        "url": "Condition/demo2-condition-htn"
+      },
+      "resource": {
+        "resourceType": "Condition",
+        "id": "demo2-condition-htn",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns"
+          ]
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "38341003"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "I10"
+            }
+          ],
+          "text": "Hypertension"
+        },
+        "subject": {
+          "reference": "Patient/demo2-patient"
+        },
+        "onsetDateTime": "2018-05-10",
+        "recordedDate": "2018-05-10",
+        "recorder": {
+          "reference": "Practitioner/demo2-practitioner"
+        }
+      }
+    },
+    {
+      "fullUrl": "Condition/demo2-condition-food-insecurity",
+      "request": {
+        "method": "PUT",
+        "url": "Condition/demo2-condition-food-insecurity"
+      },
+      "resource": {
+        "resourceType": "Condition",
+        "id": "demo2-condition-food-insecurity",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",
+            "valueDateTime": "2025-03-18T10:30:00-04:00"
+          }
+        ],
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/core/CodeSystem/condition-category",
+                "code": "health-concern",
+                "display": "Health Concern"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-tags",
+                "code": "sdoh"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "733423003"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "Z59.41"
+            }
+          ],
+          "text": "Food insecurity"
+        },
+        "subject": {
+          "reference": "Patient/demo2-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/demo2-encounter-2025"
+        },
+        "onsetDateTime": "2025-01-01",
+        "recordedDate": "2025-03-18T10:30:00-04:00",
+        "recorder": {
+          "reference": "Practitioner/demo2-practitioner"
+        },
+        "evidence": [
+          {
+            "detail": [
+              {
+                "reference": "Observation/demo2-obs-food-insecurity"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/demo2-obs-bp",
+      "request": {
+        "method": "PUT",
+        "url": "Observation/demo2-obs-bp"
+      },
+      "resource": {
+        "resourceType": "Observation",
+        "id": "demo2-obs-bp",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-blood-pressure",
+            "http://hl7.org/fhir/StructureDefinition/bp"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ],
+            "text": "Vital Signs"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "85354-9"
+            }
+          ],
+          "text": "Blood pressure"
+        },
+        "subject": {
+          "reference": "Patient/demo2-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/demo2-encounter-2026"
+        },
+        "effectiveDateTime": "2026-02-10T18:45:00-05:00",
+        "issued": "2026-02-10T18:50:00-05:00",
+        "performer": [
+          {
+            "reference": "Practitioner/demo2-practitioner"
+          }
+        ],
+        "bodySite": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "368209003"
+            }
+          ]
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "8480-6"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "value": 142,
+              "unit": "mmHg",
+              "system": "http://unitsofmeasure.org",
+              "code": "mm[Hg]"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "8462-4"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "value": 91,
+              "unit": "mmHg",
+              "system": "http://unitsofmeasure.org",
+              "code": "mm[Hg]"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/demo2-obs-bp-2025",
+      "request": {
+        "method": "PUT",
+        "url": "Observation/demo2-obs-bp-2025"
+      },
+      "resource": {
+        "resourceType": "Observation",
+        "id": "demo2-obs-bp-2025",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-blood-pressure",
+            "http://hl7.org/fhir/StructureDefinition/bp"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ],
+            "text": "Vital Signs"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "85354-9"
+            }
+          ],
+          "text": "Blood pressure"
+        },
+        "subject": {
+          "reference": "Patient/demo2-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/demo2-encounter-2025"
+        },
+        "effectiveDateTime": "2025-03-18T10:05:00-04:00",
+        "issued": "2025-03-18T10:06:00-04:00",
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "8480-6"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "value": 134,
+              "unit": "mmHg",
+              "system": "http://unitsofmeasure.org",
+              "code": "mm[Hg]"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "8462-4"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "value": 86,
+              "unit": "mmHg",
+              "system": "http://unitsofmeasure.org",
+              "code": "mm[Hg]"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/demo2-obs-heart-rate",
+      "request": {
+        "method": "PUT",
+        "url": "Observation/demo2-obs-heart-rate"
+      },
+      "resource": {
+        "resourceType": "Observation",
+        "id": "demo2-obs-heart-rate",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-heart-rate",
+            "http://hl7.org/fhir/StructureDefinition/heartrate"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ],
+            "text": "Vital Signs"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4"
+            }
+          ],
+          "text": "Heart rate"
+        },
+        "subject": {
+          "reference": "Patient/demo2-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/demo2-encounter-2026"
+        },
+        "effectiveDateTime": "2026-02-10T18:45:00-05:00",
+        "issued": "2026-02-10T18:50:00-05:00",
+        "valueQuantity": {
+          "value": 102,
+          "unit": "beats/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "fullUrl": "Observation/demo2-obs-resp-rate",
+      "request": {
+        "method": "PUT",
+        "url": "Observation/demo2-obs-resp-rate"
+      },
+      "resource": {
+        "resourceType": "Observation",
+        "id": "demo2-obs-resp-rate",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-respiratory-rate",
+            "http://hl7.org/fhir/StructureDefinition/resprate"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ],
+            "text": "Vital Signs"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1"
+            }
+          ],
+          "text": "Respiratory rate"
+        },
+        "subject": {
+          "reference": "Patient/demo2-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/demo2-encounter-2026"
+        },
+        "effectiveDateTime": "2026-02-10T18:45:00-05:00",
+        "issued": "2026-02-10T18:50:00-05:00",
+        "valueQuantity": {
+          "value": 20,
+          "unit": "breaths/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "fullUrl": "Observation/demo2-obs-temp",
+      "request": {
+        "method": "PUT",
+        "url": "Observation/demo2-obs-temp"
+      },
+      "resource": {
+        "resourceType": "Observation",
+        "id": "demo2-obs-temp",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-temperature",
+            "http://hl7.org/fhir/StructureDefinition/bodytemp"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ],
+            "text": "Vital Signs"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8310-5"
+            }
+          ],
+          "text": "Body temperature"
+        },
+        "subject": {
+          "reference": "Patient/demo2-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/demo2-encounter-2026"
+        },
+        "effectiveDateTime": "2026-02-10T18:45:00-05:00",
+        "issued": "2026-02-10T18:50:00-05:00",
+        "valueQuantity": {
+          "value": 38.2,
+          "unit": "Cel",
+          "system": "http://unitsofmeasure.org",
+          "code": "Cel"
+        }
+      }
+    },
+    {
+      "fullUrl": "Observation/demo2-obs-height",
+      "request": {
+        "method": "PUT",
+        "url": "Observation/demo2-obs-height"
+      },
+      "resource": {
+        "resourceType": "Observation",
+        "id": "demo2-obs-height",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-height",
+            "http://hl7.org/fhir/StructureDefinition/bodyheight"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ],
+            "text": "Vital Signs"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8302-2"
+            }
+          ],
+          "text": "Body height"
+        },
+        "subject": {
+          "reference": "Patient/demo2-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/demo2-encounter-2025"
+        },
+        "effectiveDateTime": "2025-03-18T10:05:00-04:00",
+        "issued": "2025-03-18T10:06:00-04:00",
+        "valueQuantity": {
+          "value": 177.8,
+          "unit": "cm",
+          "system": "http://unitsofmeasure.org",
+          "code": "cm"
+        }
+      }
+    },
+    {
+      "fullUrl": "Observation/demo2-obs-weight",
+      "request": {
+        "method": "PUT",
+        "url": "Observation/demo2-obs-weight"
+      },
+      "resource": {
+        "resourceType": "Observation",
+        "id": "demo2-obs-weight",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-weight",
+            "http://hl7.org/fhir/StructureDefinition/bodyweight"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ],
+            "text": "Vital Signs"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7"
+            }
+          ],
+          "text": "Body weight"
+        },
+        "subject": {
+          "reference": "Patient/demo2-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/demo2-encounter-2025"
+        },
+        "effectiveDateTime": "2025-03-18T10:05:00-04:00",
+        "issued": "2025-03-18T10:06:00-04:00",
+        "valueQuantity": {
+          "value": 94.3,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        }
+      }
+    },
+    {
+      "fullUrl": "Observation/demo2-obs-bmi",
+      "request": {
+        "method": "PUT",
+        "url": "Observation/demo2-obs-bmi"
+      },
+      "resource": {
+        "resourceType": "Observation",
+        "id": "demo2-obs-bmi",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-bmi",
+            "http://hl7.org/fhir/StructureDefinition/bmi"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ],
+            "text": "Vital Signs"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "39156-5"
+            }
+          ],
+          "text": "BMI"
+        },
+        "subject": {
+          "reference": "Patient/demo2-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/demo2-encounter-2025"
+        },
+        "effectiveDateTime": "2025-03-18T10:05:00-04:00",
+        "issued": "2025-03-18T10:06:00-04:00",
+        "valueQuantity": {
+          "value": 29.8,
+          "unit": "kg/m2",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg/m2"
+        },
+        "derivedFrom": [
+          {
+            "reference": "Observation/demo2-obs-height"
+          },
+          {
+            "reference": "Observation/demo2-obs-weight"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/demo2-obs-pulse-ox",
+      "request": {
+        "method": "PUT",
+        "url": "Observation/demo2-obs-pulse-ox"
+      },
+      "resource": {
+        "resourceType": "Observation",
+        "id": "demo2-obs-pulse-ox",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-pulse-oximetry",
+            "http://hl7.org/fhir/StructureDefinition/oxygensat"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ],
+            "text": "Vital Signs"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2708-6"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5"
+            }
+          ],
+          "text": "Pulse oximetry"
+        },
+        "subject": {
+          "reference": "Patient/demo2-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/demo2-encounter-2026"
+        },
+        "effectiveDateTime": "2026-02-10T18:45:00-05:00",
+        "issued": "2026-02-10T18:50:00-05:00",
+        "valueQuantity": {
+          "value": 96,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "3151-8"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "value": 2,
+              "unit": "L/min",
+              "system": "http://unitsofmeasure.org",
+              "code": "L/min"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "3150-0"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "value": 28,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "%"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/demo2-obs-smoking",
+      "request": {
+        "method": "PUT",
+        "url": "Observation/demo2-obs-smoking"
+      },
+      "resource": {
+        "resourceType": "Observation",
+        "id": "demo2-obs-smoking",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "social-history",
+                "display": "Social History"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "72166-2"
+            }
+          ],
+          "text": "Tobacco smoking status"
+        },
+        "subject": {
+          "reference": "Patient/demo2-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/demo2-encounter-2025"
+        },
+        "effectiveDateTime": "2025-03-18T10:10:00-04:00",
+        "issued": "2025-03-18T10:11:00-04:00",
+        "performer": [
+          {
+            "reference": "Practitioner/demo2-practitioner"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "8517006"
+            }
+          ],
+          "text": "Former smoker"
+        }
+      }
+    },
+    {
+      "fullUrl": "Specimen/demo2-specimen",
+      "request": {
+        "method": "PUT",
+        "url": "Specimen/demo2-specimen"
+      },
+      "resource": {
+        "resourceType": "Specimen",
+        "id": "demo2-specimen",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-specimen"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "urn:oid:1.2.36.146.595.217.0.3",
+            "value": "SPEC-2025-000342"
+          }
+        ],
+        "accessionIdentifier": {
+          "system": "urn:oid:1.2.36.146.595.217.0.4",
+          "value": "ACC-2025-03-18-0042"
+        },
+        "status": "available",
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "122555007"
+            }
+          ],
+          "text": "Venous blood"
+        },
+        "subject": {
+          "reference": "Patient/demo2-patient"
+        },
+        "receivedTime": "2025-03-18T11:30:00-04:00",
+        "collection": {
+          "collector": {
+            "reference": "Practitioner/demo2-practitioner"
+          },
+          "collectedDateTime": "2025-03-18T10:25:00-04:00",
+          "bodySite": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "368208006"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "fullUrl": "Observation/demo2-obs-hba1c",
+      "request": {
+        "method": "PUT",
+        "url": "Observation/demo2-obs-hba1c"
+      },
+      "resource": {
+        "resourceType": "Observation",
+        "id": "demo2-obs-hba1c",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ],
+            "text": "Laboratory"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "4548-4"
+            }
+          ],
+          "text": "Hemoglobin A1c"
+        },
+        "subject": {
+          "reference": "Patient/demo2-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/demo2-encounter-2025"
+        },
+        "effectiveDateTime": "2025-03-18T10:25:00-04:00",
+        "issued": "2025-03-19T08:00:00-04:00",
+        "performer": [
+          {
+            "reference": "Organization/org-greenway-clinic"
+          }
+        ],
+        "valueQuantity": {
+          "value": 7.8,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "H",
+                "display": "High"
+              }
+            ]
+          }
+        ],
+        "specimen": {
+          "reference": "Specimen/demo2-specimen"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 4.0,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "%"
+            },
+            "high": {
+              "value": 5.6,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "%"
+            },
+            "text": "4.0-5.6 %"
+          }
+        ],
+        "basedOn": [
+          {
+            "reference": "ServiceRequest/demo2-servicerequest-lab"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/demo2-obs-glucose",
+      "request": {
+        "method": "PUT",
+        "url": "Observation/demo2-obs-glucose"
+      },
+      "resource": {
+        "resourceType": "Observation",
+        "id": "demo2-obs-glucose",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ],
+            "text": "Laboratory"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2339-0"
+            }
+          ],
+          "text": "Glucose"
+        },
+        "subject": {
+          "reference": "Patient/demo2-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/demo2-encounter-2025"
+        },
+        "effectiveDateTime": "2025-03-18T10:25:00-04:00",
+        "issued": "2025-03-19T08:00:00-04:00",
+        "performer": [
+          {
+            "reference": "Organization/org-greenway-clinic"
+          }
+        ],
+        "valueQuantity": {
+          "value": 156,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "H",
+                "display": "High"
+              }
+            ]
+          }
+        ],
+        "specimen": {
+          "reference": "Specimen/demo2-specimen"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 70,
+              "unit": "mg/dL",
+              "system": "http://unitsofmeasure.org",
+              "code": "mg/dL"
+            },
+            "high": {
+              "value": 99,
+              "unit": "mg/dL",
+              "system": "http://unitsofmeasure.org",
+              "code": "mg/dL"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/demo2-obs-ldl",
+      "request": {
+        "method": "PUT",
+        "url": "Observation/demo2-obs-ldl"
+      },
+      "resource": {
+        "resourceType": "Observation",
+        "id": "demo2-obs-ldl",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ],
+            "text": "Laboratory"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "13457-7"
+            }
+          ],
+          "text": "LDL Cholesterol"
+        },
+        "subject": {
+          "reference": "Patient/demo2-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/demo2-encounter-2025"
+        },
+        "effectiveDateTime": "2025-03-18T10:25:00-04:00",
+        "issued": "2025-03-19T08:00:00-04:00",
+        "performer": [
+          {
+            "reference": "Organization/org-greenway-clinic"
+          }
+        ],
+        "valueQuantity": {
+          "value": 131,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "H",
+                "display": "High"
+              }
+            ]
+          }
+        ],
+        "specimen": {
+          "reference": "Specimen/demo2-specimen"
+        },
+        "referenceRange": [
+          {
+            "high": {
+              "value": 99,
+              "unit": "mg/dL",
+              "system": "http://unitsofmeasure.org",
+              "code": "mg/dL"
+            },
+            "text": "<100 mg/dL optimal"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/demo2-obs-hemoglobin",
+      "request": {
+        "method": "PUT",
+        "url": "Observation/demo2-obs-hemoglobin"
+      },
+      "resource": {
+        "resourceType": "Observation",
+        "id": "demo2-obs-hemoglobin",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ],
+            "text": "Laboratory"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "718-7"
+            }
+          ],
+          "text": "Hemoglobin"
+        },
+        "subject": {
+          "reference": "Patient/demo2-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/demo2-encounter-2026"
+        },
+        "effectiveDateTime": "2026-02-10T19:10:00-05:00",
+        "issued": "2026-02-10T20:30:00-05:00",
+        "performer": [
+          {
+            "reference": "Organization/org-greenway-clinic"
+          }
+        ],
+        "valueQuantity": {
+          "value": 14.1,
+          "unit": "g/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "g/dL"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "N",
+                "display": "Normal"
+              }
+            ]
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 13.0,
+              "unit": "g/dL",
+              "system": "http://unitsofmeasure.org",
+              "code": "g/dL"
+            },
+            "high": {
+              "value": 17.0,
+              "unit": "g/dL",
+              "system": "http://unitsofmeasure.org",
+              "code": "g/dL"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/demo2-obs-wbc",
+      "request": {
+        "method": "PUT",
+        "url": "Observation/demo2-obs-wbc"
+      },
+      "resource": {
+        "resourceType": "Observation",
+        "id": "demo2-obs-wbc",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ],
+            "text": "Laboratory"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "6690-2"
+            }
+          ],
+          "text": "WBC"
+        },
+        "subject": {
+          "reference": "Patient/demo2-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/demo2-encounter-2026"
+        },
+        "effectiveDateTime": "2026-02-10T19:10:00-05:00",
+        "issued": "2026-02-10T20:30:00-05:00",
+        "performer": [
+          {
+            "reference": "Organization/org-greenway-clinic"
+          }
+        ],
+        "valueQuantity": {
+          "value": 14.8,
+          "unit": "10*3/uL",
+          "system": "http://unitsofmeasure.org",
+          "code": "10*3/uL"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "H",
+                "display": "High"
+              }
+            ]
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 4.0,
+              "unit": "10*3/uL",
+              "system": "http://unitsofmeasure.org",
+              "code": "10*3/uL"
+            },
+            "high": {
+              "value": 11.0,
+              "unit": "10*3/uL",
+              "system": "http://unitsofmeasure.org",
+              "code": "10*3/uL"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/demo2-obs-urine-culture",
+      "request": {
+        "method": "PUT",
+        "url": "Observation/demo2-obs-urine-culture"
+      },
+      "resource": {
+        "resourceType": "Observation",
+        "id": "demo2-obs-urine-culture",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ],
+            "text": "Laboratory"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "630-4"
+            }
+          ],
+          "text": "Urine culture"
+        },
+        "subject": {
+          "reference": "Patient/demo2-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/demo2-encounter-2025"
+        },
+        "effectiveDateTime": "2025-03-18T10:30:00-04:00",
+        "issued": "2025-03-20T09:00:00-04:00",
+        "performer": [
+          {
+            "reference": "Organization/org-greenway-clinic"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "264868006"
+            }
+          ],
+          "text": "No growth"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "N",
+                "display": "Normal"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/demo2-obs-potassium-dar-ext",
+      "request": {
+        "method": "PUT",
+        "url": "Observation/demo2-obs-potassium-dar-ext"
+      },
+      "resource": {
+        "resourceType": "Observation",
+        "id": "demo2-obs-potassium-dar-ext",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ],
+            "text": "Laboratory"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2823-3"
+            }
+          ],
+          "text": "Potassium"
+        },
+        "subject": {
+          "reference": "Patient/demo2-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/demo2-encounter-2025"
+        },
+        "effectiveDateTime": "2025-03-18T10:25:00-04:00",
+        "issued": "2025-03-19T08:00:00-04:00",
+        "performer": [
+          {
+            "reference": "Organization/org-greenway-clinic"
+          }
+        ],
+        "valueQuantity": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+              "valueCode": "unknown"
+            }
+          ]
+        },
+        "note": [
+          {
+            "text": "Result value not transmitted by the performing laboratory."
+          }
+        ],
+        "specimen": {
+          "reference": "Specimen/demo2-specimen"
+        }
+      }
+    },
+    {
+      "fullUrl": "Observation/demo2-obs-creatinine-not-performed",
+      "request": {
+        "method": "PUT",
+        "url": "Observation/demo2-obs-creatinine-not-performed"
+      },
+      "resource": {
+        "resourceType": "Observation",
+        "id": "demo2-obs-creatinine-not-performed",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ],
+            "text": "Laboratory"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2160-0"
+            }
+          ],
+          "text": "Creatinine"
+        },
+        "subject": {
+          "reference": "Patient/demo2-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/demo2-encounter-2025"
+        },
+        "effectiveDateTime": "2025-03-18T10:25:00-04:00",
+        "issued": "2025-03-19T08:00:00-04:00",
+        "performer": [
+          {
+            "reference": "Organization/org-greenway-clinic"
+          }
+        ],
+        "dataAbsentReason": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/data-absent-reason",
+              "code": "unknown",
+              "display": "Unknown"
+            }
+          ],
+          "text": "Specimen hemolyzed; test not performed"
+        },
+        "specimen": {
+          "reference": "Specimen/demo2-specimen"
+        }
+      }
+    },
+    {
+      "fullUrl": "Observation/demo2-obs-ekg",
+      "request": {
+        "method": "PUT",
+        "url": "Observation/demo2-obs-ekg"
+      },
+      "resource": {
+        "resourceType": "Observation",
+        "id": "demo2-obs-ekg",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "procedure",
+                "display": "Procedure"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "11524-6"
+            }
+          ],
+          "text": "12-lead electrocardiogram"
+        },
+        "subject": {
+          "reference": "Patient/demo2-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/demo2-encounter-2025"
+        },
+        "effectiveDateTime": "2025-03-18T10:30:00-04:00",
+        "issued": "2025-03-18T10:45:00-04:00",
+        "performer": [
+          {
+            "reference": "Practitioner/demo2-practitioner"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "251150006"
+            }
+          ],
+          "text": "Normal sinus rhythm, no acute ST changes"
+        },
+        "partOf": [
+          {
+            "reference": "Procedure/demo2-procedure-ekg"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/demo2-obs-cxr-imaging",
+      "request": {
+        "method": "PUT",
+        "url": "Observation/demo2-obs-cxr-imaging"
+      },
+      "resource": {
+        "resourceType": "Observation",
+        "id": "demo2-obs-cxr-imaging",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "imaging",
+                "display": "Imaging"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "36643-5"
+            }
+          ],
+          "text": "Chest X-ray 2 views"
+        },
+        "subject": {
+          "reference": "Patient/demo2-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/demo2-encounter-2026"
+        },
+        "effectiveDateTime": "2026-02-10T20:00:00-05:00",
+        "issued": "2026-02-10T21:00:00-05:00",
+        "performer": [
+          {
+            "reference": "Practitioner/prac-sarah-lee"
+          }
+        ],
+        "valueString": "Lungs clear. No acute cardiopulmonary findings."
+      }
+    },
+    {
+      "fullUrl": "Observation/demo2-obs-pain",
+      "request": {
+        "method": "PUT",
+        "url": "Observation/demo2-obs-pain"
+      },
+      "resource": {
+        "resourceType": "Observation",
+        "id": "demo2-obs-pain",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "72514-3"
+            }
+          ],
+          "text": "Pain severity"
+        },
+        "subject": {
+          "reference": "Patient/demo2-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/demo2-encounter-2026"
+        },
+        "effectiveDateTime": "2026-02-10T18:45:00-05:00",
+        "issued": "2026-02-10T18:50:00-05:00",
+        "performer": [
+          {
+            "reference": "Practitioner/demo2-practitioner"
+          }
+        ],
+        "valueQuantity": {
+          "value": 8,
+          "unit": "{score}",
+          "system": "http://unitsofmeasure.org",
+          "code": "{score}"
+        }
+      }
+    },
+    {
+      "fullUrl": "Observation/demo2-obs-phq9",
+      "request": {
+        "method": "PUT",
+        "url": "Observation/demo2-obs-phq9"
+      },
+      "resource": {
+        "resourceType": "Observation",
+        "id": "demo2-obs-phq9",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey",
+                "display": "Survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "44261-6"
+            }
+          ],
+          "text": "PHQ-9 total score"
+        },
+        "subject": {
+          "reference": "Patient/demo2-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/demo2-encounter-2025"
+        },
+        "effectiveDateTime": "2025-03-18T10:15:00-04:00",
+        "issued": "2025-03-18T10:16:00-04:00",
+        "performer": [
+          {
+            "reference": "Practitioner/demo2-practitioner"
+          }
+        ],
+        "valueQuantity": {
+          "value": 6,
+          "unit": "{score}",
+          "system": "http://unitsofmeasure.org",
+          "code": "{score}"
+        },
+        "derivedFrom": [
+          {
+            "reference": "QuestionnaireResponse/demo2-questionnaireresponse-phq9"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/demo2-obs-food-insecurity",
+      "request": {
+        "method": "PUT",
+        "url": "Observation/demo2-obs-food-insecurity"
+      },
+      "resource": {
+        "resourceType": "Observation",
+        "id": "demo2-obs-food-insecurity",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey",
+                "display": "Survey"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-category",
+                "code": "sdoh",
+                "display": "SDOH"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "88123-5"
+            }
+          ],
+          "text": "Food insecurity screening"
+        },
+        "subject": {
+          "reference": "Patient/demo2-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/demo2-encounter-2025"
+        },
+        "effectiveDateTime": "2025-03-18T10:15:00-04:00",
+        "issued": "2025-03-18T10:16:00-04:00",
+        "performer": [
+          {
+            "reference": "Practitioner/demo2-practitioner"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "LA28397-0"
+            }
+          ],
+          "text": "Often true"
+        }
+      }
+    },
+    {
+      "fullUrl": "Observation/demo2-obs-occupation",
+      "request": {
+        "method": "PUT",
+        "url": "Observation/demo2-obs-occupation"
+      },
+      "resource": {
+        "resourceType": "Observation",
+        "id": "demo2-obs-occupation",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-occupation"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "social-history",
+                "display": "Social History"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "11341-5"
+            }
+          ],
+          "text": "Occupation"
+        },
+        "subject": {
+          "reference": "Patient/demo2-patient"
+        },
+        "effectiveDateTime": "2025-03-18T10:12:00-04:00",
+        "issued": "2025-03-18T10:13:00-04:00",
+        "performer": [
+          {
+            "reference": "Practitioner/demo2-practitioner"
+          }
+        ],
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.114222.4.5.314",
+              "code": "6230"
+            }
+          ],
+          "text": "Carpenter"
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "86188-0"
+                }
+              ]
+            },
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "urn:oid:2.16.840.1.114222.4.5.315",
+                  "code": "0770"
+                }
+              ],
+              "text": "Construction"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/demo2-obs-sexual-orientation",
+      "request": {
+        "method": "PUT",
+        "url": "Observation/demo2-obs-sexual-orientation"
+      },
+      "resource": {
+        "resourceType": "Observation",
+        "id": "demo2-obs-sexual-orientation",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sexual-orientation"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "social-history",
+                "display": "Social History"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "76690-7"
+            }
+          ],
+          "text": "Sexual orientation"
+        },
+        "subject": {
+          "reference": "Patient/demo2-patient"
+        },
+        "effectiveDateTime": "2025-03-18T10:12:00-04:00",
+        "issued": "2025-03-18T10:13:00-04:00",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "20430005"
+            }
+          ],
+          "text": "Straight or heterosexual"
+        }
+      }
+    },
+    {
+      "fullUrl": "QuestionnaireResponse/demo2-questionnaireresponse-phq9",
+      "request": {
+        "method": "PUT",
+        "url": "QuestionnaireResponse/demo2-questionnaireresponse-phq9"
+      },
+      "resource": {
+        "resourceType": "QuestionnaireResponse",
+        "id": "demo2-questionnaireresponse-phq9",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse"
+          ]
+        },
+        "questionnaire": "http://loinc.org/q/44249-1",
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/demo2-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/demo2-encounter-2025"
+        },
+        "authored": "2025-03-18T10:14:00-04:00",
+        "author": {
+          "reference": "Practitioner/demo2-practitioner"
+        },
+        "source": {
+          "reference": "Patient/demo2-patient"
+        },
+        "item": [
+          {
+            "linkId": "44250-9",
+            "text": "Little interest or pleasure in doing things",
+            "answer": [
+              {
+                "valueCoding": {
+                  "system": "http://loinc.org",
+                  "code": "LA6569-3"
+                }
+              }
+            ]
+          },
+          {
+            "linkId": "44255-8",
+            "text": "Feeling down, depressed, or hopeless",
+            "answer": [
+              {
+                "valueCoding": {
+                  "system": "http://loinc.org",
+                  "code": "LA6569-3"
+                }
+              }
+            ]
+          },
+          {
+            "linkId": "44259-0",
+            "text": "Trouble falling or staying asleep, or sleeping too much",
+            "answer": [
+              {
+                "valueCoding": {
+                  "system": "http://loinc.org",
+                  "code": "LA6570-1"
+                }
+              }
+            ]
+          },
+          {
+            "linkId": "44254-1",
+            "text": "Feeling tired or having little energy",
+            "answer": [
+              {
+                "valueCoding": {
+                  "system": "http://loinc.org",
+                  "code": "LA6570-1"
+                }
+              }
+            ]
+          },
+          {
+            "linkId": "44261-6",
+            "text": "PHQ-9 total score",
+            "answer": [
+              {
+                "valueInteger": 6
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "ServiceRequest/demo2-servicerequest-lab",
+      "request": {
+        "method": "PUT",
+        "url": "ServiceRequest/demo2-servicerequest-lab"
+      },
+      "resource": {
+        "resourceType": "ServiceRequest",
+        "id": "demo2-servicerequest-lab",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "urn:oid:1.2.36.146.595.217.0.5",
+            "value": "ORD-2025-000118"
+          }
+        ],
+        "status": "completed",
+        "intent": "order",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "108252007"
+              }
+            ]
+          }
+        ],
+        "priority": "routine",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.ama-assn.org/go/cpt",
+              "code": "83036"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "4548-4"
+            }
+          ],
+          "text": "Hemoglobin A1c"
+        },
+        "subject": {
+          "reference": "Patient/demo2-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/demo2-encounter-2025"
+        },
+        "occurrenceDateTime": "2025-03-18T10:25:00-04:00",
+        "authoredOn": "2025-03-18T10:20:00-04:00",
+        "requester": {
+          "reference": "Practitioner/demo2-practitioner"
+        },
+        "reasonCode": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "44054006"
+              }
+            ]
+          }
+        ],
+        "reasonReference": [
+          {
+            "reference": "Condition/demo2-condition-t2dm"
+          }
+        ],
+        "specimen": [
+          {
+            "reference": "Specimen/demo2-specimen"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "ServiceRequest/demo2-servicerequest-imaging",
+      "request": {
+        "method": "PUT",
+        "url": "ServiceRequest/demo2-servicerequest-imaging"
+      },
+      "resource": {
+        "resourceType": "ServiceRequest",
+        "id": "demo2-servicerequest-imaging",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "urn:oid:1.2.36.146.595.217.0.5",
+            "value": "ORD-2026-000507"
+          }
+        ],
+        "status": "active",
+        "intent": "order",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "363679005"
+              }
+            ]
+          }
+        ],
+        "priority": "urgent",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.ama-assn.org/go/cpt",
+              "code": "71046"
+            }
+          ],
+          "text": "Chest X-ray, 2 views"
+        },
+        "subject": {
+          "reference": "Patient/demo2-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/demo2-encounter-2026"
+        },
+        "occurrenceDateTime": "2026-02-10T20:00:00-05:00",
+        "authoredOn": "2026-02-10T19:00:00-05:00",
+        "requester": {
+          "reference": "Practitioner/demo2-practitioner"
+        },
+        "performer": [
+          {
+            "reference": "Practitioner/prac-sarah-lee"
+          }
+        ],
+        "reasonCode": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "386661006"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "DiagnosticReport/demo2-diagnosticreport-lab",
+      "request": {
+        "method": "PUT",
+        "url": "DiagnosticReport/demo2-diagnosticreport-lab"
+      },
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "demo2-diagnosticreport-lab",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "urn:oid:1.2.36.146.595.217.0.6",
+            "value": "LAB-2025-000931"
+          }
+        ],
+        "basedOn": [
+          {
+            "reference": "ServiceRequest/demo2-servicerequest-lab"
+          }
+        ],
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                "code": "LAB",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "24323-8"
+            }
+          ],
+          "text": "Metabolic and diabetes panel"
+        },
+        "subject": {
+          "reference": "Patient/demo2-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/demo2-encounter-2025"
+        },
+        "effectiveDateTime": "2025-03-18T10:25:00-04:00",
+        "issued": "2025-03-19T08:00:00-04:00",
+        "performer": [
+          {
+            "reference": "Organization/org-greenway-clinic"
+          }
+        ],
+        "resultsInterpreter": [
+          {
+            "reference": "Practitioner/demo2-practitioner"
+          }
+        ],
+        "specimen": [
+          {
+            "reference": "Specimen/demo2-specimen"
+          }
+        ],
+        "result": [
+          {
+            "reference": "Observation/demo2-obs-hba1c"
+          },
+          {
+            "reference": "Observation/demo2-obs-glucose"
+          },
+          {
+            "reference": "Observation/demo2-obs-ldl"
+          },
+          {
+            "reference": "Observation/demo2-obs-potassium-dar-ext"
+          },
+          {
+            "reference": "Observation/demo2-obs-creatinine-not-performed"
+          }
+        ],
+        "conclusion": "Elevated HbA1c and glucose consistent with suboptimally controlled type 2 diabetes. LDL above goal."
+      }
+    },
+    {
+      "fullUrl": "DiagnosticReport/demo2-diagnosticreport-cbc",
+      "request": {
+        "method": "PUT",
+        "url": "DiagnosticReport/demo2-diagnosticreport-cbc"
+      },
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "demo2-diagnosticreport-cbc",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                "code": "LAB",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "58410-2"
+            }
+          ],
+          "text": "CBC"
+        },
+        "subject": {
+          "reference": "Patient/demo2-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/demo2-encounter-2026"
+        },
+        "effectiveDateTime": "2026-02-10T19:10:00-05:00",
+        "issued": "2026-02-10T20:30:00-05:00",
+        "performer": [
+          {
+            "reference": "Organization/org-greenway-clinic"
+          }
+        ],
+        "result": [
+          {
+            "reference": "Observation/demo2-obs-hemoglobin"
+          },
+          {
+            "reference": "Observation/demo2-obs-wbc"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "DiagnosticReport/demo2-diagnosticreport-cxr",
+      "request": {
+        "method": "PUT",
+        "url": "DiagnosticReport/demo2-diagnosticreport-cxr"
+      },
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "demo2-diagnosticreport-cxr",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note"
+          ]
+        },
+        "basedOn": [
+          {
+            "reference": "ServiceRequest/demo2-servicerequest-imaging"
+          }
+        ],
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "LP29684-5"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "36643-5"
+            }
+          ],
+          "text": "Chest X-ray 2 views"
+        },
+        "subject": {
+          "reference": "Patient/demo2-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/demo2-encounter-2026"
+        },
+        "effectiveDateTime": "2026-02-10T20:00:00-05:00",
+        "issued": "2026-02-10T21:00:00-05:00",
+        "performer": [
+          {
+            "reference": "Practitioner/prac-sarah-lee"
+          }
+        ],
+        "resultsInterpreter": [
+          {
+            "reference": "Practitioner/prac-sarah-lee"
+          }
+        ],
+        "result": [
+          {
+            "reference": "Observation/demo2-obs-cxr-imaging"
+          }
+        ],
+        "conclusion": "No acute cardiopulmonary findings.",
+        "presentedForm": [
+          {
+            "contentType": "text/plain",
+            "language": "en-US",
+            "data": "Q2hlc3QgWC1yYXk6IG5vIGFjdXRlIGZpbmRpbmdz",
+            "title": "Chest X-ray report",
+            "creation": "2026-02-10T21:00:00-05:00"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "DocumentReference/demo2-documentreference-discharge",
+      "request": {
+        "method": "PUT",
+        "url": "DocumentReference/demo2-documentreference-discharge"
+      },
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "demo2-documentreference-discharge",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:uuid:7f3c2a84-5b1e-4f0a-9c3d-demo2-doc-0001"
+          }
+        ],
+        "status": "current",
+        "docStatus": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "34133-9"
+            }
+          ],
+          "text": "Summary of episode note"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+                "code": "clinical-note",
+                "display": "Clinical Note"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/demo2-patient"
+        },
+        "date": "2026-02-13T11:30:00-05:00",
+        "author": [
+          {
+            "reference": "PractitionerRole/demo2-practitionerrole"
+          },
+          {
+            "reference": "Practitioner/demo2-practitioner"
+          }
+        ],
+        "authenticator": {
+          "reference": "Practitioner/demo2-practitioner"
+        },
+        "custodian": {
+          "reference": "Organization/org-greenway-clinic"
+        },
+        "description": "Discharge summary for inpatient admission 2026-02-10 to 2026-02-13",
+        "content": [
+          {
+            "attachment": {
+              "contentType": "text/plain",
+              "language": "en-US",
+              "data": "U3VtbWFyeSBvZiBlcGlzb2RlIG5vdGU6IENhcmxvcyBNZW5kb3phIGFkbWl0dGVkIDIwMjYtMDItMTAgd2l0aCBhY3V0ZSBhcHBlbmRpY2l0aXMuIExhcGFyb3Njb3BpYyBhcHBlbmRlY3RvbXkgcGVyZm9ybWVkIDIwMjYtMDItMTEgd2l0aG91dCBjb21wbGljYXRpb24uIERpc2NoYXJnZWQgaG9tZSAyMDI2LTAyLTEzIGluIHN0YWJsZSBjb25kaXRpb24uIEZvbGxvdyB1cCB3aXRoIHByaW1hcnkgY2FyZSBpbiAyIHdlZWtzLg==",
+              "title": "Discharge summary",
+              "creation": "2026-02-13T11:30:00-05:00"
+            },
+            "format": {
+              "system": "http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode",
+              "code": "urn:ihe:iti:xds:2017:mimeTypeSufficient",
+              "display": "mimeType Sufficient"
+            }
+          }
+        ],
+        "context": {
+          "encounter": [
+            {
+              "reference": "Encounter/demo2-encounter-2026"
+            }
+          ],
+          "period": {
+            "start": "2026-02-10T18:30:00-05:00",
+            "end": "2026-02-13T11:00:00-05:00"
+          },
+          "facilityType": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "22232009"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "fullUrl": "Medication/demo2-medication-amlodipine",
+      "request": {
+        "method": "PUT",
+        "url": "Medication/demo2-medication-amlodipine"
+      },
+      "resource": {
+        "resourceType": "Medication",
+        "id": "demo2-medication-amlodipine",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication"
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "197361"
+            }
+          ],
+          "text": "Amlodipine 5 mg tablet"
+        },
+        "status": "active",
+        "form": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "385055001"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "MedicationRequest/demo2-medicationrequest-amlodipine",
+      "request": {
+        "method": "PUT",
+        "url": "MedicationRequest/demo2-medicationrequest-amlodipine"
+      },
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "demo2-medicationrequest-amlodipine",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "urn:oid:1.2.36.146.595.217.0.7",
+            "value": "RX-2026-000771"
+          }
+        ],
+        "status": "active",
+        "intent": "order",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+                "code": "community",
+                "display": "Community"
+              }
+            ]
+          }
+        ],
+        "reportedBoolean": false,
+        "medicationReference": {
+          "reference": "Medication/demo2-medication-amlodipine",
+          "display": "amlodipine 5 MG Oral Tablet"
+        },
+        "subject": {
+          "reference": "Patient/demo2-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/demo2-encounter-2026"
+        },
+        "authoredOn": "2026-02-13T10:30:00-05:00",
+        "requester": {
+          "reference": "Practitioner/demo2-practitioner"
+        },
+        "reasonCode": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "38341003"
+              }
+            ]
+          }
+        ],
+        "reasonReference": [
+          {
+            "reference": "Condition/demo2-condition-htn"
+          }
+        ],
+        "dosageInstruction": [
+          {
+            "sequence": 1,
+            "text": "Take 1 tablet (5 mg) by mouth once daily",
+            "timing": {
+              "repeat": {
+                "frequency": 1,
+                "period": 1,
+                "periodUnit": "d"
+              }
+            },
+            "route": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "26643006"
+                }
+              ]
+            },
+            "doseAndRate": [
+              {
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/dose-rate-type",
+                      "code": "ordered",
+                      "display": "Ordered"
+                    }
+                  ]
+                },
+                "doseQuantity": {
+                  "value": 5,
+                  "unit": "mg",
+                  "system": "http://unitsofmeasure.org",
+                  "code": "mg"
+                }
+              }
+            ]
+          }
+        ],
+        "dispenseRequest": {
+          "validityPeriod": {
+            "start": "2026-02-13",
+            "end": "2027-02-13"
+          },
+          "numberOfRepeatsAllowed": 3,
+          "quantity": {
+            "value": 90,
+            "unit": "{tbl}",
+            "system": "http://unitsofmeasure.org",
+            "code": "{tbl}"
+          },
+          "expectedSupplyDuration": {
+            "value": 90,
+            "unit": "days",
+            "system": "http://unitsofmeasure.org",
+            "code": "d"
+          }
+        }
+      }
+    },
+    {
+      "fullUrl": "MedicationRequest/demo2-medicationrequest-metformin",
+      "request": {
+        "method": "PUT",
+        "url": "MedicationRequest/demo2-medicationrequest-metformin"
+      },
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "demo2-medicationrequest-metformin",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "urn:oid:1.2.36.146.595.217.0.7",
+            "value": "RX-2025-000312"
+          }
+        ],
+        "status": "completed",
+        "intent": "order",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+                "code": "outpatient",
+                "display": "Outpatient"
+              }
+            ]
+          }
+        ],
+        "reportedBoolean": false,
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "861007"
+            }
+          ],
+          "text": "Metformin 500 mg tablet"
+        },
+        "subject": {
+          "reference": "Patient/demo2-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/demo2-encounter-2025"
+        },
+        "authoredOn": "2025-03-18T10:35:00-04:00",
+        "requester": {
+          "reference": "Practitioner/demo2-practitioner"
+        },
+        "reasonReference": [
+          {
+            "reference": "Condition/demo2-condition-t2dm"
+          }
+        ],
+        "dosageInstruction": [
+          {
+            "sequence": 1,
+            "text": "Take 1 tablet (500 mg) by mouth twice daily with meals",
+            "timing": {
+              "repeat": {
+                "frequency": 2,
+                "period": 1,
+                "periodUnit": "d"
+              }
+            },
+            "route": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "26643006"
+                }
+              ]
+            },
+            "doseAndRate": [
+              {
+                "doseQuantity": {
+                  "value": 500,
+                  "unit": "mg",
+                  "system": "http://unitsofmeasure.org",
+                  "code": "mg"
+                }
+              }
+            ]
+          }
+        ],
+        "dispenseRequest": {
+          "numberOfRepeatsAllowed": 2,
+          "quantity": {
+            "value": 60,
+            "unit": "{tbl}",
+            "system": "http://unitsofmeasure.org",
+            "code": "{tbl}"
+          },
+          "expectedSupplyDuration": {
+            "value": 30,
+            "unit": "days",
+            "system": "http://unitsofmeasure.org",
+            "code": "d"
+          }
+        }
+      }
+    },
+    {
+      "fullUrl": "MedicationRequest/demo2-medicationrequest-cephalexin",
+      "request": {
+        "method": "PUT",
+        "url": "MedicationRequest/demo2-medicationrequest-cephalexin"
+      },
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "demo2-medicationrequest-cephalexin",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
+          ]
+        },
+        "status": "stopped",
+        "intent": "plan",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+                "code": "discharge",
+                "display": "Discharge"
+              }
+            ]
+          }
+        ],
+        "reportedBoolean": true,
+        "reportedReference": {
+          "reference": "Patient/demo2-patient"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "309114"
+            }
+          ],
+          "text": "Cephalexin 500 mg capsule"
+        },
+        "subject": {
+          "reference": "Patient/demo2-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/demo2-encounter-2026"
+        },
+        "authoredOn": "2026-02-13T10:35:00-05:00",
+        "requester": {
+          "reference": "Practitioner/demo2-practitioner"
+        },
+        "dosageInstruction": [
+          {
+            "text": "Take 1 capsule by mouth every 6 hours for 7 days"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "MedicationDispense/demo2-medicationdispense-amlodipine",
+      "request": {
+        "method": "PUT",
+        "url": "MedicationDispense/demo2-medicationdispense-amlodipine"
+      },
+      "resource": {
+        "resourceType": "MedicationDispense",
+        "id": "demo2-medicationdispense-amlodipine",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationdispense"
+          ]
+        },
+        "status": "completed",
+        "medicationReference": {
+          "reference": "Medication/demo2-medication-amlodipine",
+          "display": "amlodipine 5 MG Oral Tablet"
+        },
+        "subject": {
+          "reference": "Patient/demo2-patient"
+        },
+        "context": {
+          "reference": "Encounter/demo2-encounter-2026"
+        },
+        "performer": [
+          {
+            "actor": {
+              "reference": "Organization/org-greenway-clinic"
+            }
+          }
+        ],
+        "authorizingPrescription": [
+          {
+            "reference": "MedicationRequest/demo2-medicationrequest-amlodipine"
+          }
+        ],
+        "type": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+              "code": "FF",
+              "display": "First Fill"
+            }
+          ]
+        },
+        "quantity": {
+          "value": 90,
+          "unit": "{tbl}",
+          "system": "http://unitsofmeasure.org",
+          "code": "{tbl}"
+        },
+        "daysSupply": {
+          "value": 90,
+          "unit": "days",
+          "system": "http://unitsofmeasure.org",
+          "code": "d"
+        },
+        "whenPrepared": "2026-02-13T14:00:00-05:00",
+        "whenHandedOver": "2026-02-13T15:30:00-05:00",
+        "dosageInstruction": [
+          {
+            "text": "Take 1 tablet (5 mg) by mouth once daily"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "AllergyIntolerance/demo2-allergy-peanut",
+      "request": {
+        "method": "PUT",
+        "url": "AllergyIntolerance/demo2-allergy-peanut"
+      },
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "id": "demo2-allergy-peanut",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance"
+          ]
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "food"
+        ],
+        "criticality": "high",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "91935009"
+            }
+          ],
+          "text": "Peanut allergy"
+        },
+        "patient": {
+          "reference": "Patient/demo2-patient"
+        },
+        "onsetDateTime": "1990-01-01",
+        "recordedDate": "2025-03-18T10:08:00-04:00",
+        "recorder": {
+          "reference": "Practitioner/demo2-practitioner"
+        },
+        "reaction": [
+          {
+            "substance": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "256349002"
+                }
+              ]
+            },
+            "manifestation": [
+              {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "39579001"
+                  }
+                ]
+              }
+            ],
+            "severity": "severe"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "AllergyIntolerance/demo2-allergy-sulfa",
+      "request": {
+        "method": "PUT",
+        "url": "AllergyIntolerance/demo2-allergy-sulfa"
+      },
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "id": "demo2-allergy-sulfa",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance"
+          ]
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "medication"
+        ],
+        "criticality": "low",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "10180"
+            }
+          ],
+          "text": "Sulfamethoxazole allergy"
+        },
+        "patient": {
+          "reference": "Patient/demo2-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/demo2-encounter-2025"
+        },
+        "onsetDateTime": "2012-07-01",
+        "recordedDate": "2025-03-18T10:08:00-04:00",
+        "recorder": {
+          "reference": "Practitioner/demo2-practitioner"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "126485001"
+                  }
+                ]
+              }
+            ],
+            "severity": "moderate",
+            "onset": "2012-07-01"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Immunization/demo2-immunization-flu",
+      "request": {
+        "method": "PUT",
+        "url": "Immunization/demo2-immunization-flu"
+      },
+      "resource": {
+        "resourceType": "Immunization",
+        "id": "demo2-immunization-flu",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-immunization"
+          ]
+        },
+        "status": "completed",
+        "vaccineCode": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/cvx",
+              "code": "140"
+            }
+          ],
+          "text": "Influenza vaccine, preservative free"
+        },
+        "patient": {
+          "reference": "Patient/demo2-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/demo2-encounter-2025"
+        },
+        "occurrenceDateTime": "2025-10-20T09:30:00-04:00",
+        "recorded": "2025-10-20T09:35:00-04:00",
+        "primarySource": true,
+        "location": {
+          "reference": "Location/loc-main-clinic"
+        },
+        "manufacturer": {
+          "display": "Sanofi Pasteur"
+        },
+        "lotNumber": "UJ349AA",
+        "expirationDate": "2026-06-30",
+        "site": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActSite",
+              "code": "LA",
+              "display": "left arm"
+            }
+          ]
+        },
+        "route": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+              "code": "IM",
+              "display": "Injection, intramuscular"
+            }
+          ]
+        },
+        "doseQuantity": {
+          "value": 0.5,
+          "unit": "mL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mL"
+        },
+        "performer": [
+          {
+            "function": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0443",
+                  "code": "AP",
+                  "display": "Administering Provider"
+                }
+              ]
+            },
+            "actor": {
+              "reference": "Practitioner/demo2-practitioner"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Immunization/demo2-immunization-covid",
+      "request": {
+        "method": "PUT",
+        "url": "Immunization/demo2-immunization-covid"
+      },
+      "resource": {
+        "resourceType": "Immunization",
+        "id": "demo2-immunization-covid",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-immunization"
+          ]
+        },
+        "status": "completed",
+        "vaccineCode": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/cvx",
+              "code": "208"
+            }
+          ],
+          "text": "COVID-19 mRNA vaccine (Pfizer)"
+        },
+        "patient": {
+          "reference": "Patient/demo2-patient"
+        },
+        "occurrenceDateTime": "2025-11-02T14:00:00-05:00",
+        "recorded": "2025-11-02T14:05:00-05:00",
+        "primarySource": true,
+        "location": {
+          "reference": "Location/loc-main-clinic"
+        },
+        "lotNumber": "GK4923",
+        "site": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActSite",
+              "code": "RA",
+              "display": "right arm"
+            }
+          ]
+        },
+        "route": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+              "code": "IM",
+              "display": "Injection, intramuscular"
+            }
+          ]
+        },
+        "doseQuantity": {
+          "value": 0.3,
+          "unit": "mL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mL"
+        },
+        "performer": [
+          {
+            "actor": {
+              "reference": "Organization/org-greenway-clinic"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Immunization/demo2-immunization-tdap-not-done",
+      "request": {
+        "method": "PUT",
+        "url": "Immunization/demo2-immunization-tdap-not-done"
+      },
+      "resource": {
+        "resourceType": "Immunization",
+        "id": "demo2-immunization-tdap-not-done",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-immunization"
+          ]
+        },
+        "status": "not-done",
+        "statusReason": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+              "code": "PATOBJ",
+              "display": "patient objection"
+            }
+          ]
+        },
+        "vaccineCode": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/cvx",
+              "code": "115"
+            }
+          ],
+          "text": "Tdap"
+        },
+        "patient": {
+          "reference": "Patient/demo2-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/demo2-encounter-2025"
+        },
+        "occurrenceDateTime": "2025-03-18T10:30:00-04:00",
+        "primarySource": true,
+        "location": {
+          "reference": "Location/loc-main-clinic"
+        }
+      }
+    },
+    {
+      "fullUrl": "Procedure/demo2-procedure-ekg",
+      "request": {
+        "method": "PUT",
+        "url": "Procedure/demo2-procedure-ekg"
+      },
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "demo2-procedure-ekg",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure"
+          ]
+        },
+        "status": "completed",
+        "category": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "103693007"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.ama-assn.org/go/cpt",
+              "code": "93000"
+            },
+            {
+              "system": "http://snomed.info/sct",
+              "code": "29303009"
+            }
+          ],
+          "text": "12-lead ECG"
+        },
+        "subject": {
+          "reference": "Patient/demo2-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/demo2-encounter-2025"
+        },
+        "performedDateTime": "2025-03-18T10:28:00-04:00",
+        "recorder": {
+          "reference": "Practitioner/demo2-practitioner"
+        },
+        "performer": [
+          {
+            "actor": {
+              "reference": "Practitioner/demo2-practitioner"
+            },
+            "onBehalfOf": {
+              "reference": "Organization/org-greenway-clinic"
+            }
+          }
+        ],
+        "location": {
+          "reference": "Location/loc-main-clinic"
+        },
+        "reasonCode": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "38341003"
+              }
+            ]
+          }
+        ],
+        "reasonReference": [
+          {
+            "reference": "Condition/demo2-condition-htn"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Procedure/demo2-procedure-appendectomy",
+      "request": {
+        "method": "PUT",
+        "url": "Procedure/demo2-procedure-appendectomy"
+      },
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "demo2-procedure-appendectomy",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure"
+          ]
+        },
+        "status": "completed",
+        "category": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "387713003"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "174041007"
+            },
+            {
+              "system": "http://www.ama-assn.org/go/cpt",
+              "code": "44970"
+            }
+          ],
+          "text": "Laparoscopic appendectomy"
+        },
+        "subject": {
+          "reference": "Patient/demo2-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/demo2-encounter-2026"
+        },
+        "performedPeriod": {
+          "start": "2026-02-11T07:30:00-05:00",
+          "end": "2026-02-11T09:05:00-05:00"
+        },
+        "recorder": {
+          "reference": "Practitioner/demo2-practitioner"
+        },
+        "performer": [
+          {
+            "function": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "304292004"
+                }
+              ]
+            },
+            "actor": {
+              "reference": "Practitioner/prac-sarah-lee"
+            },
+            "onBehalfOf": {
+              "reference": "Organization/org-greenway-clinic"
+            }
+          }
+        ],
+        "location": {
+          "reference": "Location/loc-main-clinic"
+        },
+        "reasonReference": [
+          {
+            "reference": "Condition/demo2-condition-appendicitis"
+          }
+        ],
+        "bodySite": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "66754008"
+              }
+            ]
+          }
+        ],
+        "outcome": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "385669000"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "Device/demo2-device-icd",
+      "request": {
+        "method": "PUT",
+        "url": "Device/demo2-device-icd"
+      },
+      "resource": {
+        "resourceType": "Device",
+        "id": "demo2-device-icd",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-implantable-device"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://acme-devices.com/device-id",
+            "value": "ICD-7789-2024"
+          }
+        ],
+        "udiCarrier": [
+          {
+            "deviceIdentifier": "09504000059118",
+            "issuer": "http://hl7.org/fhir/NamingSystem/gs1-di",
+            "jurisdiction": "http://hl7.org/fhir/NamingSystem/fda-udi",
+            "carrierHRF": "(01)09504000059118(17)271231(10)A213B1(21)SN778812",
+            "entryType": "barcode"
+          }
+        ],
+        "status": "active",
+        "distinctIdentifier": "09504000059118-SN778812",
+        "manufacturer": "Acme Cardiac Devices Inc",
+        "manufactureDate": "2024-06-01",
+        "expirationDate": "2027-12-31",
+        "lotNumber": "A213B1",
+        "serialNumber": "SN778812",
+        "deviceName": [
+          {
+            "name": "Acme CardioGuard ICD",
+            "type": "user-friendly-name"
+          }
+        ],
+        "modelNumber": "CG-3000",
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "19257004"
+            }
+          ],
+          "text": "Implantable cardioverter-defibrillator"
+        },
+        "patient": {
+          "reference": "Patient/demo2-patient"
+        },
+        "owner": {
+          "reference": "Organization/org-greenway-clinic"
+        },
+        "note": [
+          {
+            "text": "Implanted 2024-07-15 at outside facility; device interrogated during 2026 admission."
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "CareTeam/demo2-careteam",
+      "request": {
+        "method": "PUT",
+        "url": "CareTeam/demo2-careteam"
+      },
+      "resource": {
+        "resourceType": "CareTeam",
+        "id": "demo2-careteam",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam"
+          ]
+        },
+        "status": "active",
+        "name": "Diabetes and hypertension care team",
+        "subject": {
+          "reference": "Patient/demo2-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/demo2-encounter-2025"
+        },
+        "period": {
+          "start": "2025-03-18"
+        },
+        "participant": [
+          {
+            "role": [
+              {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "446050000"
+                  }
+                ]
+              }
+            ],
+            "member": {
+              "reference": "PractitionerRole/demo2-practitionerrole",
+              "display": "Dr. Marcus A. Rivera"
+            }
+          },
+          {
+            "role": [
+              {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "304292004"
+                  }
+                ]
+              }
+            ],
+            "member": {
+              "reference": "Practitioner/prac-sarah-lee",
+              "display": "Dr. Sarah Lee"
+            },
+            "onBehalfOf": {
+              "reference": "Organization/org-greenway-clinic"
+            }
+          },
+          {
+            "role": [
+              {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "133932002"
+                  }
+                ]
+              }
+            ],
+            "member": {
+              "reference": "RelatedPerson/demo2-relatedperson",
+              "display": "Maria Elena Alvarez"
+            }
+          },
+          {
+            "role": [
+              {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "116154003"
+                  }
+                ]
+              }
+            ],
+            "member": {
+              "reference": "Patient/demo2-patient"
+            }
+          }
+        ],
+        "managingOrganization": [
+          {
+            "reference": "Organization/org-greenway-clinic"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "CarePlan/demo2-careplan",
+      "request": {
+        "method": "PUT",
+        "url": "CarePlan/demo2-careplan"
+      },
+      "resource": {
+        "resourceType": "CarePlan",
+        "id": "demo2-careplan",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careplan"
+          ]
+        },
+        "text": {
+          "status": "additional",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Assessment and Plan</b></p><p>Type 2 diabetes mellitus, suboptimally controlled (HbA1c 7.8%). Continue metformin 500 mg twice daily; reinforce dietary counseling and 150 minutes/week of moderate exercise. Recheck HbA1c in 3 months. Goal HbA1c below 7%.</p><p>Hypertension: BP 134/86 today. Start amlodipine 5 mg daily after inpatient stay; home BP log; follow-up in 4 weeks.</p><p>Food insecurity screen positive: referral to community food resources and social work.</p></div>"
+        },
+        "status": "active",
+        "intent": "plan",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/core/CodeSystem/careplan-category",
+                "code": "assess-plan",
+                "display": "Assessment and Plan of Treatment"
+              }
+            ]
+          }
+        ],
+        "title": "Diabetes and hypertension management plan",
+        "subject": {
+          "reference": "Patient/demo2-patient"
+        },
+        "encounter": {
+          "reference": "Encounter/demo2-encounter-2025"
+        },
+        "period": {
+          "start": "2025-03-18",
+          "end": "2026-12-31"
+        },
+        "created": "2025-03-18T10:38:00-04:00",
+        "author": {
+          "reference": "Practitioner/demo2-practitioner"
+        },
+        "careTeam": [
+          {
+            "reference": "CareTeam/demo2-careteam"
+          }
+        ],
+        "addresses": [
+          {
+            "reference": "Condition/demo2-condition-t2dm"
+          },
+          {
+            "reference": "Condition/demo2-condition-htn"
+          },
+          {
+            "reference": "Condition/demo2-condition-food-insecurity"
+          }
+        ],
+        "goal": [
+          {
+            "reference": "Goal/demo2-goal-hba1c"
+          },
+          {
+            "reference": "Goal/demo2-goal-bp"
+          }
+        ],
+        "activity": [
+          {
+            "detail": {
+              "kind": "ServiceRequest",
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "11816003"
+                  }
+                ]
+              },
+              "status": "in-progress",
+              "scheduledPeriod": {
+                "start": "2025-03-18",
+                "end": "2025-09-18"
+              },
+              "description": "Dietary counseling for diabetes; carbohydrate-consistent meal plan"
+            }
+          },
+          {
+            "detail": {
+              "kind": "ServiceRequest",
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "710824005"
+                  }
+                ]
+              },
+              "status": "scheduled",
+              "description": "Social work referral for food insecurity"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Goal/demo2-goal-hba1c",
+      "request": {
+        "method": "PUT",
+        "url": "Goal/demo2-goal-hba1c"
+      },
+      "resource": {
+        "resourceType": "Goal",
+        "id": "demo2-goal-hba1c",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-goal"
+          ]
+        },
+        "lifecycleStatus": "active",
+        "achievementStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/goal-achievement",
+              "code": "in-progress",
+              "display": "In Progress"
+            }
+          ]
+        },
+        "description": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "165679005"
+            }
+          ],
+          "text": "Hemoglobin A1c below 7%"
+        },
+        "subject": {
+          "reference": "Patient/demo2-patient"
+        },
+        "startDate": "2025-03-18",
+        "target": [
+          {
+            "measure": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "4548-4"
+                }
+              ]
+            },
+            "detailRange": {
+              "high": {
+                "value": 7.0,
+                "unit": "%",
+                "system": "http://unitsofmeasure.org",
+                "code": "%"
+              }
+            },
+            "dueDate": "2026-09-30"
+          }
+        ],
+        "expressedBy": {
+          "reference": "Practitioner/demo2-practitioner"
+        },
+        "addresses": [
+          {
+            "reference": "Condition/demo2-condition-t2dm"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Goal/demo2-goal-bp",
+      "request": {
+        "method": "PUT",
+        "url": "Goal/demo2-goal-bp"
+      },
+      "resource": {
+        "resourceType": "Goal",
+        "id": "demo2-goal-bp",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-goal"
+          ]
+        },
+        "lifecycleStatus": "active",
+        "description": {
+          "text": "Blood pressure below 130/80 mmHg"
+        },
+        "subject": {
+          "reference": "Patient/demo2-patient"
+        },
+        "startDate": "2026-02-13",
+        "target": [
+          {
+            "dueDate": "2026-08-13"
+          }
+        ],
+        "expressedBy": {
+          "reference": "Practitioner/demo2-practitioner"
+        },
+        "addresses": [
+          {
+            "reference": "Condition/demo2-condition-htn"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Provenance/demo2-provenance-patient",
+      "request": {
+        "method": "PUT",
+        "url": "Provenance/demo2-provenance-patient"
+      },
+      "resource": {
+        "resourceType": "Provenance",
+        "id": "demo2-provenance-patient",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance"
+          ]
+        },
+        "target": [
+          {
+            "reference": "Patient/demo2-patient"
+          },
+          {
+            "reference": "Coverage/demo2-coverage"
+          },
+          {
+            "reference": "RelatedPerson/demo2-relatedperson"
+          }
+        ],
+        "recorded": "2025-03-18T09:55:00-04:00",
+        "activity": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation",
+              "code": "CREATE",
+              "display": "create"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+                  "code": "author",
+                  "display": "Author"
+                }
+              ]
+            },
+            "who": {
+              "reference": "Practitioner/demo2-practitioner"
+            },
+            "onBehalfOf": {
+              "reference": "Organization/org-greenway-clinic"
+            }
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-provenance-participant-type",
+                  "code": "transmitter",
+                  "display": "Transmitter"
+                }
+              ]
+            },
+            "who": {
+              "reference": "Organization/org-greenway-clinic"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Provenance/demo2-provenance-encounter",
+      "request": {
+        "method": "PUT",
+        "url": "Provenance/demo2-provenance-encounter"
+      },
+      "resource": {
+        "resourceType": "Provenance",
+        "id": "demo2-provenance-encounter",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance"
+          ]
+        },
+        "target": [
+          {
+            "reference": "Patient/demo2-patient"
+          },
+          {
+            "reference": "Encounter/demo2-encounter-2026"
+          },
+          {
+            "reference": "Condition/demo2-condition-appendicitis"
+          },
+          {
+            "reference": "Procedure/demo2-procedure-appendectomy"
+          },
+          {
+            "reference": "DocumentReference/demo2-documentreference-discharge"
+          },
+          {
+            "reference": "DiagnosticReport/demo2-diagnosticreport-cxr"
+          },
+          {
+            "reference": "MedicationRequest/demo2-medicationrequest-amlodipine"
+          },
+          {
+            "reference": "Device/demo2-device-icd"
+          }
+        ],
+        "recorded": "2026-02-13T11:35:00-05:00",
+        "activity": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation",
+              "code": "UPDATE",
+              "display": "revise"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+                  "code": "author",
+                  "display": "Author"
+                }
+              ]
+            },
+            "who": {
+              "reference": "PractitionerRole/demo2-practitionerrole"
+            },
+            "onBehalfOf": {
+              "reference": "Organization/org-greenway-clinic"
+            }
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-provenance-participant-type",
+                  "code": "transmitter",
+                  "display": "Transmitter"
+                }
+              ]
+            },
+            "who": {
+              "reference": "Organization/org-greenway-clinic"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Provenance/demo2-provenance-observation",
+      "request": {
+        "method": "PUT",
+        "url": "Provenance/demo2-provenance-observation"
+      },
+      "resource": {
+        "resourceType": "Provenance",
+        "id": "demo2-provenance-observation",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance"
+          ]
+        },
+        "target": [
+          {
+            "reference": "Patient/demo2-patient"
+          },
+          {
+            "reference": "Observation/demo2-obs-hba1c"
+          },
+          {
+            "reference": "Observation/demo2-obs-glucose"
+          },
+          {
+            "reference": "Observation/demo2-obs-ldl"
+          },
+          {
+            "reference": "Observation/demo2-obs-bp-2025"
+          },
+          {
+            "reference": "Observation/demo2-obs-smoking"
+          },
+          {
+            "reference": "DiagnosticReport/demo2-diagnosticreport-lab"
+          },
+          {
+            "reference": "Encounter/demo2-encounter-2025"
+          },
+          {
+            "reference": "Condition/demo2-condition-t2dm"
+          },
+          {
+            "reference": "AllergyIntolerance/demo2-allergy-peanut"
+          },
+          {
+            "reference": "Immunization/demo2-immunization-flu"
+          },
+          {
+            "reference": "CarePlan/demo2-careplan"
+          },
+          {
+            "reference": "CareTeam/demo2-careteam"
+          },
+          {
+            "reference": "Goal/demo2-goal-hba1c"
+          },
+          {
+            "reference": "ServiceRequest/demo2-servicerequest-lab"
+          },
+          {
+            "reference": "Specimen/demo2-specimen"
+          }
+        ],
+        "recorded": "2025-03-19T08:05:00-04:00",
+        "activity": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation",
+              "code": "CREATE",
+              "display": "create"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+                  "code": "author",
+                  "display": "Author"
+                }
+              ]
+            },
+            "who": {
+              "reference": "Practitioner/demo2-practitioner"
+            },
+            "onBehalfOf": {
+              "reference": "Organization/org-greenway-clinic"
+            }
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-provenance-participant-type",
+                  "code": "transmitter",
+                  "display": "Transmitter"
+                }
+              ]
+            },
+            "who": {
+              "reference": "Organization/org-greenway-clinic"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Group/uds-plus-reporting-group",
+      "request": {
+        "method": "PUT",
+        "url": "Group/uds-plus-reporting-group"
+      },
+      "resource": {
+        "resourceType": "Group",
+        "id": "uds-plus-reporting-group",
+        "type": "person",
+        "actual": true,
+        "name": "UDS+ 2026 reporting population",
+        "member": [
+          {
+            "entity": {
+              "reference": "Patient/demo-patient-1"
+            }
+          },
+          {
+            "entity": {
+              "reference": "Patient/demo2-patient"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

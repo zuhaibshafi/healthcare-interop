@@ -1,0 +1,1275 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "FhirIntegration.Api",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/encounters": {
+      "post": {
+        "tags": [
+          "Encounters"
+        ],
+        "summary": "Creates a US Core Encounter {patientId, start, end, classCode(AMB|IMP|EMER), typeText, status}.",
+        "operationId": "CreateEncounter",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateEncounterRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResourceWriteResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/fhir/metadata": {
+      "get": {
+        "tags": [
+          "FHIR gateway"
+        ],
+        "summary": "Summary of HAPI's CapabilityStatement (FHIR version, software, supported resource types).",
+        "operationId": "GetMetadataSummary",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CapabilitySummary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/fhir/transaction": {
+      "post": {
+        "tags": [
+          "FHIR gateway"
+        ],
+        "summary": "Forwards a raw transaction/batch Bundle to HAPI and returns the per-entry response statuses.",
+        "operationId": "PostTransaction",
+        "requestBody": {
+          "content": {
+            "application/fhir+json": {
+              "schema": {
+                "type": "string"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "string"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/fhir/validate": {
+      "post": {
+        "tags": [
+          "FHIR gateway"
+        ],
+        "summary": "Sends a resource to HAPI's $validate (optionally against a profile) and returns the OperationOutcome.",
+        "operationId": "ValidateResource",
+        "parameters": [
+          {
+            "name": "profile",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/fhir+json": {
+              "schema": {
+                "type": "string"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "string"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/health": {
+      "get": {
+        "tags": [
+          "Health"
+        ],
+        "summary": "Reachability of HAPI, the validator service and eCRNow.",
+        "operationId": "Health",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HealthReport"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/.well-known/smart-configuration": {
+      "get": {
+        "tags": [
+          "OAuth2 facade"
+        ],
+        "summary": "SMART discovery document pointing at this token facade.",
+        "operationId": "SmartConfiguration",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/oauth/token": {
+      "post": {
+        "tags": [
+          "OAuth2 facade"
+        ],
+        "summary": "OAuth2 client_credentials token endpoint (form-encoded). Returns {access_token, token_type, expires_in, scope}.",
+        "operationId": "Token",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/StringStringValuesKeyValuePair"
+                }
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TokenResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/pha/r4/fhir/$process-message": {
+      "post": {
+        "tags": [
+          "PHA receiver mock"
+        ],
+        "summary": "Receives an eICR message Bundle; persists it and returns a Reportability-Response-style acknowledgement Bundle.",
+        "operationId": "ProcessMessage",
+        "requestBody": {
+          "content": {
+            "application/fhir+json": {
+              "schema": {
+                "type": "string"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "string"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/pha/r4/fhir/Bundle": {
+      "post": {
+        "tags": [
+          "PHA receiver mock"
+        ],
+        "summary": "Alias of $process-message for clients that POST to the Bundle endpoint.",
+        "operationId": "ReceiveBundle",
+        "requestBody": {
+          "content": {
+            "application/fhir+json": {
+              "schema": {
+                "type": "string"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "string"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/pha/received": {
+      "get": {
+        "tags": [
+          "PHA receiver mock"
+        ],
+        "summary": "Lists eICR bundles received so far (file name, size, timestamp).",
+        "operationId": "ListReceivedEicrs",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ReceivedEicr"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/pha/received/{fileName}": {
+      "get": {
+        "tags": [
+          "PHA receiver mock"
+        ],
+        "summary": "Returns a previously received eICR bundle.",
+        "operationId": "GetReceivedEicr",
+        "parameters": [
+          {
+            "name": "fileName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/patients": {
+      "get": {
+        "tags": [
+          "Patients"
+        ],
+        "summary": "Search Patients by family/given/identifier; returns a simplified DTO list.",
+        "operationId": "SearchPatients",
+        "parameters": [
+          {
+            "name": "family",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "given",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "identifier",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "count",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PatientSummaryDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Patients"
+        ],
+        "summary": "Creates a US Core-profiled Patient from a simplified DTO {family, given, gender, birthDate, mrn}.",
+        "operationId": "CreatePatient",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatePatientRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResourceWriteResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/patients/{id}": {
+      "get": {
+        "tags": [
+          "Patients"
+        ],
+        "summary": "Raw FHIR Patient resource.",
+        "operationId": "GetPatient",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Patients"
+        ],
+        "summary": "Updates a Patient with a raw FHIR Patient JSON body.",
+        "operationId": "UpdatePatient",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/fhir+json": {
+              "schema": {
+                "type": "string"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "string"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResourceWriteResult"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Patients"
+        ],
+        "summary": "Deletes a Patient (HAPI soft-delete; the resource becomes HTTP 410 Gone).",
+        "operationId": "DeletePatient",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/patients/{id}/encounters": {
+      "get": {
+        "tags": [
+          "Patients"
+        ],
+        "summary": "Encounter?patient={id} as a FHIR searchset Bundle.",
+        "operationId": "GetPatientEncounters",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/patients/{id}/conditions": {
+      "get": {
+        "tags": [
+          "Patients"
+        ],
+        "summary": "Condition?patient={id} as a FHIR searchset Bundle.",
+        "operationId": "GetPatientConditions",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/patients/{id}/observations": {
+      "get": {
+        "tags": [
+          "Patients"
+        ],
+        "summary": "Observation?patient={id}[&category=] as a FHIR searchset Bundle (category e.g. vital-signs, laboratory).",
+        "operationId": "GetPatientObservations",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "category",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/patients/{id}/everything": {
+      "get": {
+        "tags": [
+          "Patients"
+        ],
+        "summary": "Patient/{id}/$everything: resource-type counts plus the full Bundle.",
+        "operationId": "GetPatientEverything",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/udsplus/$import": {
+      "post": {
+        "tags": [
+          "UDS+ Data Receiver (mock)"
+        ],
+        "summary": "Mock HRSA $import: fetches every udsData.url in the manifest, counts resources, returns 202 + Content-Location.",
+        "operationId": "UdsPlusImport",
+        "requestBody": {
+          "content": {
+            "application/fhir+json": {
+              "schema": {
+                "type": "string"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "string"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/udsplus/$import-status/{id}": {
+      "get": {
+        "tags": [
+          "UDS+ Data Receiver (mock)"
+        ],
+        "summary": "Status of a received submission: {status, counts, outcomes}.",
+        "operationId": "UdsPlusImportStatus",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/udsplus/received": {
+      "get": {
+        "tags": [
+          "UDS+ Data Receiver (mock)"
+        ],
+        "summary": "All submissions received by the mock receiver since start-up.",
+        "operationId": "UdsPlusReceivedList",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/udsplus/submit": {
+      "post": {
+        "tags": [
+          "UDS+ Data Submitter"
+        ],
+        "summary": "Runs the UDS+ pipeline: Group $export -> de-identify -> NDJSON + manifest -> validate (optional) -> $import to the mock receiver.",
+        "operationId": "UdsPlusSubmit",
+        "parameters": [
+          {
+            "name": "groupId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "validate",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "submit",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UdsPlusSubmitResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/udsplus/runs": {
+      "get": {
+        "tags": [
+          "UDS+ Data Submitter"
+        ],
+        "summary": "Lists previous submitter runs and their artefacts.",
+        "operationId": "UdsPlusRuns",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/udsplus/files/{runId}/{fileName}": {
+      "get": {
+        "tags": [
+          "UDS+ Data Submitter"
+        ],
+        "summary": "Read-only download of a run artefact (NDJSON as application/fhir+ndjson).",
+        "operationId": "UdsPlusFile",
+        "parameters": [
+          {
+            "name": "runId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fileName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ecr/launch": {
+      "post": {
+        "tags": [
+          "eCRNow client"
+        ],
+        "summary": "POSTs {fhirServerURL, patientId, encounterId} to eCRNow /api/launchPatient and relays the response.",
+        "operationId": "EcrLaunch",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EcrLaunchRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpstreamResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ecr/healthcare-settings": {
+      "get": {
+        "tags": [
+          "eCRNow client"
+        ],
+        "summary": "Proxies GET {EcrNowUrl}/api/healthcareSettings/.",
+        "operationId": "EcrHealthcareSettings",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpstreamResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "CapabilitySummary": {
+        "type": "object",
+        "properties": {
+          "fhirVersion": {
+            "type": "string",
+            "nullable": true
+          },
+          "softwareName": {
+            "type": "string",
+            "nullable": true
+          },
+          "softwareVersion": {
+            "type": "string",
+            "nullable": true
+          },
+          "resourceTypeCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "resourceTypes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "url": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Summary of HAPI's CapabilityStatement."
+      },
+      "CreateEncounterRequest": {
+        "type": "object",
+        "properties": {
+          "patientId": {
+            "type": "string",
+            "nullable": true
+          },
+          "start": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "end": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "classCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "typeText": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Minimal input for creating a US Core Encounter."
+      },
+      "CreatePatientRequest": {
+        "type": "object",
+        "properties": {
+          "family": {
+            "type": "string",
+            "nullable": true
+          },
+          "given": {
+            "type": "string",
+            "nullable": true
+          },
+          "gender": {
+            "type": "string",
+            "nullable": true
+          },
+          "birthDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "mrn": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Minimal input for creating a US Core Patient."
+      },
+      "DependencyStatus": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "url": {
+            "type": "string",
+            "nullable": true
+          },
+          "healthy": {
+            "type": "boolean"
+          },
+          "statusCode": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "elapsedMs": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "detail": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Per-dependency health check result."
+      },
+      "EcrLaunchRequest": {
+        "type": "object",
+        "properties": {
+          "patientId": {
+            "type": "string",
+            "nullable": true
+          },
+          "encounterId": {
+            "type": "string",
+            "nullable": true
+          },
+          "validationMode": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Request body for POST /api/ecr/launch."
+      },
+      "HealthReport": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "checkedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "dependencies": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DependencyStatus"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "JsonNode": {
+        "type": "object",
+        "properties": {
+          "options": {
+            "$ref": "#/components/schemas/JsonNodeOptions"
+          },
+          "parent": {
+            "$ref": "#/components/schemas/JsonNode"
+          },
+          "root": {
+            "$ref": "#/components/schemas/JsonNode"
+          }
+        },
+        "additionalProperties": false
+      },
+      "JsonNodeOptions": {
+        "type": "object",
+        "properties": {
+          "propertyNameCaseInsensitive": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PatientSummaryDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "gender": {
+            "type": "string",
+            "nullable": true
+          },
+          "birthDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "mrn": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastUpdated": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Flattened view of a FHIR Patient for list/search responses."
+      },
+      "ReceivedEicr": {
+        "type": "object",
+        "properties": {
+          "fileName": {
+            "type": "string",
+            "nullable": true
+          },
+          "sizeBytes": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "receivedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "url": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Metadata for an eICR bundle received by the PHA mock."
+      },
+      "ResourceWriteResult": {
+        "type": "object",
+        "properties": {
+          "resourceType": {
+            "type": "string",
+            "nullable": true
+          },
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "versionId": {
+            "type": "string",
+            "nullable": true
+          },
+          "location": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Result of a create/update against HAPI."
+      },
+      "StringStringValuesKeyValuePair": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string",
+            "nullable": true
+          },
+          "value": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "TokenResponse": {
+        "type": "object",
+        "properties": {
+          "access_token": {
+            "type": "string",
+            "nullable": true
+          },
+          "token_type": {
+            "type": "string",
+            "nullable": true
+          },
+          "expires_in": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "scope": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UdsPlusSubmitResult": {
+        "type": "object",
+        "properties": {
+          "runId": {
+            "type": "string",
+            "nullable": true
+          },
+          "groupId": {
+            "type": "string",
+            "nullable": true
+          },
+          "startedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "completedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "exportedCounts": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "nullable": true
+          },
+          "deidentifiedCounts": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "nullable": true
+          },
+          "files": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "manifestUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "validation": {
+            "$ref": "#/components/schemas/ValidationSummary"
+          },
+          "importResponse": {
+            "$ref": "#/components/schemas/UpstreamResponse"
+          },
+          "importStatus": {
+            "$ref": "#/components/schemas/JsonNode"
+          },
+          "notes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpstreamResponse": {
+        "type": "object",
+        "properties": {
+          "statusCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "contentType": {
+            "type": "string",
+            "nullable": true
+          },
+          "body": {
+            "$ref": "#/components/schemas/JsonNode"
+          },
+          "rawBody": {
+            "type": "string",
+            "nullable": true
+          },
+          "url": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Result of proxying a call to an upstream HTTP system (eCRNow, mock receiver, etc.)."
+      },
+      "ValidationFileSummary": {
+        "type": "object",
+        "properties": {
+          "fileName": {
+            "type": "string",
+            "nullable": true
+          },
+          "errors": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "warnings": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "information": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ValidationSummary": {
+        "type": "object",
+        "properties": {
+          "sessionId": {
+            "type": "string",
+            "nullable": true
+          },
+          "errors": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "warnings": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "information": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "files": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ValidationFileSummary"
+            },
+            "nullable": true
+          },
+          "reportUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "error": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Encounters"
+    },
+    {
+      "name": "FHIR gateway"
+    },
+    {
+      "name": "Health"
+    },
+    {
+      "name": "OAuth2 facade"
+    },
+    {
+      "name": "PHA receiver mock"
+    },
+    {
+      "name": "Patients"
+    },
+    {
+      "name": "UDS+ Data Receiver (mock)"
+    },
+    {
+      "name": "UDS+ Data Submitter"
+    },
+    {
+      "name": "eCRNow client"
+    }
+  ]
+}

@@ -1,0 +1,212 @@
+{
+  "resourceType": "Parameters",
+  "id": "20261108-194605-c2e634b92fb9484db9b993bb",
+  "meta": {
+    "profile": [
+      "http://fhir.org/guides/hrsa/uds-plus/StructureDefinition/uds-plus-import-manifest"
+    ]
+  },
+  "parameter": [
+    {
+      "name": "inputFormat",
+      "valueCode": "fhir+ndjson"
+    },
+    {
+      "name": "submissionId",
+      "valueString": "20261108-194605-c2e634b92fb9484db9b993bb"
+    },
+    {
+      "name": "submissionTime",
+      "valueDateTime": "2026-11-08T19:46:05+00:00"
+    },
+    {
+      "name": "hcInformation",
+      "part": [
+        {
+          "name": "uei",
+          "valueString": "DEMO12345678"
+        },
+        {
+          "name": "grantNumber",
+          "valueString": "H80CS00000"
+        },
+        {
+          "name": "hcName",
+          "valueString": "Demo Community Health Center"
+        },
+        {
+          "name": "hcAddress",
+          "valueAddress": {
+            "line": [
+              "100 Interop Way"
+            ],
+            "city": "Atlanta",
+            "state": "GA",
+            "postalCode": "30301",
+            "country": "US"
+          }
+        },
+        {
+          "name": "hcContactPerson",
+          "valueHumanName": {
+            "family": "Reporter",
+            "given": [
+              "Uds"
+            ]
+          }
+        },
+        {
+          "name": "hcContactPhone",
+          "valueContactPoint": {
+            "system": "phone",
+            "value": "555-010-0000"
+          }
+        },
+        {
+          "name": "hcPrenatalCareByReferralOnly",
+          "valueBoolean": false
+        }
+      ]
+    },
+    {
+      "name": "importProtocol",
+      "valueCode": "https"
+    },
+    {
+      "name": "udsData",
+      "part": [
+        {
+          "name": "type",
+          "valueCode": "AllergyIntolerance"
+        },
+        {
+          "name": "url",
+          "valueUrl": "http://localhost:5080/udsplus/files/20261108-194605-c2e634b92fb9484db9b993bb/AllergyIntolerance.ndjson"
+        },
+        {
+          "name": "expirationTime",
+          "valueDateTime": "2026-11-15T19:46:05+00:00"
+        }
+      ]
+    },
+    {
+      "name": "udsData",
+      "part": [
+        {
+          "name": "type",
+          "valueCode": "Condition"
+        },
+        {
+          "name": "url",
+          "valueUrl": "http://localhost:5080/udsplus/files/20261108-194605-c2e634b92fb9484db9b993bb/Condition.ndjson"
+        },
+        {
+          "name": "expirationTime",
+          "valueDateTime": "2026-11-15T19:46:05+00:00"
+        }
+      ]
+    },
+    {
+      "name": "udsData",
+      "part": [
+        {
+          "name": "type",
+          "valueCode": "Encounter"
+        },
+        {
+          "name": "url",
+          "valueUrl": "http://localhost:5080/udsplus/files/20261108-194605-c2e634b92fb9484db9b993bb/Encounter.ndjson"
+        },
+        {
+          "name": "expirationTime",
+          "valueDateTime": "2026-11-15T19:46:05+00:00"
+        }
+      ]
+    },
+    {
+      "name": "udsData",
+      "part": [
+        {
+          "name": "type",
+          "valueCode": "Immunization"
+        },
+        {
+          "name": "url",
+          "valueUrl": "http://localhost:5080/udsplus/files/20261108-194605-c2e634b92fb9484db9b993bb/Immunization.ndjson"
+        },
+        {
+          "name": "expirationTime",
+          "valueDateTime": "2026-11-15T19:46:05+00:00"
+        }
+      ]
+    },
+    {
+      "name": "udsData",
+      "part": [
+        {
+          "name": "type",
+          "valueCode": "MedicationRequest"
+        },
+        {
+          "name": "url",
+          "valueUrl": "http://localhost:5080/udsplus/files/20261108-194605-c2e634b92fb9484db9b993bb/MedicationRequest.ndjson"
+        },
+        {
+          "name": "expirationTime",
+          "valueDateTime": "2026-11-15T19:46:05+00:00"
+        }
+      ]
+    },
+    {
+      "name": "udsData",
+      "part": [
+        {
+          "name": "type",
+          "valueCode": "Observation"
+        },
+        {
+          "name": "url",
+          "valueUrl": "http://localhost:5080/udsplus/files/20261108-194605-c2e634b92fb9484db9b993bb/Observation.ndjson"
+        },
+        {
+          "name": "expirationTime",
+          "valueDateTime": "2026-11-15T19:46:05+00:00"
+        }
+      ]
+    },
+    {
+      "name": "udsData",
+      "part": [
+        {
+          "name": "type",
+          "valueCode": "Patient"
+        },
+        {
+          "name": "url",
+          "valueUrl": "http://localhost:5080/udsplus/files/20261108-194605-c2e634b92fb9484db9b993bb/Patient.ndjson"
+        },
+        {
+          "name": "expirationTime",
+          "valueDateTime": "2026-11-15T19:46:05+00:00"
+        }
+      ]
+    },
+    {
+      "name": "udsData",
+      "part": [
+        {
+          "name": "type",
+          "valueCode": "Procedure"
+        },
+        {
+          "name": "url",
+          "valueUrl": "http://localhost:5080/udsplus/files/20261108-194605-c2e634b92fb9484db9b993bb/Procedure.ndjson"
+        },
+        {
+          "name": "expirationTime",
+          "valueDateTime": "2026-11-15T19:46:05+00:00"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,988 @@
+{
+ "inferno": "http://localhost:4568",
+ "suite": "uds_plus",
+ "group": "uds_plus-uds_plus_test_group",
+ "session": "djl0AOvMuN8",
+ "run": "dcbc0989-4789-41c7-857d-b83566a68740",
+ "inputs": [
+  {
+   "name": "import_manifest",
+   "value": "http://localhost:5080/udsplus/files/20261108-194605-c2e634b92fb9484db9b993bb/manifest.json"
+  }
+ ],
+ "results": [
+  {
+   "id": "c22d850a-d031-411e-abd9-9a084620aa2c",
+   "created_at": "2026-11-09T01:18:02.514+05:30",
+   "inputs": [
+    {
+     "name": "import_manifest",
+     "value": "http://localhost:5080/udsplus/files/20261108-194605-c2e634b92fb9484db9b993bb/manifest.json",
+     "type": "text"
+    }
+   ],
+   "optional": false,
+   "outputs": [],
+   "requests": [
+    {
+     "id": "065401e4-5e0b-45ad-8959-73deba84e604",
+     "direction": "outgoing",
+     "index": 28,
+     "result_id": "c22d850a-d031-411e-abd9-9a084620aa2c",
+     "status": 200,
+     "timestamp": "2026-11-09T01:18:02.520+05:30",
+     "url": "http://localhost:5080/udsplus/files/20261108-194605-c2e634b92fb9484db9b993bb/manifest.json",
+     "verb": "get"
+    }
+   ],
+   "result": "pass",
+   "test_id": "uds_plus-uds_plus_test_group-uds_plus_read_manifest_test",
+   "test_run_id": "dcbc0989-4789-41c7-857d-b83566a68740",
+   "test_session_id": "djl0AOvMuN8",
+   "updated_at": "2026-11-09T01:18:02.514+05:30"
+  },
+  {
+   "id": "f8be8708-aa4c-46f5-a7bc-e3af718dd595",
+   "created_at": "2026-11-09T01:18:02.574+05:30",
+   "inputs": [],
+   "messages": [
+    {
+     "message": "Parameters/20261108-194605-c2e634b92fb9484db9b993bb: Parameters.parameter[5].part[1].value.ofType(url): No definition could be found for URL value 'http://localhost:5080/udsplus/files/20261108-194605-c2e634b92fb9484db9b993bb/AllergyIntolerance.ndjson'",
+     "type": "warning"
+    },
+    {
+     "message": "Parameters/20261108-194605-c2e634b92fb9484db9b993bb: Parameters.parameter[6].part[1].value.ofType(url): No definition could be found for URL value 'http://localhost:5080/udsplus/files/20261108-194605-c2e634b92fb9484db9b993bb/Condition.ndjson'",
+     "type": "warning"
+    },
+    {
+     "message": "Parameters/20261108-194605-c2e634b92fb9484db9b993bb: Parameters.parameter[7].part[1].value.ofType(url): No definition could be found for URL value 'http://localhost:5080/udsplus/files/20261108-194605-c2e634b92fb9484db9b993bb/Encounter.ndjson'",
+     "type": "warning"
+    },
+    {
+     "message": "Parameters/20261108-194605-c2e634b92fb9484db9b993bb: Parameters.parameter[8].part[1].value.ofType(url): No definition could be found for URL value 'http://localhost:5080/udsplus/files/20261108-194605-c2e634b92fb9484db9b993bb/Immunization.ndjson'",
+     "type": "warning"
+    },
+    {
+     "message": "Parameters/20261108-194605-c2e634b92fb9484db9b993bb: Parameters.parameter[9].part[1].value.ofType(url): No definition could be found for URL value 'http://localhost:5080/udsplus/files/20261108-194605-c2e634b92fb9484db9b993bb/MedicationRequest.ndjson'",
+     "type": "warning"
+    },
+    {
+     "message": "Parameters/20261108-194605-c2e634b92fb9484db9b993bb: Parameters.parameter[10].part[1].value.ofType(url): No definition could be found for URL value 'http://localhost:5080/udsplus/files/20261108-194605-c2e634b92fb9484db9b993bb/Observation.ndjson'",
+     "type": "warning"
+    },
+    {
+     "message": "Parameters/20261108-194605-c2e634b92fb9484db9b993bb: Parameters.parameter[11].part[1].value.ofType(url): No definition could be found for URL value 'http://localhost:5080/udsplus/files/20261108-194605-c2e634b92fb9484db9b993bb/Patient.ndjson'",
+     "type": "warning"
+    },
+    {
+     "message": "Parameters/20261108-194605-c2e634b92fb9484db9b993bb: Parameters.parameter[12].part[1].value.ofType(url): No definition could be found for URL value 'http://localhost:5080/udsplus/files/20261108-194605-c2e634b92fb9484db9b993bb/Procedure.ndjson'",
+     "type": "warning"
+    }
+   ],
+   "optional": false,
+   "outputs": [],
+   "requests": [],
+   "result": "pass",
+   "test_id": "uds_plus-uds_plus_test_group-uds_plus_validate_manifest_test",
+   "test_run_id": "dcbc0989-4789-41c7-857d-b83566a68740",
+   "test_session_id": "djl0AOvMuN8",
+   "updated_at": "2026-11-09T01:18:02.574+05:30"
+  },
+  {
+   "id": "a50de3da-60f0-406a-9b00-90d4cc76df9c",
+   "created_at": "2026-11-09T01:18:02.763+05:30",
+   "inputs": [],
+   "optional": false,
+   "outputs": [],
+   "requests": [
+    {
+     "id": "20884a5d-d377-4fa7-b7e9-5b9b4a5cbe86",
+     "direction": "outgoing",
+     "index": 29,
+     "result_id": "a50de3da-60f0-406a-9b00-90d4cc76df9c",
+     "status": 200,
+     "timestamp": "2026-11-09T01:18:02.769+05:30",
+     "url": "http://localhost:5080/udsplus/files/20261108-194605-c2e634b92fb9484db9b993bb/AllergyIntolerance.ndjson",
+     "verb": "get"
+    },
+    {
+     "id": "fcb4d7f0-b4e3-433e-ab34-d0faf0c853a8",
+     "direction": "outgoing",
+     "index": 30,
+     "result_id": "a50de3da-60f0-406a-9b00-90d4cc76df9c",
+     "status": 200,
+     "timestamp": "2026-11-09T01:18:02.794+05:30",
+     "url": "http://localhost:5080/udsplus/files/20261108-194605-c2e634b92fb9484db9b993bb/Condition.ndjson",
+     "verb": "get"
+    },
+    {
+     "id": "7576f7d8-577c-4096-b7be-040f4311fa61",
+     "direction": "outgoing",
+     "index": 31,
+     "result_id": "a50de3da-60f0-406a-9b00-90d4cc76df9c",
+     "status": 200,
+     "timestamp": "2026-11-09T01:18:02.817+05:30",
+     "url": "http://localhost:5080/udsplus/files/20261108-194605-c2e634b92fb9484db9b993bb/Encounter.ndjson",
+     "verb": "get"
+    },
+    {
+     "id": "000ba949-958f-4570-a156-8dcc386d44c6",
+     "direction": "outgoing",
+     "index": 32,
+     "result_id": "a50de3da-60f0-406a-9b00-90d4cc76df9c",
+     "status": 200,
+     "timestamp": "2026-11-09T01:18:02.841+05:30",
+     "url": "http://localhost:5080/udsplus/files/20261108-194605-c2e634b92fb9484db9b993bb/Immunization.ndjson",
+     "verb": "get"
+    },
+    {
+     "id": "f7e5ca98-a410-4ac0-b795-f90348c557b5",
+     "direction": "outgoing",
+     "index": 33,
+     "result_id": "a50de3da-60f0-406a-9b00-90d4cc76df9c",
+     "status": 200,
+     "timestamp": "2026-11-09T01:18:02.865+05:30",
+     "url": "http://localhost:5080/udsplus/files/20261108-194605-c2e634b92fb9484db9b993bb/MedicationRequest.ndjson",
+     "verb": "get"
+    },
+    {
+     "id": "42156bb4-3f45-405a-8a4c-5c424436bf54",
+     "direction": "outgoing",
+     "index": 34,
+     "result_id": "a50de3da-60f0-406a-9b00-90d4cc76df9c",
+     "status": 200,
+     "timestamp": "2026-11-09T01:18:02.894+05:30",
+     "url": "http://localhost:5080/udsplus/files/20261108-194605-c2e634b92fb9484db9b993bb/Observation.ndjson",
+     "verb": "get"
+    },
+    {
+     "id": "8afd773a-b6b4-4760-a5bb-a1450793a2bb",
+     "direction": "outgoing",
+     "index": 35,
+     "result_id": "a50de3da-60f0-406a-9b00-90d4cc76df9c",
+     "status": 200,
+     "timestamp": "2026-11-09T01:18:02.918+05:30",
+     "url": "http://localhost:5080/udsplus/files/20261108-194605-c2e634b92fb9484db9b993bb/Patient.ndjson",
+     "verb": "get"
+    },
+    {
+     "id": "fa3bdfa6-e95e-4155-bbfe-a2227a1f55b0",
+     "direction": "outgoing",
+     "index": 36,
+     "result_id": "a50de3da-60f0-406a-9b00-90d4cc76df9c",
+     "status": 200,
+     "timestamp": "2026-11-09T01:18:02.941+05:30",
+     "url": "http://localhost:5080/udsplus/files/20261108-194605-c2e634b92fb9484db9b993bb/Procedure.ndjson",
+     "verb": "get"
+    }
+   ],
+   "result": "pass",
+   "test_id": "uds_plus-uds_plus_test_group-uds_plus_read_data_test",
+   "test_run_id": "dcbc0989-4789-41c7-857d-b83566a68740",
+   "test_session_id": "djl0AOvMuN8",
+   "updated_at": "2026-11-09T01:18:02.763+05:30"
+  },
+  {
+   "id": "9b218dd9-4810-442d-8a84-ff84c9df6ef3",
+   "created_at": "2026-11-09T01:18:02.966+05:30",
+   "inputs": [],
+   "optional": false,
+   "outputs": [],
+   "requests": [],
+   "result": "omit",
+   "result_message": "No data of this type was identified.",
+   "test_id": "uds_plus-uds_plus_test_group-uds_plus_validate_coverage_test",
+   "test_run_id": "dcbc0989-4789-41c7-857d-b83566a68740",
+   "test_session_id": "djl0AOvMuN8",
+   "updated_at": "2026-11-09T01:18:02.966+05:30"
+  },
+  {
+   "id": "50bd93b9-79da-4d38-9b52-55efa231885a",
+   "created_at": "2026-11-09T01:18:04.079+05:30",
+   "inputs": [],
+   "messages": [
+    {
+     "message": "Condition/demo-condition-covid: Condition: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    },
+    {
+     "message": "Condition/demo-condition-htn: Condition: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    },
+    {
+     "message": "Condition/demo2-condition-uri: Condition: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    },
+    {
+     "message": "Condition/demo2-condition-appendicitis: Condition: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    },
+    {
+     "message": "Condition/demo2-condition-t2dm: Condition: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    },
+    {
+     "message": "Condition/demo2-condition-htn: Condition: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    },
+    {
+     "message": "Condition/demo2-condition-food-insecurity: Condition.category[0]: None of the codings provided are in the value set 'Condition Category Codes' (http://hl7.org/fhir/ValueSet/condition-category|4.0.1), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable) (codes = http://hl7.org/fhir/us/core/CodeSystem/condition-category#health-concern)",
+     "type": "warning"
+    },
+    {
+     "message": "Condition/demo2-condition-food-insecurity: Condition: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    }
+   ],
+   "optional": false,
+   "outputs": [],
+   "requests": [],
+   "result": "pass",
+   "test_id": "uds_plus-uds_plus_test_group-uds_plus_validate_diagnosis_test",
+   "test_run_id": "dcbc0989-4789-41c7-857d-b83566a68740",
+   "test_session_id": "djl0AOvMuN8",
+   "updated_at": "2026-11-09T01:18:04.079+05:30"
+  },
+  {
+   "id": "73d78fe0-b718-4ba2-b737-566d1ae994d2",
+   "created_at": "2026-11-09T01:18:04.202+05:30",
+   "inputs": [],
+   "messages": [
+    {
+     "message": "Encounter/demo-encounter-1: Encounter.hospitalization.dischargeDisposition: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/discharge-disposition|0.1.0 from active ValueSet http://hl7.org/fhir/us/core/ValueSet/us-core-discharge-disposition|6.1.0",
+     "type": "info"
+    },
+    {
+     "message": "Encounter/demo-encounter-1: Encounter.hospitalization.dischargeDisposition: None of the codings provided are in the value set 'US Core Discharge Disposition' (http://hl7.org/fhir/us/core/ValueSet/us-core-discharge-disposition|6.1.0), and a coding is recommended to come from this value set (codes = http://terminology.hl7.org/CodeSystem/discharge-disposition#home)",
+     "type": "info"
+    },
+    {
+     "message": "Encounter/demo-encounter-1: Encounter: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    },
+    {
+     "message": "Encounter/demo2-encounter-2025: Encounter.hospitalization.dischargeDisposition: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/discharge-disposition|0.1.0 from active ValueSet http://hl7.org/fhir/us/core/ValueSet/us-core-discharge-disposition|6.1.0",
+     "type": "info"
+    },
+    {
+     "message": "Encounter/demo2-encounter-2025: Encounter.hospitalization.dischargeDisposition: None of the codings provided are in the value set 'US Core Discharge Disposition' (http://hl7.org/fhir/us/core/ValueSet/us-core-discharge-disposition|6.1.0), and a coding is recommended to come from this value set (codes = http://terminology.hl7.org/CodeSystem/discharge-disposition#home)",
+     "type": "info"
+    },
+    {
+     "message": "Encounter/demo2-encounter-2025: Encounter: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    },
+    {
+     "message": "Encounter/demo2-encounter-2026: Encounter.type[0]: None of the codings provided are in the value set 'US Core Encounter Type' (http://hl7.org/fhir/us/core/ValueSet/us-core-encounter-type|6.1.0), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable) (codes = http://snomed.info/sct#32485007)",
+     "type": "warning"
+    },
+    {
+     "message": "Encounter/demo2-encounter-2026: Encounter.hospitalization.dischargeDisposition: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/discharge-disposition|0.1.0 from active ValueSet http://hl7.org/fhir/us/core/ValueSet/us-core-discharge-disposition|6.1.0",
+     "type": "info"
+    },
+    {
+     "message": "Encounter/demo2-encounter-2026: Encounter.hospitalization.dischargeDisposition: None of the codings provided are in the value set 'US Core Discharge Disposition' (http://hl7.org/fhir/us/core/ValueSet/us-core-discharge-disposition|6.1.0), and a coding is recommended to come from this value set (codes = http://terminology.hl7.org/CodeSystem/discharge-disposition#home)",
+     "type": "info"
+    },
+    {
+     "message": "Encounter/demo2-encounter-2026: Encounter: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    }
+   ],
+   "optional": false,
+   "outputs": [],
+   "requests": [],
+   "result": "pass",
+   "test_id": "uds_plus-uds_plus_test_group-uds_plus_validate_encounter_test",
+   "test_run_id": "dcbc0989-4789-41c7-857d-b83566a68740",
+   "test_session_id": "djl0AOvMuN8",
+   "updated_at": "2026-11-09T01:18:04.202+05:30"
+  },
+  {
+   "id": "e5f26a76-dd9b-4f5f-9650-3d9dbf377667",
+   "created_at": "2026-11-09T01:18:04.281+05:30",
+   "inputs": [],
+   "messages": [
+    {
+     "message": "Patient/c78d920ac0b3028038845c8e52ee852f7c589f59089da78b6bb4be64e1531a35: Patient.extension[2]: This element does not match any known slice defined in the profile http://fhir.org/guides/hrsa/uds-plus/StructureDefinition/de-identified-uds-plus-patient|2.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)",
+     "type": "info"
+    },
+    {
+     "message": "Patient/c78d920ac0b3028038845c8e52ee852f7c589f59089da78b6bb4be64e1531a35: Patient.extension[0].extension[2].value.ofType(Coding): The code provided (urn:oid:2.16.840.1.113883.6.238#2108-9) was not found in the value set 'Detailed Race' (http://hl7.org/fhir/us/core/ValueSet/detailed-race|6.1.0), and a code from this value set is required: The provided code 'urn:oid:2.16.840.1.113883.6.238#2108-9' was not found in the value set 'http://hl7.org/fhir/us/core/ValueSet/detailed-race|6.1.0'",
+     "type": "error"
+    },
+    {
+     "message": "Patient/c78d920ac0b3028038845c8e52ee852f7c589f59089da78b6bb4be64e1531a35: Patient: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    }
+   ],
+   "optional": false,
+   "outputs": [],
+   "requests": [],
+   "result": "fail",
+   "result_message": "Resource does not conform to the profile: http://fhir.org/guides/hrsa/uds-plus/StructureDefinition/de-identified-uds-plus-patient|2.0.0",
+   "test_id": "uds_plus-uds_plus_test_group-uds_plus_validate_patient_test",
+   "test_run_id": "dcbc0989-4789-41c7-857d-b83566a68740",
+   "test_session_id": "djl0AOvMuN8",
+   "updated_at": "2026-11-09T01:18:04.281+05:30"
+  },
+  {
+   "id": "12f07d47-6e79-47fa-bb76-038165ad33f6",
+   "created_at": "2026-11-09T01:18:04.978+05:30",
+   "inputs": [],
+   "messages": [
+    {
+     "message": "Procedure/demo-proc-swab: Procedure: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    },
+    {
+     "message": "Procedure/demo2-procedure-appendectomy: Procedure: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    },
+    {
+     "message": "Procedure/demo2-procedure-ekg: Procedure.category.coding[0]: The concept '103693007' has a status of inactive and its use should be reviewed",
+     "type": "warning"
+    },
+    {
+     "message": "Procedure/demo2-procedure-ekg: Procedure: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    }
+   ],
+   "optional": false,
+   "outputs": [],
+   "requests": [],
+   "result": "pass",
+   "test_id": "uds_plus-uds_plus_test_group-uds_plus_validate_procedure_test",
+   "test_run_id": "dcbc0989-4789-41c7-857d-b83566a68740",
+   "test_session_id": "djl0AOvMuN8",
+   "updated_at": "2026-11-09T01:18:04.978+05:30"
+  },
+  {
+   "id": "70483004-6cd7-42ac-9638-be8b7dc32683",
+   "created_at": "2026-11-09T01:18:05.002+05:30",
+   "inputs": [],
+   "optional": false,
+   "outputs": [],
+   "requests": [],
+   "result": "omit",
+   "result_message": "No data of this type was identified.",
+   "test_id": "uds_plus-uds_plus_test_group-uds_plus_validate_related_person_test",
+   "test_run_id": "dcbc0989-4789-41c7-857d-b83566a68740",
+   "test_session_id": "djl0AOvMuN8",
+   "updated_at": "2026-11-09T01:18:05.002+05:30"
+  },
+  {
+   "id": "475bab75-f020-41aa-96b8-158b42cb20e3",
+   "created_at": "2026-11-09T01:18:05.696+05:30",
+   "inputs": [],
+   "messages": [
+    {
+     "message": "Immunization/demo-imm-flu: Immunization: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    },
+    {
+     "message": "Immunization/demo2-immunization-flu: Immunization: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    },
+    {
+     "message": "Immunization/demo2-immunization-covid: Immunization: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    },
+    {
+     "message": "Immunization/demo2-immunization-tdap-not-done: Immunization: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    }
+   ],
+   "optional": false,
+   "outputs": [],
+   "requests": [],
+   "result": "pass",
+   "test_id": "uds_plus-uds_plus_test_group-uds_plus_validate_immunization_test",
+   "test_run_id": "dcbc0989-4789-41c7-857d-b83566a68740",
+   "test_session_id": "djl0AOvMuN8",
+   "updated_at": "2026-11-09T01:18:05.696+05:30"
+  },
+  {
+   "id": "27f9d655-1dca-4249-a343-02d29a756ae1",
+   "created_at": "2026-11-09T01:18:05.722+05:30",
+   "inputs": [],
+   "optional": false,
+   "outputs": [],
+   "requests": [],
+   "result": "omit",
+   "result_message": "No data of this type was identified.",
+   "test_id": "uds_plus-uds_plus_test_group-uds_plus_validate_location_test",
+   "test_run_id": "dcbc0989-4789-41c7-857d-b83566a68740",
+   "test_session_id": "djl0AOvMuN8",
+   "updated_at": "2026-11-09T01:18:05.722+05:30"
+  },
+  {
+   "id": "5bf90c46-47d6-454e-96cf-d7c163ecd67a",
+   "created_at": "2026-11-09T01:18:06.710+05:30",
+   "inputs": [],
+   "messages": [
+    {
+     "message": "AllergyIntolerance/demo-allergy-pcn: AllergyIntolerance: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    },
+    {
+     "message": "AllergyIntolerance/demo2-allergy-peanut: AllergyIntolerance.code: None of the codings provided are in the value set 'Common substances for allergy and intolerance documentation including refutations' (http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1186.8|20240625), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable) (codes = http://snomed.info/sct#91935009)",
+     "type": "warning"
+    },
+    {
+     "message": "AllergyIntolerance/demo2-allergy-peanut: AllergyIntolerance.reaction[0].substance.coding[0]: The concept '256349002' has a status of inactive and its use should be reviewed",
+     "type": "warning"
+    },
+    {
+     "message": "AllergyIntolerance/demo2-allergy-peanut: AllergyIntolerance: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    },
+    {
+     "message": "AllergyIntolerance/demo2-allergy-sulfa: AllergyIntolerance: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    }
+   ],
+   "optional": false,
+   "outputs": [],
+   "requests": [],
+   "result": "pass",
+   "test_id": "uds_plus-uds_plus_test_group-uds_plus_validate_allergy_intolerance_test",
+   "test_run_id": "dcbc0989-4789-41c7-857d-b83566a68740",
+   "test_session_id": "djl0AOvMuN8",
+   "updated_at": "2026-11-09T01:18:06.710+05:30"
+  },
+  {
+   "id": "29ae9353-ee62-4a20-880b-bd02a06e477a",
+   "created_at": "2026-11-09T01:18:06.737+05:30",
+   "inputs": [],
+   "optional": false,
+   "outputs": [],
+   "requests": [],
+   "result": "omit",
+   "result_message": "No data of this type was identified.",
+   "test_id": "uds_plus-uds_plus_test_group-uds_plus_validate_adverse_event_test",
+   "test_run_id": "dcbc0989-4789-41c7-857d-b83566a68740",
+   "test_session_id": "djl0AOvMuN8",
+   "updated_at": "2026-11-09T01:18:06.737+05:30"
+  },
+  {
+   "id": "411fedb1-297f-4ab2-84c4-29364badebd1",
+   "created_at": "2026-11-09T01:18:06.744+05:30",
+   "inputs": [],
+   "optional": false,
+   "outputs": [],
+   "requests": [],
+   "result": "omit",
+   "result_message": "No data of this type was identified.",
+   "test_id": "uds_plus-uds_plus_test_group-uds_plus_validate_income_test",
+   "test_run_id": "dcbc0989-4789-41c7-857d-b83566a68740",
+   "test_session_id": "djl0AOvMuN8",
+   "updated_at": "2026-11-09T01:18:06.744+05:30"
+  },
+  {
+   "id": "64aa4281-b96e-419a-b73f-dcf532ffe8d1",
+   "created_at": "2026-11-09T01:18:07.022+05:30",
+   "inputs": [],
+   "messages": [
+    {
+     "message": "Observation/demo-obs-covid-pcr: Observation.category[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/observation-category|0.1.0 from active ValueSet http://hl7.org/fhir/us/core/ValueSet/us-core-clinical-result-observation-category|6.1.0",
+     "type": "info"
+    },
+    {
+     "message": "Observation/demo-obs-covid-pcr: Observation: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo-obs-covid-pcr: Observation: Best Practice Recommendation: In general, all observations should have a performer",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo2-obs-hba1c: Observation.category[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/observation-category|0.1.0 from active ValueSet http://hl7.org/fhir/us/core/ValueSet/us-core-clinical-result-observation-category|6.1.0",
+     "type": "info"
+    },
+    {
+     "message": "Observation/demo2-obs-hba1c: Observation: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo2-obs-hba1c: Observation: Best Practice Recommendation: In general, all observations should have a performer",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo2-obs-glucose: Observation.category[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/observation-category|0.1.0 from active ValueSet http://hl7.org/fhir/us/core/ValueSet/us-core-clinical-result-observation-category|6.1.0",
+     "type": "info"
+    },
+    {
+     "message": "Observation/demo2-obs-glucose: Observation: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo2-obs-glucose: Observation: Best Practice Recommendation: In general, all observations should have a performer",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo2-obs-ldl: Observation.category[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/observation-category|0.1.0 from active ValueSet http://hl7.org/fhir/us/core/ValueSet/us-core-clinical-result-observation-category|6.1.0",
+     "type": "info"
+    },
+    {
+     "message": "Observation/demo2-obs-ldl: Observation: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo2-obs-ldl: Observation: Best Practice Recommendation: In general, all observations should have a performer",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo2-obs-hemoglobin: Observation.category[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/observation-category|0.1.0 from active ValueSet http://hl7.org/fhir/us/core/ValueSet/us-core-clinical-result-observation-category|6.1.0",
+     "type": "info"
+    },
+    {
+     "message": "Observation/demo2-obs-hemoglobin: Observation: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo2-obs-hemoglobin: Observation: Best Practice Recommendation: In general, all observations should have a performer",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo2-obs-wbc: Observation.category[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/observation-category|0.1.0 from active ValueSet http://hl7.org/fhir/us/core/ValueSet/us-core-clinical-result-observation-category|6.1.0",
+     "type": "info"
+    },
+    {
+     "message": "Observation/demo2-obs-wbc: Observation: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo2-obs-wbc: Observation: Best Practice Recommendation: In general, all observations should have a performer",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo2-obs-urine-culture: Observation.category[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/observation-category|0.1.0 from active ValueSet http://hl7.org/fhir/us/core/ValueSet/us-core-clinical-result-observation-category|6.1.0",
+     "type": "info"
+    },
+    {
+     "message": "Observation/demo2-obs-urine-culture: Observation: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo2-obs-urine-culture: Observation: Best Practice Recommendation: In general, all observations should have a performer",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo2-obs-potassium-dar-ext: Observation.category[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/observation-category|0.1.0 from active ValueSet http://hl7.org/fhir/us/core/ValueSet/us-core-clinical-result-observation-category|6.1.0",
+     "type": "info"
+    },
+    {
+     "message": "Observation/demo2-obs-potassium-dar-ext: Observation: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo2-obs-potassium-dar-ext: Observation: Best Practice Recommendation: In general, all observations should have a performer",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo2-obs-creatinine-not-performed: Observation.category[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/observation-category|0.1.0 from active ValueSet http://hl7.org/fhir/us/core/ValueSet/us-core-clinical-result-observation-category|6.1.0",
+     "type": "info"
+    },
+    {
+     "message": "Observation/demo2-obs-creatinine-not-performed: Observation: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo2-obs-creatinine-not-performed: Observation: Best Practice Recommendation: In general, all observations should have a performer",
+     "type": "warning"
+    }
+   ],
+   "optional": false,
+   "outputs": [],
+   "requests": [],
+   "result": "pass",
+   "test_id": "uds_plus-uds_plus_test_group-uds_plus_validate_lab_test",
+   "test_run_id": "dcbc0989-4789-41c7-857d-b83566a68740",
+   "test_session_id": "djl0AOvMuN8",
+   "updated_at": "2026-11-09T01:18:07.022+05:30"
+  },
+  {
+   "id": "4567f758-bfcc-4e23-b1a4-fbff646fb43c",
+   "created_at": "2026-11-09T01:18:07.115+05:30",
+   "inputs": [],
+   "optional": false,
+   "outputs": [],
+   "requests": [],
+   "result": "omit",
+   "result_message": "No data of this type was identified.",
+   "test_id": "uds_plus-uds_plus_test_group-uds_plus_validate_clinical_result_test",
+   "test_run_id": "dcbc0989-4789-41c7-857d-b83566a68740",
+   "test_session_id": "djl0AOvMuN8",
+   "updated_at": "2026-11-09T01:18:07.115+05:30"
+  },
+  {
+   "id": "375db001-ef94-45ae-ac96-bfd46d831027",
+   "created_at": "2026-11-09T01:18:07.744+05:30",
+   "inputs": [],
+   "messages": [
+    {
+     "message": "Observation/demo-obs-bp: Observation: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo-obs-bp: Observation: Validate Observation against the Blood pressure systolic and diastolic profile (http://hl7.org/fhir/StructureDefinition/bp) which is required by the FHIR specification because the LOINC code 85354-9 was found",
+     "type": "info"
+    },
+    {
+     "message": "Observation/demo-obs-bp: Observation: Best Practice Recommendation: In general, all observations should have a performer",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo-obs-temp: Observation: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo-obs-temp: Observation: Validate Observation against the Body temperature profile (http://hl7.org/fhir/StructureDefinition/bodytemp) which is required by the FHIR specification because the LOINC code 8310-5 was found",
+     "type": "info"
+    },
+    {
+     "message": "Observation/demo-obs-temp: Observation: Best Practice Recommendation: In general, all observations should have a performer",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo-obs-smoking: Observation: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo-obs-smoking: Observation: Best Practice Recommendation: In general, all observations should have a performer",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo2-obs-bp: Observation: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo2-obs-bp: Observation: Validate Observation against the Blood pressure systolic and diastolic profile (http://hl7.org/fhir/StructureDefinition/bp) which is required by the FHIR specification because the LOINC code 85354-9 was found",
+     "type": "info"
+    },
+    {
+     "message": "Observation/demo2-obs-bp: Observation: Best Practice Recommendation: In general, all observations should have a performer",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo2-obs-bp-2025: Observation: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo2-obs-bp-2025: Observation: Validate Observation against the Blood pressure systolic and diastolic profile (http://hl7.org/fhir/StructureDefinition/bp) which is required by the FHIR specification because the LOINC code 85354-9 was found",
+     "type": "info"
+    },
+    {
+     "message": "Observation/demo2-obs-bp-2025: Observation: Best Practice Recommendation: In general, all observations should have a performer",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo2-obs-heart-rate: Observation: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo2-obs-heart-rate: Observation: Validate Observation against the Heart rate profile (http://hl7.org/fhir/StructureDefinition/heartrate) which is required by the FHIR specification because the LOINC code 8867-4 was found",
+     "type": "info"
+    },
+    {
+     "message": "Observation/demo2-obs-heart-rate: Observation: Best Practice Recommendation: In general, all observations should have a performer",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo2-obs-resp-rate: Observation: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo2-obs-resp-rate: Observation: Validate Observation against the Respiratory Rate profile (http://hl7.org/fhir/StructureDefinition/resprate) which is required by the FHIR specification because the LOINC code 9279-1 was found",
+     "type": "info"
+    },
+    {
+     "message": "Observation/demo2-obs-resp-rate: Observation: Best Practice Recommendation: In general, all observations should have a performer",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo2-obs-temp: Observation: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo2-obs-temp: Observation: Validate Observation against the Body temperature profile (http://hl7.org/fhir/StructureDefinition/bodytemp) which is required by the FHIR specification because the LOINC code 8310-5 was found",
+     "type": "info"
+    },
+    {
+     "message": "Observation/demo2-obs-temp: Observation: Best Practice Recommendation: In general, all observations should have a performer",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo2-obs-height: Observation: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo2-obs-height: Observation: Validate Observation against the Body height profile (http://hl7.org/fhir/StructureDefinition/bodyheight) which is required by the FHIR specification because the LOINC code 8302-2 was found",
+     "type": "info"
+    },
+    {
+     "message": "Observation/demo2-obs-height: Observation: Best Practice Recommendation: In general, all observations should have a performer",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo2-obs-weight: Observation: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo2-obs-weight: Observation: Validate Observation against the Body weight profile (http://hl7.org/fhir/StructureDefinition/bodyweight) which is required by the FHIR specification because the LOINC code 29463-7 was found",
+     "type": "info"
+    },
+    {
+     "message": "Observation/demo2-obs-weight: Observation: Best Practice Recommendation: In general, all observations should have a performer",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo2-obs-bmi: Observation: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo2-obs-bmi: Observation: Validate Observation against the Body mass index profile (http://hl7.org/fhir/StructureDefinition/bmi) which is required by the FHIR specification because the LOINC code 39156-5 was found",
+     "type": "info"
+    },
+    {
+     "message": "Observation/demo2-obs-bmi: Observation: Best Practice Recommendation: In general, all observations should have a performer",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo2-obs-pulse-ox: Observation: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo2-obs-pulse-ox: Observation: Validate Observation against the Oxygen saturation profile (http://hl7.org/fhir/StructureDefinition/oxygensat) which is required by the FHIR specification because the LOINC code 2708-6 was found",
+     "type": "info"
+    },
+    {
+     "message": "Observation/demo2-obs-pulse-ox: Observation.component[0].code: None of the codings provided are in the value set 'Vital Signs' (http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable) (codes = http://loinc.org#3151-8)",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo2-obs-pulse-ox: Observation.component[0].value.ofType(Quantity): The code provided (http://unitsofmeasure.org#L/min) is not in the value set 'Vital Signs Units' (http://hl7.org/fhir/ValueSet/ucum-vitals-common|4.0.1), and a code should come from this value set unless it has no suitable code (the validator cannot judge what is suitable)",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo2-obs-pulse-ox: Observation.component[1].code: None of the codings provided are in the value set 'Vital Signs' (http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable) (codes = http://loinc.org#3150-0)",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo2-obs-pulse-ox: Observation: Best Practice Recommendation: In general, all observations should have a performer",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo2-obs-smoking: Observation: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo2-obs-smoking: Observation: Best Practice Recommendation: In general, all observations should have a performer",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo2-obs-ekg: Observation: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo2-obs-ekg: Observation: Best Practice Recommendation: In general, all observations should have a performer",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo2-obs-cxr-imaging: Observation: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo2-obs-cxr-imaging: Observation: Best Practice Recommendation: In general, all observations should have a performer",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo2-obs-pain: Observation.value.ofType(Quantity): UCUM Codes that contain human readable annotations like {score} can be misleading (e.g. they are ignored when comparing units). Best Practice is not to depend on annotations in the UCUM code, so this usage should be checked",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo2-obs-pain: Observation: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo2-obs-pain: Observation: Best Practice Recommendation: In general, all observations should have a performer",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo2-obs-phq9: Observation.value.ofType(Quantity): UCUM Codes that contain human readable annotations like {score} can be misleading (e.g. they are ignored when comparing units). Best Practice is not to depend on annotations in the UCUM code, so this usage should be checked",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo2-obs-phq9: Observation: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo2-obs-phq9: Observation: Best Practice Recommendation: In general, all observations should have a performer",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo2-obs-occupation: Observation.value.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'urn:oid:2.16.840.1.114222.4.5.314' could not be found, so the code cannot be validated",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo2-obs-occupation: Observation.component[0].value.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'urn:oid:2.16.840.1.114222.4.5.315' could not be found, so the code cannot be validated",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo2-obs-occupation: Observation: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo2-obs-occupation: Observation: Best Practice Recommendation: In general, all observations should have a performer",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo2-obs-sexual-orientation: Observation: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo2-obs-sexual-orientation: Observation: Best Practice Recommendation: In general, all observations should have a performer",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo2-obs-food-insecurity: Observation: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    },
+    {
+     "message": "Observation/demo2-obs-food-insecurity: Observation: Best Practice Recommendation: In general, all observations should have a performer",
+     "type": "warning"
+    }
+   ],
+   "optional": false,
+   "outputs": [],
+   "requests": [],
+   "result": "pass",
+   "test_id": "uds_plus-uds_plus_test_group-uds_plus_validate_observation_test",
+   "test_run_id": "dcbc0989-4789-41c7-857d-b83566a68740",
+   "test_session_id": "djl0AOvMuN8",
+   "updated_at": "2026-11-09T01:18:07.744+05:30"
+  },
+  {
+   "id": "8da50bac-1b0d-4056-ac71-0712f0da85d6",
+   "created_at": "2026-11-09T01:18:08.055+05:30",
+   "inputs": [],
+   "messages": [
+    {
+     "message": "MedicationRequest/demo-medrx-paxlovid: MedicationRequest: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    },
+    {
+     "message": "MedicationRequest/demo2-medicationrequest-amlodipine: MedicationRequest: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    },
+    {
+     "message": "MedicationRequest/demo2-medicationrequest-metformin: MedicationRequest: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    },
+    {
+     "message": "MedicationRequest/demo2-medicationrequest-cephalexin: MedicationRequest: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)",
+     "type": "warning"
+    }
+   ],
+   "optional": false,
+   "outputs": [],
+   "requests": [],
+   "result": "pass",
+   "test_id": "uds_plus-uds_plus_test_group-uds_plus_validate_medication_request_test",
+   "test_run_id": "dcbc0989-4789-41c7-857d-b83566a68740",
+   "test_session_id": "djl0AOvMuN8",
+   "updated_at": "2026-11-09T01:18:08.055+05:30"
+  },
+  {
+   "id": "16bfdf17-b569-4684-8eb3-f82bfbee2409",
+   "created_at": "2026-11-09T01:18:08.073+05:30",
+   "inputs": [],
+   "optional": false,
+   "outputs": [],
+   "requests": [],
+   "result": "omit",
+   "result_message": "No data of this type was identified.",
+   "test_id": "uds_plus-uds_plus_test_group-uds_plus_validate_medication_statement_test",
+   "test_run_id": "dcbc0989-4789-41c7-857d-b83566a68740",
+   "test_session_id": "djl0AOvMuN8",
+   "updated_at": "2026-11-09T01:18:08.073+05:30"
+  },
+  {
+   "id": "ef6dcd35-76e7-4d34-80ed-5ae7a9bba0a3",
+   "created_at": "2026-11-09T01:18:08.078+05:30",
+   "inputs": [],
+   "optional": false,
+   "outputs": [],
+   "requests": [],
+   "result": "omit",
+   "result_message": "No data of this type was identified.",
+   "test_id": "uds_plus-uds_plus_test_group-uds_plus_validate_service_request_test",
+   "test_run_id": "dcbc0989-4789-41c7-857d-b83566a68740",
+   "test_session_id": "djl0AOvMuN8",
+   "updated_at": "2026-11-09T01:18:08.078+05:30"
+  },
+  {
+   "id": "c3867ab2-e79c-40a5-9b40-6551872f5aaf",
+   "created_at": "2026-11-09T01:18:08.082+05:30",
+   "inputs": [],
+   "optional": false,
+   "outputs": [],
+   "requests": [],
+   "result": "omit",
+   "result_message": "No data of this type was identified.",
+   "test_id": "uds_plus-uds_plus_test_group-uds_plus_validate_data_urls_test",
+   "test_run_id": "dcbc0989-4789-41c7-857d-b83566a68740",
+   "test_session_id": "djl0AOvMuN8",
+   "updated_at": "2026-11-09T01:18:08.082+05:30"
+  },
+  {
+   "id": "29060b83-2406-4439-b26c-004abcc5349f",
+   "created_at": "2026-11-09T01:18:08.086+05:30",
+   "inputs": [],
+   "optional": false,
+   "outputs": [],
+   "requests": [],
+   "result": "omit",
+   "result_message": "No data of this type was identified.",
+   "test_id": "uds_plus-uds_plus_test_group-uds_plus_validate_patient_reporting_parameters_test",
+   "test_run_id": "dcbc0989-4789-41c7-857d-b83566a68740",
+   "test_session_id": "djl0AOvMuN8",
+   "updated_at": "2026-11-09T01:18:08.086+05:30"
+  },
+  {
+   "id": "ced3f572-2963-4f26-86a9-17a2b8b94102",
+   "created_at": "2026-11-09T01:18:08.093+05:30",
+   "inputs": [],
+   "optional": false,
+   "outputs": [],
+   "requests": [],
+   "result": "pass",
+   "test_id": "uds_plus-uds_plus_test_group-uds_plus_invalid_type_test",
+   "test_run_id": "dcbc0989-4789-41c7-857d-b83566a68740",
+   "test_session_id": "djl0AOvMuN8",
+   "updated_at": "2026-11-09T01:18:08.093+05:30"
+  },
+  {
+   "id": "44d364b3-c4af-4415-8eba-9fa1f0c48af2",
+   "created_at": "2026-11-09T01:18:08.097+05:30",
+   "inputs": [
+    {
+     "name": "import_manifest",
+     "label": "Import Manifest",
+     "description": "\n                User can input the Import manifest as: \n                a URL link to the location of the manifest (ex: http://www.example.com/import_manifest.json) OR \n                a JSON string that composes the manifest (ex: {manifest_contents}) \n            ",
+     "value": "http://localhost:5080/udsplus/files/20261108-194605-c2e634b92fb9484db9b993bb/manifest.json",
+     "type": "text"
+    }
+   ],
+   "optional": false,
+   "outputs": [],
+   "requests": [],
+   "result": "fail",
+   "test_group_id": "uds_plus-uds_plus_test_group",
+   "test_run_id": "dcbc0989-4789-41c7-857d-b83566a68740",
+   "test_session_id": "djl0AOvMuN8",
+   "updated_at": "2026-11-09T01:18:08.097+05:30"
+  }
+ ]
+}

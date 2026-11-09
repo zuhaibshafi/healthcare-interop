@@ -1,0 +1,128 @@
+{
+  "runId": "20261108-181848-901c697e0f7b4e518d17296d",
+  "groupId": "uds-plus-reporting-group",
+  "startedAt": "2026-11-08T18:18:48.984893+00:00",
+  "completedAt": "2026-11-08T18:31:14.3641621+00:00",
+  "exportedCounts": {
+    "Condition": 2,
+    "MedicationRequest": 1,
+    "AllergyIntolerance": 1,
+    "Immunization": 1,
+    "Observation": 4,
+    "Patient": 1,
+    "Procedure": 1,
+    "Encounter": 1
+  },
+  "deidentifiedCounts": {
+    "Patient": 1,
+    "AllergyIntolerance": 1,
+    "Condition": 2,
+    "Encounter": 1,
+    "Immunization": 1,
+    "MedicationRequest": 1,
+    "Observation": 4,
+    "Procedure": 1
+  },
+  "files": [
+    "http://localhost:5080/udsplus/files/20261108-181848-901c697e0f7b4e518d17296d/AllergyIntolerance.ndjson",
+    "http://localhost:5080/udsplus/files/20261108-181848-901c697e0f7b4e518d17296d/Condition.ndjson",
+    "http://localhost:5080/udsplus/files/20261108-181848-901c697e0f7b4e518d17296d/Encounter.ndjson",
+    "http://localhost:5080/udsplus/files/20261108-181848-901c697e0f7b4e518d17296d/Immunization.ndjson",
+    "http://localhost:5080/udsplus/files/20261108-181848-901c697e0f7b4e518d17296d/MedicationRequest.ndjson",
+    "http://localhost:5080/udsplus/files/20261108-181848-901c697e0f7b4e518d17296d/Observation.ndjson",
+    "http://localhost:5080/udsplus/files/20261108-181848-901c697e0f7b4e518d17296d/Patient.ndjson",
+    "http://localhost:5080/udsplus/files/20261108-181848-901c697e0f7b4e518d17296d/Procedure.ndjson"
+  ],
+  "manifestUrl": "http://localhost:5080/udsplus/files/20261108-181848-901c697e0f7b4e518d17296d/manifest.json",
+  "validation": {
+    "errors": 0,
+    "warnings": 0,
+    "information": 0,
+    "files": [],
+    "reportUrl": "http://localhost:5080/udsplus/files/20261108-181848-901c697e0f7b4e518d17296d/validation-report.json",
+    "error": "An error occurred while sending the request."
+  },
+  "importResponse": {
+    "statusCode": 202,
+    "contentType": "application/fhir\u002Bjson; charset=utf-8",
+    "body": {
+      "resourceType": "OperationOutcome",
+      "issue": [
+        {
+          "severity": "information",
+          "code": "informational",
+          "diagnostics": "Submission 424a9edbb69e accepted; poll http://localhost:5080/udsplus/$import-status/424a9edbb69e"
+        }
+      ]
+    },
+    "url": "http://localhost:5080/udsplus/$import"
+  },
+  "importStatus": {
+    "id": "424a9edbb69e",
+    "status": "complete",
+    "submissionId": "20261108-181848-901c697e0f7b4e518d17296d",
+    "receivedAt": "2026-11-08T18:31:14.3367622\u002B00:00",
+    "completedAt": "2026-11-08T18:31:14.3604935\u002B00:00",
+    "counts": {
+      "AllergyIntolerance": 1,
+      "Condition": 2,
+      "Encounter": 1,
+      "Immunization": 1,
+      "MedicationRequest": 1,
+      "Observation": 4,
+      "Patient": 1,
+      "Procedure": 1
+    },
+    "outcomes": [
+      {
+        "type": "AllergyIntolerance",
+        "url": "http://localhost:5080/udsplus/files/20261108-181848-901c697e0f7b4e518d17296d/AllergyIntolerance.ndjson",
+        "resourceCount": 1,
+        "statusCode": 200
+      },
+      {
+        "type": "Condition",
+        "url": "http://localhost:5080/udsplus/files/20261108-181848-901c697e0f7b4e518d17296d/Condition.ndjson",
+        "resourceCount": 2,
+        "statusCode": 200
+      },
+      {
+        "type": "Encounter",
+        "url": "http://localhost:5080/udsplus/files/20261108-181848-901c697e0f7b4e518d17296d/Encounter.ndjson",
+        "resourceCount": 1,
+        "statusCode": 200
+      },
+      {
+        "type": "Immunization",
+        "url": "http://localhost:5080/udsplus/files/20261108-181848-901c697e0f7b4e518d17296d/Immunization.ndjson",
+        "resourceCount": 1,
+        "statusCode": 200
+      },
+      {
+        "type": "MedicationRequest",
+        "url": "http://localhost:5080/udsplus/files/20261108-181848-901c697e0f7b4e518d17296d/MedicationRequest.ndjson",
+        "resourceCount": 1,
+        "statusCode": 200
+      },
+      {
+        "type": "Observation",
+        "url": "http://localhost:5080/udsplus/files/20261108-181848-901c697e0f7b4e518d17296d/Observation.ndjson",
+        "resourceCount": 4,
+        "statusCode": 200
+      },
+      {
+        "type": "Patient",
+        "url": "http://localhost:5080/udsplus/files/20261108-181848-901c697e0f7b4e518d17296d/Patient.ndjson",
+        "resourceCount": 1,
+        "statusCode": 200
+      },
+      {
+        "type": "Procedure",
+        "url": "http://localhost:5080/udsplus/files/20261108-181848-901c697e0f7b4e518d17296d/Procedure.ndjson",
+        "resourceCount": 1,
+        "statusCode": 200
+      }
+    ]
+  },
+  "notes": []
+}

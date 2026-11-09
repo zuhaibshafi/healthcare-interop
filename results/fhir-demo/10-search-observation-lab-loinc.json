@@ -1,0 +1,90 @@
+{
+ "resourceType": "Bundle",
+ "id": "d645c210-b6e5-4cbd-bf9c-d041b69a64aa",
+ "meta": {
+  "lastUpdated": "2026-11-08T23:47:27.696+05:30"
+ },
+ "type": "searchset",
+ "total": 1,
+ "link": [
+  {
+   "relation": "self",
+   "url": "http://localhost:8080/fhir/Observation?code=http%3A%2F%2Floinc.org%7C94500-6&patient=demo-patient-1"
+  }
+ ],
+ "entry": [
+  {
+   "fullUrl": "http://localhost:8080/fhir/Observation/demo-obs-covid-pcr",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "demo-obs-covid-pcr",
+    "meta": {
+     "versionId": "1",
+     "lastUpdated": "2026-11-08T23:14:55.780+05:30",
+     "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+     ]
+    },
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "laboratory",
+        "display": "Laboratory"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "94500-6",
+       "display": "SARS-CoV-2 (COVID-19) RNA [Presence] in Respiratory specimen by NAA with probe detection"
+      }
+     ],
+     "text": "SARS-CoV-2 RNA PCR"
+    },
+    "subject": {
+     "reference": "Patient/demo-patient-1"
+    },
+    "encounter": {
+     "reference": "Encounter/demo-encounter-1"
+    },
+    "effectiveDateTime": "2026-11-07T09:20:00-05:00",
+    "issued": "2026-11-07T13:00:00-05:00",
+    "performer": [
+     {
+      "reference": "Organization/org-greenway-clinic"
+     }
+    ],
+    "valueCodeableConcept": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "260373001",
+       "display": "Detected (qualifier value)"
+      }
+     ],
+     "text": "Detected"
+    },
+    "interpretation": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "code": "A",
+        "display": "Abnormal"
+       }
+      ]
+     }
+    ]
+   },
+   "search": {
+    "mode": "match"
+   }
+  }
+ ]
+}

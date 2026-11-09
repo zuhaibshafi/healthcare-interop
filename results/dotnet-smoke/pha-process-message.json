@@ -1,0 +1,34 @@
+{
+  "resourceType": "Bundle",
+  "id": "df1cce0e-e987-4cb0-bd7a-6b09dca71446",
+  "type": "message",
+  "timestamp": "2026-11-08T18:15:19.569003+00:00",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:e5b1a7e9-bd4c-4740-96ad-070833adc85f",
+      "resource": {
+        "resourceType": "MessageHeader",
+        "id": "e5b1a7e9-bd4c-4740-96ad-070833adc85f",
+        "eventCoding": {
+          "system": "http://hl7.org/fhir/us/ecr/CodeSystem/us-ph-messageheader-message-types",
+          "code": "reportability-response",
+          "display": "Reportability Response"
+        },
+        "destination": [
+          {
+            "name": "eCRNow smoke",
+            "endpoint": "http://localhost:8081"
+          }
+        ],
+        "source": {
+          "name": "FhirIntegration PHA mock",
+          "endpoint": "http://localhost:5080/pha/r4/fhir/$process-message"
+        },
+        "response": {
+          "identifier": "mh-1",
+          "code": "ok"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+diff --git a/.env.development b/.env.development
+index a0de5eb..8072b7e 100644
+--- a/.env.development
++++ b/.env.development
+@@ -1,6 +1,7 @@
+-FHIR_RESOURCE_VALIDATOR_URL=http://localhost/hl7validatorapi
++FHIR_RESOURCE_VALIDATOR_URL=http://localhost:8082
+ INFERNO_HOST=http://localhost:4567
+-REDIS_URL=redis://localhost:6379/0
++REDIS_URL=redis://127.0.0.1:6379/0
+ FHIR_REFERENCE_SERVER=http://localhost:8080/reference-server/r4
+ HOST_HEADER=localhost:8080
+-FHIR_RESOURCE_VALIDATOR_EXPANSION_PARAMETERS='{"resourceType":"Parameters","parameter":[{"name":"force-system-version","valueCanonical":"http://www.nlm.nih.gov/research/umls/rxnorm|03022026"},{"name":"force-system-version","valueCanonical":"http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20250901"},{"name":"force-system-version","valueCanonical":"http://hl7.org/fhir/sid/cvx|20250715"}]}'
+\ No newline at end of file
++FHIR_RESOURCE_VALIDATOR_EXPANSION_PARAMETERS=C:/git/us-core-test-kit/config/validator_expansion_parameters.json
++INITIALIZE_VALIDATOR_SESSIONS=false
+diff --git a/Gemfile b/Gemfile
+index 2c42d7c..674bc8b 100644
+--- a/Gemfile
++++ b/Gemfile
+@@ -9,3 +9,6 @@ group :development, :test do
+   gem 'rack-test'
+   gem 'selenium-webdriver'
+ end
++
++# Local Windows fix: rest-client needs ffi on Windows but the Linux-generated lockfile omits it
++gem 'ffi', platforms: [:windows]
+diff --git a/Gemfile.lock b/Gemfile.lock
+index 510f609..6581fb4 100644
+--- a/Gemfile.lock
++++ b/Gemfile.lock
+@@ -105,6 +105,7 @@ GEM
+     faraday-retry (1.0.4)
+     faraday_middleware (1.2.1)
+       faraday (~> 1.0)
++    ffi (1.17.4-x64-mingw-ucrt)
+     fhir_client (6.2.0)
+       activesupport (>= 3)
+       addressable (>= 2.9.0)
+@@ -234,6 +235,8 @@ GEM
+       racc (~> 1.4)
+     nokogiri (1.19.4-arm64-darwin)
+       racc (~> 1.4)
++    nokogiri (1.19.4-x64-mingw-ucrt)
++      racc (~> 1.4)
+     nokogiri (1.19.4-x86_64-darwin)
+       racc (~> 1.4)
+     nokogiri (1.19.4-x86_64-linux-gnu)
+@@ -341,6 +344,7 @@ GEM
+     sqlite3 (1.7.3-aarch64-linux)
+     sqlite3 (1.7.3-arm-linux)
+     sqlite3 (1.7.3-arm64-darwin)
++    sqlite3 (1.7.3-x64-mingw-ucrt)
+     sqlite3 (1.7.3-x86_64-darwin)
+     sqlite3 (1.7.3-x86_64-linux)
+     strings (0.2.1)
+@@ -382,6 +386,7 @@ PLATFORMS
+   arm-linux-gnu
+   arm-linux-musl
+   arm64-darwin
++  x64-mingw-ucrt
+   x86_64-darwin
+   x86_64-linux-gnu
+   x86_64-linux-musl
+@@ -390,6 +395,7 @@ DEPENDENCIES
+   database_cleaner-sequel (~> 1.8)
+   debug
+   factory_bot (~> 6.1)
++  ffi
+   rack-test
+   rspec (~> 3.10)
+   selenium-webdriver
+@@ -444,6 +450,7 @@ CHECKSUMS
+   faraday-rack (1.0.0) sha256=ef60ec969a2bb95b8dbf24400155aee64a00fc8ba6c6a4d3968562bcc92328c0
+   faraday-retry (1.0.4) sha256=dc659233777fabf96c69c2ffe56c0a5d2c102af90321a42cc6c90157bcd716aa
+   faraday_middleware (1.2.1) sha256=d45b78c8ee864c4783fbc276f845243d4a7918a67301c052647bacabec0529e9
++  ffi (1.17.4-x64-mingw-ucrt) sha256=f6ff9618cfccc494138bddade27aa06c74c6c7bc367a1ea1103d80c2fcb9ed35
+   fhir_client (6.2.0) sha256=da740984792e464948e87a5a6273b3f24fb67c788a055be67399db14e7f929bd
+   fhir_dstu2_models (1.2.0) sha256=efb8be21a0caef112ebc90a55762bacde1cbd457e13567895579c79dbcb1b16f
+   fhir_models (5.1.0) sha256=5139aadcc372648847d648b2415911c4a2c053e57b3f02d2637ec6e3bdb2013f
+@@ -482,6 +489,7 @@ CHECKSUMS
+   nokogiri (1.19.4-arm-linux-gnu) sha256=a301313e38bb065d68239e79734bcd6f56fb6efaacebde29e9abf2a4735340ca
+   nokogiri (1.19.4-arm-linux-musl) sha256=588923c101bcfa78869734d247d25b598674323e7f22474fc468f6e5647311eb
+   nokogiri (1.19.4-arm64-darwin) sha256=a46db9853286e6597b36ebc6953817d15acf3a299583eb3f89fdc6f91dd63527
++  nokogiri (1.19.4-x64-mingw-ucrt) sha256=051da97b8eccfdb5444fed40246a35e10d7298b9efe759b4cd25455ea04c587e
+   nokogiri (1.19.4-x86_64-darwin) sha256=7fd17057d3e1f00e9954a74b3cd76595d3d4a5ef233b7ed9599047c204f70551
+   nokogiri (1.19.4-x86_64-linux-gnu) sha256=379fae440b28915e3f19d752ce2dcf8465ed2b2fbefd2a7ca0dd497bc981a06a
+   nokogiri (1.19.4-x86_64-linux-musl) sha256=17dfb7c1fa194ae02fbf7c51a7afc8d278045ab3fdacfd86f91d02d7b274470b
+@@ -524,6 +532,7 @@ CHECKSUMS
+   sqlite3 (1.7.3-aarch64-linux) sha256=0ccb8c001cd2617f4801a2c816142d3c9bc299e3f3e0f49e03812f3610b0891c
+   sqlite3 (1.7.3-arm-linux) sha256=eb653026d44f8502b74564e585245485a5667d72f8888854e53c561f816541b0
+   sqlite3 (1.7.3-arm64-darwin) sha256=b956160cc882d2568f332f915c9fe27cae9a4521b202d6e7ea540171c88e4600
++  sqlite3 (1.7.3-x64-mingw-ucrt) sha256=8304a254e4fb0692e651b6f783e009415085f885d940c51c77981b8523511f45
+   sqlite3 (1.7.3-x86_64-darwin) sha256=b88e117ae14b2c5b61a7eb14da24b3b0e93cd3e1c17774ff3b6e5a03ffe4e5b7
+   sqlite3 (1.7.3-x86_64-linux) sha256=522a3285660dec8253465880c97980e873db0d79060900be8d14194217a3ee73
+   strings (0.2.1) sha256=933293b3c95cf85b81eb44b3cf673e3087661ba739bbadfeadf442083158d6fb
+diff --git a/config/validator_expansion_parameters.json b/config/validator_expansion_parameters.json
+new file mode 100644
+index 0000000..e7632ce
+--- /dev/null
++++ b/config/validator_expansion_parameters.json
+@@ -0,0 +1 @@
++{"resourceType":"Parameters","parameter":[{"name":"force-system-version","valueCanonical":"http://www.nlm.nih.gov/research/umls/rxnorm|03022026"},{"name":"force-system-version","valueCanonical":"http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20250901"},{"name":"force-system-version","valueCanonical":"http://hl7.org/fhir/sid/cvx|20250715"}]}
+\ No newline at end of file

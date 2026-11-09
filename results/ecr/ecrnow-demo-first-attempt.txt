@@ -1,0 +1,40 @@
+
+=== 1. Connectivity
+HAPI FHIR OK: HAPI FHIR Server 8.12.0 fhirVersion=4.0.1
+eCRNow OK: 0 healthcare setting(s) registered
+
+=== 2. Register HAPI as an eCRNow Healthcare Setting
+Created hsId=2 for http://localhost:8080/fhir (authType=None)
+
+=== 3. Knowledge Artifact Repositories loaded by eCRNow (kar.directory)
+repo=local-repo-ersd url=http://localhost/ersd -> karId=bundle-ersd-specification-bundle version=2 name=PlanDefinition_eRSD_Instance
+
+=== 4. Activate the eRSD KAR for this Healthcare Setting
+addKARStatus -> HTTP 200: [{"id": 2, "hsId": 2, "karId": "bundle-ersd-specification-bundle", "karVersion": "2", "versionUniqueKarId": "bundle-ersd-specification-bundle|2", "isActive": true, "lastActivationDate": "2026-11-08T18:07:09.170+00:00", "lastInActivationDate": "2026-11-08T18:07:09.157+00:00", "subscriptionsEnabled": 
+active KARs for hsId=2: [('bundle-ersd-specification-bundle', '2', True, 'FHIR')]
+
+=== 5. Launch patient processing (EHR -> eCRNow 'launchPatient')
+launchPatient -> HTTP 200: {'resourceType': 'OperationOutcome', 'meta': {'lastUpdated': '2026-11-08T18:07:10.193+00:00'}, 'issue': [{'severity': 'information', 'code': 'informational', 'details': {'text': 'Patient Instance launched for processing successfully'}}]}
+
+=== 6. Wait for eICR (eCRNow evaluates the eRSD trigger codes, then creates/validates/submits the report)
+  ... still processing
+  ... still processing
+  ... still processing
+  ... still processing
+  ... still processing
+  ... still processing
+  ... still processing
+  ... still processing
+  ... still processing
+  ... still processing
+  ... still processing
+  ... still processing
+  ... still processing
+  ... still processing
+  ... still processing
+No eICR/PH message visible yet via API; check C:/git/ecrnow-runtime/bsa-output and logs/ecrNow.log
+Tip: GET /api/notificationContexts shows the processing state machine for the encounter.
+
+=== Done
+Swagger UI for eCRNow:  http://localhost:8081/swagger-ui/index.html
+Debug output (eICR bundles, trigger evaluation): C:/git/ecrnow-runtime/bsa-output/
